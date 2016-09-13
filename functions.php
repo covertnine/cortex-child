@@ -4,7 +4,7 @@
 function cortex_enqueue_child_styles() {
 
 	//grab theme options
-	$cortex_theme_options = global $cortex_options;
+	global $cortex_options;
 
     //queue up the child stylesheet after the dark/light theme style
 	if ( $cortex_theme_options['c9-theme-style'] == 'light' ) {
