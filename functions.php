@@ -20,3 +20,9 @@ function cortex_enqueue_child_styles() {
     add_editor_style( get_stylesheet_directory_uri() . '/style.css');
 }
 add_action( 'wp_enqueue_scripts', 'cortex_enqueue_child_styles', 35 );
+
+/* add child style to editor */
+function cortex_child_editor_style() {
+   add_editor_style( get_stylesheet_directory_uri() . '/style.css' );
+}
+add_action( 'init', 'cortex_child_editor_style' );
