@@ -1,0 +1,40 @@
+{
+    "key": "group_551604a7cb621",
+    "title": "Post Format Video",
+    "fields": [
+        {
+            "key": "field_551604e8a6561",
+            "label": "Video Link",
+            "name": "video_link",
+            "type": "oembed",
+            "instructions": "Copy and paste the video URL like this:\r\nhttp:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ\r\n\r\nSupports:\r\n<ul>\r\n<li>YouTube<\/li>\r\n<li>Vimeo<\/li>\r\n<li>Vine<\/li>\r\n<li>Flickr<\/li>\r\n<li>Instagram<\/li>\r\n<li>Hulu<\/li>\r\n<li>FunnyOrDie<\/li>\r\n<li>Revision3<\/li>\r\n<li>TED<\/li>\r\n<li><a href=\"https:\/\/codex.wordpress.org\/Embeds\" target=\"_blank\">and many more...<\/a><\/li>\r\n<\/ul>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1496510210
+}

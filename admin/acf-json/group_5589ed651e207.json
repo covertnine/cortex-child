@@ -1,0 +1,371 @@
+{
+    "key": "group_5589ed651e207",
+    "title": "Events Page Options",
+    "fields": [
+        {
+            "key": "field_568428b587217",
+            "label": "Change Header Navigation Type",
+            "name": "navigation_type_override",
+            "type": "radio",
+            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "nav1": "Transparent Background",
+                "nav2": "Opaque Background"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_558adcf424092",
+            "label": "Events Display Type",
+            "name": "events_display_type",
+            "type": "radio",
+            "instructions": "Select the style of display you would like to use for this events listing",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "basic": "Basic listing with no images",
+                "big": "Big listing with featured images"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "basic",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5589ed65231f5",
+            "label": "Events Category",
+            "name": "limit_by_category",
+            "type": "taxonomy",
+            "instructions": "Would you like to limit the which events show on the page by a category?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "events-category",
+            "field_type": "select",
+            "allow_null": 1,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_558ad4ad263e6",
+            "label": "Upcoming Events Heading",
+            "name": "upcoming_events_heading",
+            "type": "text",
+            "instructions": "Enter in the text you'd like to display above the upcoming events. (Upcoming events, upcoming shows, upcoming dates, etc.) If left blank, the page title will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Upcoming Dates",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_558ad456263e5",
+            "label": "Show Past Events",
+            "name": "show_past_events",
+            "type": "true_false",
+            "instructions": "Would you like to show an archive of past events on a tab next to the upcoming events?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_558ad4fa263e7",
+            "label": "Past Events Heading",
+            "name": "past_events_heading",
+            "type": "text",
+            "instructions": "Enter in the heading for past\/archived events. (Previous Dates, Past Events, Events Archive, etc.)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad456263e5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Previous Dates",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5589ed6523242",
+            "label": "Custom Background",
+            "name": "custom_background",
+            "type": "radio",
+            "instructions": "Select a background image, color, or pattern",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "image": "Image",
+                "color": "Color",
+                "pattern": "Background Pattern",
+                "color_pattern": "Color & Pattern"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5589ed6523254",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "Optional background color",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#121212"
+        },
+        {
+            "key": "field_5589ed6523266",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Optional background image. Recommended 2000 pixels wide minimum",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5589ed6523278",
+            "label": "Background Image Parallax",
+            "name": "background_image_parallax",
+            "type": "radio",
+            "instructions": "Show the background image with a parallax effect.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5589ed652328b",
+            "label": "Background Pattern",
+            "name": "background_pattern",
+            "type": "image",
+            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5589ed652329d",
+            "label": "Background Pattern Repeat",
+            "name": "background_pattern_repeat",
+            "type": "radio",
+            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5589ed6523242",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "repeat-y": "Repeat Vertically",
+                "repeat-x": "Repeat Horizontally",
+                "repeat": "Repeat Both"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "repeat",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page_events.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1496510210
+}

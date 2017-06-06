@@ -1,0 +1,367 @@
+{
+    "key": "group_557dbe804e92d",
+    "title": "Project Page Options",
+    "fields": [
+        {
+            "key": "field_5684295026b6f",
+            "label": "Change Header Navigation Type",
+            "name": "navigation_type_override",
+            "type": "radio",
+            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "nav1": "Transparent Background",
+                "nav2": "Opaque Background"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557dbe8053b94",
+            "label": "Project Category",
+            "name": "project_category",
+            "type": "taxonomy",
+            "instructions": "Would you like to limit the which projects show on the page by a category?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "projects-category",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_557e19090923d",
+            "label": "Width",
+            "name": "width",
+            "type": "radio",
+            "instructions": "Select the width for the project listing",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "container": "Boxed width",
+                "container-fluid": "Full width"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "container",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_558458d821356",
+            "label": "Columns",
+            "name": "columns",
+            "type": "select",
+            "instructions": "Select how many columns you'd like to display for the project listing",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cm100": "1 column",
+                "cm50": "2 columns",
+                "cm33": "3 columns",
+                "cm25": "4 columns"
+            },
+            "default_value": {
+                "cm50": "cm50"
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557dbe8053ba9",
+            "label": "Order By",
+            "name": "order_by",
+            "type": "select",
+            "instructions": "What do you want to order Projects by?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ID": "Post ID",
+                "title": "Title",
+                "date": "Published Date",
+                "rand": "Random",
+                "menu_order": "Manual (Menu Order)"
+            },
+            "default_value": {
+                "date": "date"
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557dbe8053bbb",
+            "label": "Custom Background",
+            "name": "custom_background",
+            "type": "radio",
+            "instructions": "Select a background image, color, or pattern",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "image": "Image",
+                "color": "Color",
+                "pattern": "Background Pattern",
+                "color_pattern": "Color & Pattern"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557dbe8053bcd",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "Optional background color",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#121212"
+        },
+        {
+            "key": "field_557dbe8053bde",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Optional background image. Recommended 2000 pixels wide minimum",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_557dbe8053bef",
+            "label": "Background Image Parallax",
+            "name": "background_image_parallax",
+            "type": "radio",
+            "instructions": "Show the background image with a parallax effect.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557dbe8053c01",
+            "label": "Background Pattern",
+            "name": "background_pattern",
+            "type": "image",
+            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_557dbe8053c12",
+            "label": "Background Pattern Repeat",
+            "name": "background_pattern_repeat",
+            "type": "radio",
+            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "pattern"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_557dbe8053bbb",
+                        "operator": "==",
+                        "value": "color_pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "repeat-y": "Repeat Vertically",
+                "repeat-x": "Repeat Horizontally",
+                "repeat": "Repeat Both"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "repeat",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page_projects.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1496510210
+}

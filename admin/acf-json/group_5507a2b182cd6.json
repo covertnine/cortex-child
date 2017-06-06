@@ -1,0 +1,314 @@
+{
+    "key": "group_5507a2b182cd6",
+    "title": "Portfolio Post Options",
+    "fields": [
+        {
+            "key": "field_568429f97d999",
+            "label": "Change Navigation Type",
+            "name": "navigation_type_override",
+            "type": "radio",
+            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "nav1": "Transparent Background",
+                "nav2": "Opaque Background"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_56d88875a003d",
+            "label": "Enable Header Overlay",
+            "name": "enable_overlay",
+            "type": "radio",
+            "instructions": "Cortex displays an overlay over featured images in headers to make the heading text easier to read. You can enable or disable this if your heading\/title text is readable over your featured image without the need for a semi-transparent overlay. Default is to display the overlay if a featured image is set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "dark-overlay": "Enable",
+                "no-overlay": "Disable"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5507a2ce80f0e",
+            "label": "Heading",
+            "name": "heading",
+            "type": "text",
+            "instructions": "Enter main heading for the portfolio",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5507a36a80f0f",
+            "label": "Sub Heading",
+            "name": "sub_heading",
+            "type": "text",
+            "instructions": "Enter secondary heading (goes above main headline on homepage)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56d888c9a003e",
+            "label": "Heading Font Color",
+            "name": "heading_font_color",
+            "type": "radio",
+            "instructions": "Select the heading color for the post or page, if your featured image is dark, you'll want a light heading. If your featured image is lighter, you'll want a dark heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "light-color-text": "Light Heading",
+                "dark-color-text": "Dark Heading"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5507a39780f10",
+            "label": "Masonry Width",
+            "name": "masonry_width",
+            "type": "select",
+            "instructions": "Select the width of the Featured Image that will be showing up on the homepage and elsewhere. (How wide do you want it's tile to be?)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cm25": "25%",
+                "cm50": "50%",
+                "cm75": "75%",
+                "cm100": "100%"
+            },
+            "default_value": {
+                "cm25": "25%"
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5507a49080f11",
+            "label": "Portfolio Type",
+            "name": "portfolio_type",
+            "type": "radio",
+            "instructions": "Select which type of gallery this will be. Lightbox will open on the same page, and stand alone will be on it's own age embedded on the page.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "lightbox": "Lightbox",
+                "stand-alone": "Stand Alone"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "lightbox",
+            "layout": "horizontal",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5518500d279e7",
+            "label": "Gallery Type",
+            "name": "gallery_type",
+            "type": "select",
+            "instructions": "Select how you'd like the stand alone portfolio page laid out.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5507a49080f11",
+                        "operator": "==",
+                        "value": "stand-alone"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "masonry": "Masonry with Lightbox",
+                "grid": "Masonry with Grid and Lightbox",
+                "flex-slider": "Flex Slider",
+                "inline": "Inline Boxed Full Width Images",
+                "inline-text": "Inline Boxed Full Width Images with captions below"
+            },
+            "default_value": {
+                "": ""
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 1,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_557d05740fc51",
+            "label": "Columns",
+            "name": "columns",
+            "type": "select",
+            "instructions": "Select how many columns you would like to have for thumbnail indexes",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5518500d279e7",
+                        "operator": "==",
+                        "value": "masonry"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5518500d279e7",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "two": "Two",
+                "three": "Three",
+                "four": "Four",
+                "five": "Five",
+                "six": "Six"
+            },
+            "default_value": {
+                "four": "four"
+            },
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5507a5a51df67",
+            "label": "Images",
+            "name": "images",
+            "type": "gallery",
+            "instructions": "Upload images",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, gif, png",
+            "insert": "append"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "discussion",
+        "comments",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1496510210
+}

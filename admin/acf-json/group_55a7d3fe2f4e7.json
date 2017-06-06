@@ -1,0 +1,1776 @@
+{
+    "key": "group_55a7d3fe2f4e7",
+    "title": "Cortex Page Builder Full Sidebar",
+    "fields": [
+        {
+            "key": "field_55a7d3fe4f2a4",
+            "label": "Cortex Page Builder",
+            "name": "cortex_page_builder_sidebar",
+            "type": "flexible_content",
+            "instructions": "Drag as many page components as you need that can include blog posts, events, slide shows, WordPress TinyMCE Editors, WooCommerce Products, & more. After adding your body components, select a sidebar, and that will display to the left or right of the body components you add here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Body Section",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "54f73fa6107ad",
+                    "name": "wp_editor",
+                    "label": "WP Editor",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe56e8e",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "<p>Enter content here<\/p>",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56f07",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "559ea71db7cfd",
+                    "name": "simple_slider",
+                    "label": "Simple Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe57629",
+                            "label": "Slides",
+                            "name": "slides",
+                            "type": "repeater",
+                            "instructions": "Generate a simple slider using the flex slider with images and content",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_55a7d3ffce00e",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Slide",
+                            "sub_fields": [
+                                {
+                                    "key": "field_55a7d3ffce00e",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "Attach your image to the slide. Make sure all slide images are the same width\/height!",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_55a7d3ffce027",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "Enter in the content for the slide if any",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                },
+                                {
+                                    "key": "field_55a7d3ffce03a",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "page_link",
+                                    "instructions": "Link this slide to a post or page?",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+
+                                    ],
+                                    "taxonomy": [
+
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "allow_archives": 1
+                                },
+                                {
+                                    "key": "field_55a7d3ffce04d",
+                                    "label": "External Link",
+                                    "name": "external_link",
+                                    "type": "text",
+                                    "instructions": "If you'd prefer to link this slide to an external link outside of your site.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_55a7d3fe5763a",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter in a custom class for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "559ec1649a48d",
+                    "name": "full_width_image",
+                    "label": "Full Width Image",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe5765a",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "Attach the full width image. Recommend using an image that's at least 2000 pixels wide",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe5766a",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Enter any content you'd like to display over the image",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe5767b",
+                            "label": "Display Overlay",
+                            "name": "display_overlay",
+                            "type": "true_false",
+                            "instructions": "Put a semi-transparent full width\/height overlay over the image to make the content over the image easier to read?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe5768b",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter in a custom class for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "54f742a2f08d8",
+                    "name": "blog_latest",
+                    "label": "Blog Posts",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe56a61",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56a76",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Optional field for a subtitle which will show up below the main title",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_57bb24e1af1dd",
+                            "label": "Posts Layout",
+                            "name": "c9_posts_layout",
+                            "type": "radio",
+                            "instructions": "Select the layout you'd like to use for the blog posts. Default is split with the featured image\/video\/audio on the left, and the title\/meta\/excerpt on the right. Full Width layout is similar to Tumblr with the full width image on top and the title\/meta\/excerpt below. Sticky posts will always be full width.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "c9-split": "Split Width Layout",
+                                "c9-full": "Full Width Layout"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "c9-split",
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_55a7d3fe56b07",
+                            "label": "Filter By Category",
+                            "name": "filter_by_category",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56b19",
+                            "label": "Filter By Format",
+                            "name": "filter_by_format",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "post_format",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56b29",
+                            "label": "Number of posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 10,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 100,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56b39",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56b49",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your posts page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe56b39",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56b59",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55a97431b57ef",
+                    "name": "blog_latest_slider",
+                    "label": "Blog Posts Slider",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a97431b57f0",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a97431b57f1",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Optional field for a subtitle which will show up below the main title",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a97431b57f2",
+                            "label": "Filter By Category",
+                            "name": "filter_by_category",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a97431b57f3",
+                            "label": "Filter By Format",
+                            "name": "filter_by_format",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "post_format",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a97431b57f4",
+                            "label": "Number of posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 5,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 100,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a97431b57f7",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "559c1f74e3cf7",
+                    "name": "magazine_latest",
+                    "label": "Blog Posts Grid",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe56b6b",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56b7b",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Optional field for a subtitle which will show up below the main title",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56bdb",
+                            "label": "Display Date",
+                            "name": "display_date",
+                            "type": "true_false",
+                            "instructions": "Display the post dates?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56beb",
+                            "label": "Display Post Meta",
+                            "name": "display_post_meta",
+                            "type": "true_false",
+                            "instructions": "Display the author, category, and 3 most popular post tags associated with each post? (Individual post meta items can be hidden independently with CSS)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56c04",
+                            "label": "Display Post Excerpt & Read More Button",
+                            "name": "display_post_excerpt",
+                            "type": "true_false",
+                            "instructions": "Display a short excerpt underneath the post with a 'read more' button linking to the full post?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56c34",
+                            "label": "Filter By Category",
+                            "name": "filter_by_category",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56c43",
+                            "label": "Filter By Format",
+                            "name": "filter_by_format",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "post_format",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56c53",
+                            "label": "Number of posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 10,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 100,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56c6f",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56c83",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your posts page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe56c6f",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56c94",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "559d83f9ed5d9",
+                    "name": "magazine_latest_featured",
+                    "label": "Blog Posts Recent Featured",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe56ca4",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56cbd",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Optional field for a subtitle which will show up below the main title",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56d1b",
+                            "label": "Number of Featured Posts",
+                            "name": "number_of_featured_posts",
+                            "type": "radio",
+                            "instructions": "How many featured posts would you like to display?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1": 1,
+                                "2": 2
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": 1,
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_55a7d3fe56d2a",
+                            "label": "Display Featured Post Date",
+                            "name": "display_date",
+                            "type": "true_false",
+                            "instructions": "Display the featured post date?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56d3a",
+                            "label": "Display Featured Post Meta",
+                            "name": "display_post_meta",
+                            "type": "true_false",
+                            "instructions": "Display the author, category, and 3 most popular post tags associated with the featured post? (Individual post meta items can be hidden independently with CSS)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56d49",
+                            "label": "Display Featured Post Excerpt & Read More Button",
+                            "name": "display_post_excerpt",
+                            "type": "true_false",
+                            "instructions": "Display a short excerpt underneath the featured post with a 'read more' button linking to the full post?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56d59",
+                            "label": "Number of recent posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 4,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 3,
+                            "max": 20,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56d97",
+                            "label": "Filter By Category",
+                            "name": "filter_by_category",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56da7",
+                            "label": "Filter By Format",
+                            "name": "filter_by_format",
+                            "type": "taxonomy",
+                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "post_format",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_55a7d3fe56dc0",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe56dd0",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your posts page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe56dc0",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56de0",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55885444c2ee1",
+                    "name": "events_listing",
+                    "label": "Events Listing",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe57241",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Input title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the title to be displayed above the events listing",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57251",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Input a sub title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the sub title to be displayed below the main title",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 200,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57261",
+                            "label": "Event Display Type",
+                            "name": "event_display_type",
+                            "type": "radio",
+                            "instructions": "Select the style of display you would like to use for this events listing",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "basic": "Basic listing with no images",
+                                "big": "Big listing with images hyperlinked to detail pages"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "basic",
+                            "layout": "vertical",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_55a7d3fe57271",
+                            "label": "Limit by category?",
+                            "name": "limit_by_category",
+                            "type": "taxonomy",
+                            "instructions": "If you'd like to limit the event to one specific category please select it here. The default is to show all events.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "events-category",
+                            "field_type": "select",
+                            "allow_null": 1,
+                            "add_term": 1,
+                            "save_terms": 1,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57286",
+                            "label": "Number of events to display",
+                            "name": "number_of_events_to_display",
+                            "type": "number",
+                            "instructions": "How many events would you like to display?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 5,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 50,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57296",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe572a6",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your full events listing page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe57296",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57323",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55884e32724dc",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe57335",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Input title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the title to be displayed above the contact form",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57346",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Input a sub title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the subtitle to be displayed above the contact form",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 144,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57358",
+                            "label": "Select Contact Form",
+                            "name": "select_contact_form",
+                            "type": "cf7",
+                            "instructions": "Select which contact form you'd like to display.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "disable": [
+                                0
+                            ]
+                        },
+                        {
+                            "key": "field_55a7d3fe573ca",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55884ee3724eb",
+                    "name": "custom_code",
+                    "label": "Custom Code",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe573da",
+                            "label": "Custom Code",
+                            "name": "custom_code",
+                            "type": "textarea",
+                            "instructions": "Copy and paste any HTML, CSS, or Javascript code into the field. Make sure to use opening and closing tags for styles, javascript, and HTML or else it may break the design.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "<style type=\"text\/css\">.custom-class { } <\/style>",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe573ea",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter in a custom class (if necessary) for the custom code field",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5596e564ca836",
+                    "name": "woocommerce_products_grid",
+                    "label": "WooCommerce Products Grid",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_55a7d3fe5770e",
+                            "label": "Content Above Product Grid",
+                            "name": "content_above_product_grid",
+                            "type": "wysiwyg",
+                            "instructions": "Enter in any content to display above the product grid. (Title, subtitle, etc.)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57724",
+                            "label": "Product Filter Options",
+                            "name": "product_sorting_options",
+                            "type": "radio",
+                            "instructions": "If you'd like to limit the product grid to a specific product type, tag, or category select it here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "None",
+                                "tag": "Product Tag",
+                                "category": "Product Category"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "none",
+                            "layout": "vertical",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_55a7d3fe57746",
+                            "label": "Product Category",
+                            "name": "product_category",
+                            "type": "taxonomy",
+                            "instructions": "Limit the product grid to a category?",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe57724",
+                                        "operator": "==",
+                                        "value": "category"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "product_cat",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 1,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe57759",
+                            "label": "Product Tag",
+                            "name": "product_tag",
+                            "type": "taxonomy",
+                            "instructions": "Limit the product grid to a product tag?",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe57724",
+                                        "operator": "==",
+                                        "value": "tag"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "product_tag",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 1,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe5776b",
+                            "label": "Order By",
+                            "name": "order_by",
+                            "type": "select",
+                            "instructions": "What order do you want to display the products by?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "ID": "Post ID",
+                                "title": "Title",
+                                "date": "Published Date",
+                                "rand": "Random",
+                                "menu_order": "Manual (Menu Order)"
+                            },
+                            "default_value": {
+                                "date": "date"
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_55a7d3fe5777c",
+                            "label": "Number of Products",
+                            "name": "number_of_products",
+                            "type": "number",
+                            "instructions": "Select the number of products you'd like to display in the product grid.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 8,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe5778c",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_55a7d3fe5779c",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your full products listing page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55a7d3fe5778c",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe5780e",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "Enter in a custom class for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page_builder-sidebar.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": [
+        "the_content",
+        "discussion",
+        "comments",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1496510210
+}

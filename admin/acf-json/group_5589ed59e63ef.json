@@ -1,0 +1,371 @@
+{
+    "key": "group_5589ed59e63ef",
+    "title": "Events Page Header Options",
+    "fields": [
+        {
+            "key": "field_558ad607fd475",
+            "label": "Events Page Header Type",
+            "name": "events_page_header_type",
+            "type": "radio",
+            "instructions": "Select what you'd like to display in the header for the events page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-image-select-3",
+                "id": ""
+            },
+            "choices": {
+                "background-next-event": "<p>Next Upcoming Event<\/p> <img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/events-header-next-event-big-image.png\" alt=\"Next Upcoming Event\">",
+                "background-image-text": "<p>Background Image & Text<\/p> <img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/events-header-background-image-text.png\" alt=\"Background Image & Text\">",
+                "background-color": "<p>Background Color & Text<\/p> <img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/events-header-background-color-text.png\" alt=\"Background Color & Text\">",
+                "background-pattern": "<p>Background Pattern & Text<\/p> <img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/events-header-background-pattern-text-1.png\" alt=\"Background Pattern & Text\">",
+                "background-image": "<p>Background Image<\/p> <img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/events-header-background-image-only.png\" alt=\"Background Image Only\">"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_558ada25fd478",
+            "label": "Next Event Heading",
+            "name": "next_event_heading",
+            "type": "text",
+            "instructions": "Enter in the heading to be displayed above the next event info such as Next Show, Next Event, Next Concert, etc.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-next-event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Next Event",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_558adac0fd479",
+            "label": "Show next event featured image?",
+            "name": "show_next_event_featured_image",
+            "type": "true_false",
+            "instructions": "Select whether or not to display the next upcoming event featured image for the show or event",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-next-event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_558b74b4b632d",
+            "label": "Featured Image Display",
+            "name": "featured_image_display",
+            "type": "radio",
+            "instructions": "Show the featured image to the left or right of the event info?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558adac0fd479",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-next-event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "alignleft": "Left",
+                "alignright": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "alignleft",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_558adbb9fd47b",
+            "label": "Events Page Heading",
+            "name": "events_page_heading",
+            "type": "text",
+            "instructions": "Enter in the heading for the page. If left blank, the page title will be used.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-image-text"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Upcoming Events, Upcoming Shows, Gigs",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_558adc05fd47e",
+            "label": "Events Page Sub Heading",
+            "name": "events_page_sub_heading",
+            "type": "text",
+            "instructions": "Enter in the text to display in the subheading for the events page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-image-text"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "More dates to be announced... More Events Coming Soon! (etc.)",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5589ed59eaffe",
+            "label": "Background Image",
+            "name": "heading_background_image",
+            "type": "image",
+            "instructions": "Optional background image. Recommended 2000 pixels wide by 770px high minimum in a horizontal orientation. Wide-format images work best.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-next-event"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-image-text"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5589ed59eafeb",
+            "label": "Background Color",
+            "name": "heading_background_color",
+            "type": "color_picker",
+            "instructions": "Optional background color",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-color"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_5589ed59eb05d",
+            "label": "Background Pattern",
+            "name": "heading_background_pattern",
+            "type": "image",
+            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5589ed59eb07b",
+            "label": "Background Pattern Repeat",
+            "name": "heading_background_pattern_repeat",
+            "type": "radio",
+            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558ad607fd475",
+                        "operator": "==",
+                        "value": "background-pattern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "repeat-y": "Repeat Vertically",
+                "repeat-x": "Repeat Horizontally",
+                "repeat": "Repeat Both"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "repeat",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page_events.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1496721897
+}
