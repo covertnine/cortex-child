@@ -3,31 +3,6 @@
     "title": "Events Page Options",
     "fields": [
         {
-            "key": "field_568428b587217",
-            "label": "Change Header Navigation Type",
-            "name": "navigation_type_override",
-            "type": "radio",
-            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "default": "Default",
-                "nav1": "Transparent Background",
-                "nav2": "Opaque Background"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "default",
-            "layout": "vertical",
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
             "key": "field_558adcf424092",
             "label": "Events Display Type",
             "name": "events_display_type",
@@ -37,18 +12,18 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "acf-image-select-3",
                 "id": ""
             },
             "choices": {
-                "basic": "Basic listing with no images",
-                "big": "Big listing with featured images"
+                "big": "<p>Featured Images & Listing<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/event-big-listing-3.png\" alt=\"Listing with featured images to left of all event info with buttons\">",
+                "basic": "<p>Basic Listing<\/p><img src=\"https:\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/event-listing.png\" alt=\"Basic Listing with event headliners and subheadings\">"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "basic",
-            "layout": "vertical",
-            "allow_null": 0,
+            "default_value": "big",
+            "layout": "horizontal",
             "return_format": "value"
         },
         {
@@ -58,7 +33,22 @@
             "type": "taxonomy",
             "instructions": "Would you like to limit the which events show on the page by a category?",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "basic"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "big"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -80,7 +70,22 @@
             "type": "text",
             "instructions": "Enter in the text you'd like to display above the upcoming events. (Upcoming events, upcoming shows, upcoming dates, etc.) If left blank, the page title will be used.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "basic"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "big"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -90,9 +95,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": 200,
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": 200
         },
         {
             "key": "field_558ad456263e5",
@@ -101,7 +104,22 @@
             "type": "true_false",
             "instructions": "Would you like to show an archive of past events on a tab next to the upcoming events?",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "basic"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "big"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -126,6 +144,23 @@
                         "field": "field_558ad456263e5",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "basic"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_558ad456263e5",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_558adcf424092",
+                        "operator": "==",
+                        "value": "big"
                     }
                 ]
             ],
@@ -138,9 +173,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": 200,
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": 200
         },
         {
             "key": "field_5589ed6523242",
@@ -359,13 +392,13 @@
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "side",
+    "menu_order": 4,
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496510210
+    "modified": 1497227720
 }

@@ -15,14 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Section Layout",
-            "min": "",
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "55943defda1ce": {
                     "key": "55943defda1ce",
                     "name": "hero",
-                    "label": "Hero",
+                    "label": "Hero Header",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1003,10 +1000,10 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "54f73fa6107ad": {
                     "key": "54f73fa6107ad",
                     "name": "wp_editor",
-                    "label": "WP Editor",
+                    "label": "WordPress Editor",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1281,7 +1278,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "559ec1649a48d": {
                     "key": "559ec1649a48d",
                     "name": "full_width_image",
                     "label": "Full Width Image",
@@ -1398,7 +1395,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "54f645751e7f5": {
                     "key": "54f645751e7f5",
                     "name": "full_page_slider",
                     "label": "Slider Revolution",
@@ -1449,7 +1446,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "559ea71db7cfd": {
                     "key": "559ea71db7cfd",
                     "name": "simple_slider",
                     "label": "Slider Simple",
@@ -1612,11 +1609,11 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "54f742a2f08d8": {
                     "key": "54f742a2f08d8",
                     "name": "blog_latest",
                     "label": "Blog Posts",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55109c21f51d2",
@@ -1659,6 +1656,30 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_57bb23e4aea46",
+                            "label": "Posts Layout",
+                            "name": "c9_posts_layout",
+                            "type": "radio",
+                            "instructions": "Sticky posts will always be full width.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "acf-image-select-half-width",
+                                "id": ""
+                            },
+                            "choices": {
+                                "c9-split": "<p>Split Width Layout<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/blog-style-posts.png\" alt=\"Split Width\" \/>",
+                                "c9-full": "<p>Full Width Layout<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/blog-posts-tumblr.png\" alt=\"Full Width\" \/>"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "c9-split",
+                            "layout": "vertical",
+                            "return_format": "value"
                         },
                         {
                             "key": "field_555a21a5a7258",
@@ -1832,30 +1853,6 @@
                             "save_other_choice": 0,
                             "default_value": "repeat",
                             "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_57bb23e4aea46",
-                            "label": "Posts Layout",
-                            "name": "c9_posts_layout",
-                            "type": "radio",
-                            "instructions": "Select the layout you'd like to use for the blog posts. Default is split with the featured image\/video\/audio on the left, and the title\/meta\/excerpt on the right. Full Width layout is similar to Tumblr with the full width image on top and the title\/meta\/excerpt below. Sticky posts will always be full width.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "c9-split": "Split Width Layout",
-                                "c9-full": "Full Width Layout"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "c9-split",
-                            "layout": "vertical",
                             "allow_null": 0,
                             "return_format": "value"
                         },
@@ -2062,7 +2059,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55a95e449c1d3": {
                     "key": "55a95e449c1d3",
                     "name": "blog_latest_slider",
                     "label": "Blog Posts Slider",
@@ -2440,7 +2437,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "559c1f74e3cf7": {
                     "key": "559c1f74e3cf7",
                     "name": "magazine_latest",
                     "label": "Blog Posts Grid",
@@ -2923,7 +2920,510 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "559bfb81c8584": {
+                    "key": "559bfb81c8584",
+                    "name": "masonry_posts",
+                    "label": "Blog Posts Masonry",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_559bfb81c8585",
+                            "label": "Heading",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Input title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the title to be displayed above the posts",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_559c09f3412df",
+                            "label": "Sub Heading",
+                            "name": "sub_title",
+                            "type": "text",
+                            "instructions": "Input a sub title for this section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Enter the sub title to be displayed below the title",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 75,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_559bfb81c8586",
+                            "label": "Limit by Category?",
+                            "name": "limit_by_category",
+                            "type": "radio",
+                            "instructions": "Limit the posts by category? (Select no to show all categories)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1": "Yes",
+                                "0": "No"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": 0,
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559bfb81c8587",
+                            "label": "Post Category",
+                            "name": "post_category",
+                            "type": "taxonomy",
+                            "instructions": "If you want to organize your posts by categories select a specific category here. Otherwise, leave as default to pull in all posts.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8586",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "checkbox",
+                            "allow_null": 0,
+                            "load_save_terms": 1,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
+                        },
+                        {
+                            "key": "field_559bfb81c8588",
+                            "label": "Order By",
+                            "name": "order_by",
+                            "type": "select",
+                            "instructions": "How do you want to display Posts?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "ID": "Post ID",
+                                "title": "Title",
+                                "date": "Published Date",
+                                "rand": "Random",
+                                "menu_order": "Manual (Menu Order)"
+                            },
+                            "default_value": {
+                                "date": "date"
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559c0089a28e7",
+                            "label": "Columns",
+                            "name": "columns",
+                            "type": "select",
+                            "instructions": "How many columns of posts would you like to display?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "two": "Two",
+                                "three": "Three",
+                                "four": "Four",
+                                "five": "Five",
+                                "six": "Six"
+                            },
+                            "default_value": {
+                                "four": "four"
+                            },
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559c0714ce324",
+                            "label": "Show Meta Information for Posts?",
+                            "name": "show_meta",
+                            "type": "true_false",
+                            "instructions": "Would you like to display the post date, category, and tags for the posts? (Post meta will not show for five or six columns due to lack of space.)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_559c092c00e41",
+                            "label": "Number of posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "Select how many posts you'd like to display",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 10,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 100,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_559c080000e3e",
+                            "label": "Display view more button?",
+                            "name": "view_more_btn",
+                            "type": "true_false",
+                            "instructions": "Display a \"view more\" button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_559c07ff00e3d",
+                            "label": "View More Button Link",
+                            "name": "view_more_button_link",
+                            "type": "text",
+                            "instructions": "Enter the link to your posts page",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559c080000e3e",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_559bfb81c8589",
+                            "label": "Custom Background",
+                            "name": "custom_background",
+                            "type": "radio",
+                            "instructions": "Select a background image, color, or pattern",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "None",
+                                "image": "Image",
+                                "color": "Color",
+                                "pattern": "Background Pattern",
+                                "color_pattern": "Color & Pattern"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "none",
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559bfb81c858a",
+                            "label": "Background Color",
+                            "name": "background_color",
+                            "type": "color_picker",
+                            "instructions": "Select background color",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "color"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "color_pattern"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#121212"
+                        },
+                        {
+                            "key": "field_559bfb81c858b",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "Recommended minimum 2000 pixels wide",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "full",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "jpg, png, gif"
+                        },
+                        {
+                            "key": "field_559bfb81c858c",
+                            "label": "Background Image Parallax",
+                            "name": "background_image_parallax",
+                            "type": "radio",
+                            "instructions": "Show the background image with a parallax effect.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "pattern"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "color_pattern"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559bfb81c858d",
+                            "label": "Background Pattern",
+                            "name": "background_pattern",
+                            "type": "image",
+                            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "pattern"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "color_pattern"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_559bfb81c858e",
+                            "label": "Background Pattern Repeat",
+                            "name": "background_pattern_repeat",
+                            "type": "radio",
+                            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "pattern"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_559bfb81c8589",
+                                        "operator": "==",
+                                        "value": "color_pattern"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "repeat-y": "Repeat Vertically",
+                                "repeat-x": "Repeat Horizontally",
+                                "repeat": "Repeat Both"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "repeat",
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_559bfb81c858f",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "559d83f9ed5d9": {
                     "key": "559d83f9ed5d9",
                     "name": "magazine_latest_featured",
                     "label": "Blog Posts Recent Featured",
@@ -3429,10 +3929,10 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55079a42fb1f3": {
                     "key": "55079a42fb1f3",
                     "name": "masonry_portfolio",
-                    "label": "Masonry Portfolio",
+                    "label": "Portfolios Masonry",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -3811,513 +4311,10 @@
                     "min": "",
                     "max": ""
                 },
-                {
-                    "key": "559bfb81c8584",
-                    "name": "masonry_posts",
-                    "label": "Masonry Posts",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_559bfb81c8585",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Input title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the title to be displayed above the posts",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 75,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_559c09f3412df",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Input a sub title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the sub title to be displayed below the title",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 75,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_559bfb81c8586",
-                            "label": "Limit by Category?",
-                            "name": "limit_by_category",
-                            "type": "radio",
-                            "instructions": "Limit the posts by category? (Select no to show all categories)",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "1": "Yes",
-                                "0": "No"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": 0,
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559bfb81c8587",
-                            "label": "Post Category",
-                            "name": "post_category",
-                            "type": "taxonomy",
-                            "instructions": "If you want to organize your posts by categories select a specific category here. Otherwise, leave as default to pull in all posts.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8586",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "category",
-                            "field_type": "checkbox",
-                            "allow_null": 0,
-                            "load_save_terms": 1,
-                            "return_format": "id",
-                            "multiple": 0,
-                            "add_term": 1,
-                            "load_terms": 0,
-                            "save_terms": 1
-                        },
-                        {
-                            "key": "field_559bfb81c8588",
-                            "label": "Order By",
-                            "name": "order_by",
-                            "type": "select",
-                            "instructions": "How do you want to display Posts?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "ID": "Post ID",
-                                "title": "Title",
-                                "date": "Published Date",
-                                "rand": "Random",
-                                "menu_order": "Manual (Menu Order)"
-                            },
-                            "default_value": {
-                                "date": "date"
-                            },
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559c0089a28e7",
-                            "label": "Columns",
-                            "name": "columns",
-                            "type": "select",
-                            "instructions": "How many columns of posts would you like to display?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "two": "Two",
-                                "three": "Three",
-                                "four": "Four",
-                                "five": "Five",
-                                "six": "Six"
-                            },
-                            "default_value": {
-                                "four": "four"
-                            },
-                            "allow_null": 1,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559c0714ce324",
-                            "label": "Show Meta Information for Posts?",
-                            "name": "show_meta",
-                            "type": "true_false",
-                            "instructions": "Would you like to display the post date, category, and tags for the posts? (Post meta will not show for five or six columns due to lack of space.)",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 1,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_559c092c00e41",
-                            "label": "Number of posts to display?",
-                            "name": "number_of_posts_to_display",
-                            "type": "number",
-                            "instructions": "Select how many posts you'd like to display",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": 10,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "min": 1,
-                            "max": 100,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_559c080000e3e",
-                            "label": "Display view more button?",
-                            "name": "view_more_btn",
-                            "type": "true_false",
-                            "instructions": "Display a \"view more\" button",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 1,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_559c07ff00e3d",
-                            "label": "View More Button Link",
-                            "name": "view_more_button_link",
-                            "type": "text",
-                            "instructions": "Enter the link to your posts page",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559c080000e3e",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_559bfb81c8589",
-                            "label": "Custom Background",
-                            "name": "custom_background",
-                            "type": "radio",
-                            "instructions": "Select a background image, color, or pattern",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "none": "None",
-                                "image": "Image",
-                                "color": "Color",
-                                "pattern": "Background Pattern",
-                                "color_pattern": "Color & Pattern"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "none",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559bfb81c858a",
-                            "label": "Background Color",
-                            "name": "background_color",
-                            "type": "color_picker",
-                            "instructions": "Select background color",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "color"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#121212"
-                        },
-                        {
-                            "key": "field_559bfb81c858b",
-                            "label": "Background Image",
-                            "name": "background_image",
-                            "type": "image",
-                            "instructions": "Recommended minimum 2000 pixels wide",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "full",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "jpg, png, gif"
-                        },
-                        {
-                            "key": "field_559bfb81c858c",
-                            "label": "Background Image Parallax",
-                            "name": "background_image_parallax",
-                            "type": "radio",
-                            "instructions": "Show the background image with a parallax effect.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "yes": "Yes",
-                                "no": "No"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "no",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559bfb81c858d",
-                            "label": "Background Pattern",
-                            "name": "background_pattern",
-                            "type": "image",
-                            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_559bfb81c858e",
-                            "label": "Background Pattern Repeat",
-                            "name": "background_pattern_repeat",
-                            "type": "radio",
-                            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_559bfb81c8589",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "repeat-y": "Repeat Vertically",
-                                "repeat-x": "Repeat Horizontally",
-                                "repeat": "Repeat Both"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "repeat",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_559bfb81c858f",
-                            "label": "Custom Class",
-                            "name": "custom_class",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
+                "55884d02056b2": {
                     "key": "55884d02056b2",
                     "name": "masonry_projects",
-                    "label": "Masonry Projects",
+                    "label": "Projects Masonry",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -4744,11 +4741,11 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55885444c2ee1": {
                     "key": "55885444c2ee1",
                     "name": "events_listing",
                     "label": "Events Listing",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55885444c2ee2",
@@ -4759,7 +4756,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -4767,9 +4764,7 @@
                             "placeholder": "Enter the title to be displayed above the events listing",
                             "prepend": "",
                             "append": "",
-                            "maxlength": 75,
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": 75
                         },
                         {
                             "key": "field_5588545ac2eee",
@@ -4780,7 +4775,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -4788,9 +4783,7 @@
                             "placeholder": "Enter the sub title to be displayed below the main title",
                             "prepend": "",
                             "append": "",
-                            "maxlength": 200,
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": 200
                         },
                         {
                             "key": "field_558854d4c2ef1",
@@ -4802,18 +4795,18 @@
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "",
+                                "class": "acf-image-select-3",
                                 "id": ""
                             },
                             "choices": {
-                                "basic": "Basic listing with no images",
-                                "big": "Big listing with images hyperlinked to detail pages"
+                                "big": "<p>Featured Images & Listing<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/event-big-listing-3.png\" alt=\"Listing with featured images to left of all event info with buttons\">",
+                                "basic": "<p>Basic Listing<\/p><img src=\"https:\/\/www.covertnine.com\/wp-content\/uploads\/2017\/06\/event-listing.png\" alt=\"Basic Listing with event headliners and subheadings\">"
                             },
+                            "allow_null": 0,
                             "other_choice": 0,
                             "save_other_choice": 0,
-                            "default_value": "basic",
-                            "layout": "vertical",
-                            "allow_null": 0,
+                            "default_value": "big",
+                            "layout": "horizontal",
                             "return_format": "value"
                         },
                         {
@@ -5155,320 +5148,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
-                    "key": "55884e32724dc",
-                    "name": "contact_form",
-                    "label": "Contact Form",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_55884e32724dd",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Input title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the title to be displayed above the contact form",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 75,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_55884e45724e9",
-                            "label": "Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Input a sub title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the subtitle to be displayed above the contact form",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 144,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_55887142bb78b",
-                            "label": "Select Contact Form",
-                            "name": "select_contact_form",
-                            "type": "cf7",
-                            "instructions": "Select which contact form you'd like to display.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "disable": [
-                                0
-                            ]
-                        },
-                        {
-                            "key": "field_55884e32724e2",
-                            "label": "Custom Background",
-                            "name": "custom_background",
-                            "type": "radio",
-                            "instructions": "Select a background image, color, or pattern",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "none": "None",
-                                "image": "Image",
-                                "color": "Color",
-                                "pattern": "Background Pattern",
-                                "color_pattern": "Color & Pattern"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "none",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_55884e32724e3",
-                            "label": "Background Color",
-                            "name": "background_color",
-                            "type": "color_picker",
-                            "instructions": "Select background color",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "color"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#121212"
-                        },
-                        {
-                            "key": "field_55884e32724e4",
-                            "label": "Background Image",
-                            "name": "background_image",
-                            "type": "image",
-                            "instructions": "Recommended minimum 2000 pixels wide",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "full",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "jpg, png, gif"
-                        },
-                        {
-                            "key": "field_55884e32724e5",
-                            "label": "Background Image Parallax",
-                            "name": "background_image_parallax",
-                            "type": "radio",
-                            "instructions": "Show the background image with a parallax effect.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "yes": "Yes",
-                                "no": "No"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "no",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_55884e32724e6",
-                            "label": "Background Pattern",
-                            "name": "background_pattern",
-                            "type": "image",
-                            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_55884e32724e7",
-                            "label": "Background Pattern Repeat",
-                            "name": "background_pattern_repeat",
-                            "type": "radio",
-                            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "pattern"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_55884e32724e2",
-                                        "operator": "==",
-                                        "value": "color_pattern"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "repeat-y": "Repeat Vertically",
-                                "repeat-x": "Repeat Horizontally",
-                                "repeat": "Repeat Both"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "repeat",
-                            "layout": "horizontal",
-                            "allow_null": 0,
-                            "return_format": "value"
-                        },
-                        {
-                            "key": "field_55884e32724e8",
-                            "label": "Custom Class",
-                            "name": "custom_class",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
+                "5596e564ca836": {
                     "key": "5596e564ca836",
                     "name": "woocommerce_products_grid",
                     "label": "WooCommerce Products Grid",
@@ -5927,7 +5607,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55a844866829c": {
                     "key": "55a844866829c",
                     "name": "woocommerce_products_slider",
                     "label": "WooCommerce Products Carousel",
@@ -6386,7 +6066,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55884ee3724eb": {
                     "key": "55884ee3724eb",
                     "name": "custom_code",
                     "label": "Custom Code",
@@ -6438,7 +6118,10 @@
                     "min": "",
                     "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Section Layout",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -6470,5 +6153,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1496720032
+    "modified": 1498423737
 }
