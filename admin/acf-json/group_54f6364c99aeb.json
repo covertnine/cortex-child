@@ -212,7 +212,7 @@
                             "tabs": "all",
                             "toolbar": "full",
                             "media_upload": 1,
-                            "delay": 1
+                            "delay": 0
                         },
                         {
                             "key": "field_5594497eda1d4",
@@ -419,7 +419,7 @@
                             "tabs": "all",
                             "toolbar": "full",
                             "media_upload": 1,
-                            "delay": 1
+                            "delay": 0
                         },
                         {
                             "key": "field_55945238b7fb6",
@@ -1023,7 +1023,7 @@
                             "tabs": "all",
                             "toolbar": "full",
                             "media_upload": 1,
-                            "delay": 1
+                            "delay": 0
                         },
                         {
                             "key": "field_555a224ca725d",
@@ -1254,6 +1254,34 @@
                             "return_format": "value"
                         },
                         {
+                            "key": "field_598140ce5f74e",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "radio",
+                            "instructions": "Select the amount of padding you'd like the section to have on the top and bottom of the content.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "acf-image-select select6",
+                                "id": ""
+                            },
+                            "choices": {
+                                "pad0": "<p>None<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-0px.png\">",
+                                "pad25": "<p>Small<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-25px.png\">",
+                                "pad50": "<p>Medium<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-50px.png\">",
+                                "pad75": "<p>Large<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-75px.png\">",
+                                "pad100": "<p>XL<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-100px.png\">",
+                                "pad150": "<p>2XL<\/p><img src=\"\/\/www.covertnine.com\/wp-content\/uploads\/2017\/08\/section-spacing-settings-150px.png\">"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "pad50",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
                             "key": "field_54f8bfc2161d8",
                             "label": "Custom Class",
                             "name": "custom_class",
@@ -1282,7 +1310,7 @@
                     "key": "559ec1649a48d",
                     "name": "full_width_image",
                     "label": "Full Width Image",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_559ec1649a48e",
@@ -1337,7 +1365,7 @@
                             "label": "Content",
                             "name": "content",
                             "type": "wysiwyg",
-                            "instructions": "Enter any content you'd like to display over the image",
+                            "instructions": "Enter any content you'd like to display over the full width image. Content will be vertically centered over the image with around 200px of padding on the top and bottom to accommodate the image. If you need more space to show more of the full width image, adjust the section padding in the option below, or insert a spacer short code using the editor buttons below.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1371,6 +1399,27 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_5983b8a8e563a",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
                             "key": "field_559ec22d9a496",
                             "label": "Custom Class",
                             "name": "custom_class",
@@ -1399,7 +1448,7 @@
                     "key": "54f645751e7f5",
                     "name": "full_page_slider",
                     "label": "Slider Revolution",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_54f88c6be3e80",
@@ -1793,11 +1842,11 @@
                             "label": "Heading",
                             "name": "title",
                             "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "instructions": "Optional field for a title above your posts",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1805,20 +1854,18 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         },
                         {
                             "key": "field_55109c2bf51d3",
                             "label": "Sub Heading",
                             "name": "sub_title",
                             "type": "text",
-                            "instructions": "Optional field for a subtitle which will show up below the main title",
+                            "instructions": "Optional field for a sub title below the heading",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1826,9 +1873,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         },
                         {
                             "key": "field_57bb23e4aea46",
@@ -2099,7 +2144,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -2121,19 +2166,18 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "post_format",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "load_save_terms": 1,
-                            "return_format": "id",
-                            "multiple": 0,
                             "add_term": 1,
+                            "save_terms": 1,
                             "load_terms": 0,
-                            "save_terms": 1
+                            "return_format": "id",
+                            "multiple": 0
                         },
                         {
                             "key": "field_559c095c00e42",
@@ -2144,7 +2188,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -2153,26 +2197,24 @@
                             "prepend": "",
                             "append": "",
                             "min": 1,
-                            "max": 100,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "max": 50,
+                            "step": 1
                         },
                         {
                             "key": "field_559c089e00e40",
                             "label": "Display view more button?",
                             "name": "view_more_btn",
                             "type": "true_false",
-                            "instructions": "Display a \"view more\" button",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "message": "",
-                            "default_value": 1,
+                            "default_value": 0,
                             "ui": 0,
                             "ui_on_text": "",
                             "ui_off_text": ""
@@ -2207,6 +2249,27 @@
                             "disabled": 0
                         },
                         {
+                            "key": "field_598a82bcf8aa8",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
                             "key": "field_54f911b85d26d",
                             "label": "Custom Class",
                             "name": "custom_class",
@@ -2235,7 +2298,7 @@
                     "key": "55a95e449c1d3",
                     "name": "blog_latest_slider",
                     "label": "Blog Posts Slider",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55a95e449c1d4",
@@ -2613,18 +2676,18 @@
                     "key": "559c1f74e3cf7",
                     "name": "magazine_latest",
                     "label": "Blog Posts Grid",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_559c1f74e3cf8",
                             "label": "Heading",
                             "name": "title",
                             "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
+                            "instructions": "Optional field for a title which will show up as a main heading",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -2632,9 +2695,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         },
                         {
                             "key": "field_559c1f74e3cf9",
@@ -2645,7 +2706,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -2653,9 +2714,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         },
                         {
                             "key": "field_559c1f74e3cfa",
@@ -2841,7 +2900,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -2860,7 +2919,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -2879,7 +2938,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -2959,19 +3018,18 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "category",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "load_save_terms": 1,
-                            "return_format": "id",
-                            "multiple": 0,
                             "add_term": 1,
+                            "save_terms": 1,
                             "load_terms": 0,
-                            "save_terms": 1
+                            "return_format": "id",
+                            "multiple": 0
                         },
                         {
                             "key": "field_559c1f74e3d01",
@@ -2982,19 +3040,18 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "post_format",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "load_save_terms": 1,
-                            "return_format": "id",
-                            "multiple": 0,
                             "add_term": 1,
+                            "save_terms": 1,
                             "load_terms": 0,
-                            "save_terms": 1
+                            "return_format": "id",
+                            "multiple": 0
                         },
                         {
                             "key": "field_559c1f74e3d02",
@@ -3024,7 +3081,7 @@
                             "label": "Display view more button?",
                             "name": "view_more_btn",
                             "type": "true_false",
-                            "instructions": "Display a \"view more\" button",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3066,6 +3123,27 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_598509685d579",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_559c1f74e3d05",
@@ -4234,7 +4312,7 @@
                     "key": "559d83f9ed5d9",
                     "name": "magazine_latest_featured",
                     "label": "Blog Posts Recent Featured",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_559d83f9ed5da",
@@ -4740,7 +4818,7 @@
                     "key": "55079a42fb1f3",
                     "name": "masonry_portfolio",
                     "label": "Portfolios Masonry",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_550851089564f",
@@ -5122,7 +5200,7 @@
                     "key": "55884d02056b2",
                     "name": "masonry_projects",
                     "label": "Projects Masonry",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55884d02056b3",
@@ -5959,7 +6037,7 @@
                     "key": "5596e564ca836",
                     "name": "woocommerce_products_grid",
                     "label": "WooCommerce Products Grid",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5596e6faca83a",
@@ -6418,7 +6496,7 @@
                     "key": "55a844866829c",
                     "name": "woocommerce_products_slider",
                     "label": "WooCommerce Products Carousel",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55a844866829d",
@@ -6877,7 +6955,7 @@
                     "key": "55884ee3724eb",
                     "name": "custom_code",
                     "label": "Custom Code",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_558872787841d",
@@ -6960,5 +7038,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1502749838
+    "modified": 1502249791
 }
