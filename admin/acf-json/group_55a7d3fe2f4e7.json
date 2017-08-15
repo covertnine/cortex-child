@@ -35,7 +35,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "<p>Enter content here<\/p>",
+                            "default_value": "<p>Enter content and shortcodes here<\/p>",
                             "tabs": "all",
                             "toolbar": "full",
                             "media_upload": 1,
@@ -1646,5 +1646,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1498424214
+    "modified": 1501472855
 }
