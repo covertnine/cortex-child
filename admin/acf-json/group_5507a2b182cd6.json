@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_568429f97d999",
-            "label": "Change Navigation Type",
+            "label": "Change Header Navigation Background",
             "name": "navigation_type_override",
             "type": "radio",
             "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
@@ -20,36 +20,11 @@
                 "nav1": "Transparent Background",
                 "nav2": "Opaque Background"
             },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "default",
-            "layout": "vertical",
             "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_56d88875a003d",
-            "label": "Enable Header Overlay",
-            "name": "enable_overlay",
-            "type": "radio",
-            "instructions": "Cortex displays an overlay over featured images in headers to make the heading text easier to read. You can enable or disable this if your heading\/title text is readable over your featured image without the need for a semi-transparent overlay. Default is to display the overlay if a featured image is set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "default": "Default",
-                "dark-overlay": "Enable",
-                "no-overlay": "Disable"
-            },
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "default",
             "layout": "horizontal",
-            "allow_null": 0,
             "return_format": "value"
         },
         {
@@ -61,7 +36,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -69,20 +44,18 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_5507a36a80f0f",
             "label": "Sub Heading",
             "name": "sub_heading",
             "type": "text",
-            "instructions": "Enter secondary heading (goes above main headline on homepage)",
+            "instructions": "Enter secondary heading (goes above heading)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -90,20 +63,18 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_56d888c9a003e",
             "label": "Heading Font Color",
             "name": "heading_font_color",
             "type": "radio",
-            "instructions": "Select the heading color for the post or page, if your featured image is dark, you'll want a light heading. If your featured image is lighter, you'll want a dark heading.",
+            "instructions": "If your featured image is darker in tone, you'll want a light color for your heading text so it is readable. If your featured image is lighter in tone, you'll want a dark heading.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -112,42 +83,36 @@
                 "light-color-text": "Light Heading",
                 "dark-color-text": "Dark Heading"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "default",
             "layout": "horizontal",
-            "allow_null": 0,
             "return_format": "value"
         },
         {
-            "key": "field_5507a39780f10",
-            "label": "Masonry Width",
-            "name": "masonry_width",
-            "type": "select",
-            "instructions": "Select the width of the Featured Image that will be showing up on the homepage and elsewhere. (How wide do you want it's tile to be?)",
-            "required": 1,
+            "key": "field_56d88875a003d",
+            "label": "Enable Background Featured Image Overlay",
+            "name": "enable_overlay",
+            "type": "radio",
+            "instructions": "By default, Cortex displays a semi transparent overlay on top of background featured images so that the heading and subheading text are readable. You can disable this overlay below.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "cm25": "25%",
-                "cm50": "50%",
-                "cm75": "75%",
-                "cm100": "100%"
-            },
-            "default_value": {
-                "cm25": "25%"
+                "default": "Default",
+                "dark-overlay": "Enable",
+                "no-overlay": "Disable"
             },
             "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
             "return_format": "value"
         },
         {
@@ -179,7 +144,7 @@
             "label": "Gallery Type",
             "name": "gallery_type",
             "type": "select",
-            "instructions": "Select how you'd like the stand alone portfolio page laid out.",
+            "instructions": "Select your preferred layout for the imagery on the portfolio single post.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -202,17 +167,44 @@
                 "inline": "Inline Boxed Full Width Images",
                 "inline-text": "Inline Boxed Full Width Images with captions below"
             },
-            "default_value": {
-                "": ""
-            },
+            "default_value": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
-            "ajax": 1,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5507a39780f10",
+            "label": "Masonry Portfolios Tile Width",
+            "name": "masonry_width",
+            "type": "select",
+            "instructions": "If you plan on displaying the masonry portfolio layout somewhere on your website, you will have to select the width of the featured image that will be used for this particular portfolio. (How wide do you want the featured image to be on the masonry layout?)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cm25": "25%",
+                "cm50": "50%",
+                "cm75": "75%",
+                "cm100": "100%"
+            },
+            "default_value": [
+                "25%"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_557d05740fc51",
@@ -227,6 +219,11 @@
                         "field": "field_5518500d279e7",
                         "operator": "==",
                         "value": "masonry"
+                    },
+                    {
+                        "field": "field_5507a49080f11",
+                        "operator": "==",
+                        "value": "stand-alone"
                     }
                 ],
                 [
@@ -234,6 +231,11 @@
                         "field": "field_5518500d279e7",
                         "operator": "==",
                         "value": "grid"
+                    },
+                    {
+                        "field": "field_5507a49080f11",
+                        "operator": "==",
+                        "value": "stand-alone"
                     }
                 ]
             ],
@@ -249,17 +251,15 @@
                 "five": "Five",
                 "six": "Six"
             },
-            "default_value": {
-                "four": "four"
-            },
+            "default_value": [
+                "four"
+            ],
             "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_5507a5a51df67",
@@ -300,7 +300,7 @@
     "menu_order": 0,
     "position": "acf_after_title",
     "style": "default",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
         "discussion",
@@ -310,5 +310,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1496510210
+    "modified": 1501294538
 }

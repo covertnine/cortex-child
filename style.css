@@ -11,3 +11,1056 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cortex
 Tags: responsive, css3, html5, bootstrap, responsive-layout, featured-images, rtl-language-support, two-columns, three-columns, dark, light
 */
+/*--------------------------------------------------------------
+0.0 Special Styles
+----------------------------------------------------------------*/
+/* To get the section background on sponsor benefits to extend well into additional benefits -- Sam */
+#section-4.sponsor-benefits .section-bg {
+	padding-bottom: 25rem;
+	margin-bottom: -31rem;
+}
+
+/*--------------------------------------------------------------
+1.0 Body & Global Definitions
+----------------------------------------------------------------*/
+body {
+}
+h1, .h1 {
+	font-size: 8rem;
+	letter-spacing: 1px;
+}
+h2, .h2 {
+	font-size: 4.8rem;
+	letter-spacing: 1px;
+}
+h3 {
+	font-size: 4.3rem;
+	line-height: 5rem;
+}
+h5 {
+	margin-top: 0;
+}
+.entry-content h2, 
+.entry-content .h2,
+.entry-content h3 {
+	font-size: 6rem;
+	letter-spacing: 1px;
+}  
+.entry-content h5,
+.entry-content h6,
+.entry-content .h5,
+.entry-content .h6 {
+	font-size: 2.2rem;
+	margin-top: 0;
+}
+p, .entry-content p {
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+blockquote {
+	border-left: none;
+	margin: 0;
+	padding: 0;
+}
+blockquote:before {
+	content: "";
+}
+blockquote p:before {
+	display: inline-block;
+    content: "\f10d";
+    font-family: FontAwesome;
+    right: 10px;
+    left: 10px;
+    margin-right: .8rem;
+}
+blockquote p:last-child:after {
+	display: inline-block;
+    content: "\f10e";
+    font-family: FontAwesome;
+    right: 10px;
+    left: 10px;
+    margin-left: .8rem;
+}
+.full_width_image {
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	color: white;
+}
+.hero-sub-title {
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	color: white;
+	font-weight: 200;
+}
+.light {
+	font-weight: 200;
+}
+.extra-light {
+	font-weight: 100;
+}
+.btn, .btn-sm, .btn-md, .btn-default, .btn-lg, .button, input[type="submit"], .btn-primary {
+	font-weight: 900;
+	text-shadow: none !important;
+	letter-spacing: .45;
+}
+.btn-primary {
+	background-color: #15c232;
+}
+.entry-content p a.btn-primary:hover {
+	background-color: black;
+	color: white;
+}
+input[type="text"] {
+	color: black;
+}
+@media (max-width: 767px) { 
+	.entry-content h2, 
+	.entry-content .h2,
+	.entry-content h3 {
+		font-size: 3rem;
+		letter-spacing: .5px;
+	}  
+	.entry-content h5,
+	.entry-content h6,
+	.entry-content .h5,
+	.entry-content .h6 {
+		font-size: 1.1rem;
+	}
+	p, .entry-content p {
+		font-size: .9rem;
+		line-height: 2rem;
+	}
+ }
+/*--------------------------------------------------------------
+1.05 Header and Nav Code
+----------------------------------------------------------------*/
+#menu-header-menu li a {
+	font-weight: 700;
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+}
+
+#menu-header-menu .donate-menu {
+	background: #15c232;
+}
+
+#menu-header-menu .donate-menu a {
+	color: white;
+}
+
+.nav-contain .container {
+  overflow: hidden;
+}
+
+.logo-header {
+  height: 100%;
+}
+/* Header Media Queries */
+@media (max-width: 767px) {
+	 #navbar-collapse-1 {
+		background: white;
+		border-top: 3px solid #15c232;
+		margin-bottom: 3px;
+	}
+	#navbar-collapse-1 ul {
+		margin-bottom: 3px;
+	}
+	/*.navbar-default .container .in ul li.donate-menu {
+	background: #15c232;
+}*/
+}
+@media (min-width: 768px) { 
+	.navbar-header {
+    height: 200px;
+}
+}
+@media (min-width: 992px) { 
+  #logo img {
+	  height: 100%;
+	  position: absolute;
+	  top: -20px;
+	}
+ #menu-header-menu li {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.navbar-small .navbar-bg-solid {
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
+	box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
+}
+}
+/*--------------------------------------------------------------
+1.06 Footer Code
+----------------------------------------------------------------*/
+/* Start Footer-top/Contact Section */
+#footer-top:before {
+	content: url("/wp-content/uploads/2017/08/chicago-skyline.png");
+	position: absolute;
+	bottom: 15rem;
+	right: 7rem;
+}
+#footer-top {
+/*	z-index: -1;
+*/	position: relative;
+	background: #d1d1d1;
+	height: 200px;
+}
+#footer-top aside:first-child {
+	top: -20px;
+}
+#footer-top aside .textwidget {
+	text-align: left;
+}
+#footer-top .footer-tree {
+	float: left;
+	margin-right: 1rem;
+}
+#footer-top .text-wrapper {
+	padding-top: 8rem;
+}
+#footer-top .text-wrapper:before {
+	content: url("/wp-content/uploads/2017/08/subscribe-tree.png");
+	float: left;
+	margin-top: -8rem;
+	margin-right: .5rem;
+}
+#footer-top aside .first-word {
+	font-size: 5rem;
+	line-height: 5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-top: 3rem;
+}
+#footer-top aside .second-word {
+	color: #00783f;
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+#footer-top #custom_html-3 {
+	width: 50%;
+	float: left;
+}
+#footer-top #widget_cortex_mailchimp-2 {
+	margin-top: 3.5rem;
+	width: 50%;
+	float: right;
+}
+.c9-footer-full-width .widget-cortex-mailchimp form {
+	float: right;
+	position: relative;
+	height: auto;
+	display: block;
+}
+/* First Name Field */
+.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(1) {
+	width: 49%;
+	float: left;
+}
+/* Last Name Field */
+.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(2) {
+	width: 49%;
+	float: right;
+}
+/* Email Field */
+.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex {
+	width: 70%;
+	float: left;
+}
+.input__field--cortex {
+	background: #fff;
+}
+#footer-top .input_field {
+	text-decoration: none;
+	height: 200px;
+	color: #d1d1d1;
+}
+#footer-top .c9-footer-full-width .widget-cortex-mailchimp .input--cortex {
+	margin: 0;
+	max-width: 100%;
+}
+#footer-top .c9-footer-full-width .widget-cortex-mailchimp form .button {
+	margin-top: 8px;
+	float: right;
+	width: 28%;
+}
+#footer-top .input__label--cortex {
+	margin-left: 20px;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 1px;
+	color: #3f3e3e;
+	position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(99%);
+    text-align: left;
+    pointer-events: none;
+}
+#footer-top form label span {
+	margin-left: 1rem;
+}
+#footer-top .input__label--cortex:before {
+	border-bottom: none;
+}
+#footer-top .input__label--cortex:after {
+	border-bottom: none;
+}
+
+#footer-top .input__field--cortex:focus + .input__label--cortex .input__label-content--cortex {
+	animation: none;
+	display: none;
+}
+#footer-top .input__field--cortex:not(:focus) + .input__label--cortex .input__label-content--cortex {
+	display: none;
+}
+
+#footer-top .input__field--cortex:invalid + .input__label--cortex .input__label-content--cortex {
+	display: none;
+}
+/* End Footer-top/Contact Section */
+/* Start Footer-bottom */
+#footer-bottom {
+	padding-top: 30px;
+}
+#footer-bottom .widget_cortex_subscribe_widget ul li a:before {
+	opacity: 1;
+}
+#footer-bottom {
+	color: white;
+}
+#footer-bottom a {
+	color: white;
+	font-weight: 100;
+}
+#footer-bottom a:after {
+	color: white;
+}
+#footer-bottom .btn {
+	font-weight: 700;
+	letter-spacing: .25px;
+}
+#footer-bottom h3 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: white;
+	letter-spacing: 1px;
+}
+#footer-a ul {
+	margin-top: 0;
+}
+#footer-a li {
+	line-height: 2.8rem;
+	font-weight: 500;
+	text-transform: none;
+}
+#footer-a li a {
+	text-transform: none;
+}
+#footer-a li a:before {
+	margin-right: 10px;
+	content: "\f18e";
+	font-family: FontAwesome;
+}
+#footer-b aside {
+	width: 100%;
+}
+#footer-b .textwidget > p {
+	margin-bottom: 1rem;
+}
+#footer-b .btn {
+	padding-top: 7px;
+	margin-bottom: 5px;
+}
+#footer-c a {
+	font-weight: 300;
+	text-transform: none;
+}
+#footer-d aside ul {
+	width: 80%;
+}
+#footer-d ul {
+	display: flex;
+	justify-content: space-between;
+}
+/* End Footer Bottom */
+/* Start Copyright Section */
+#colophon {
+	background: white;
+}
+#colophon .site-title {
+	float: left;
+}
+#colophon .site-title h3 {
+	margin-top: 0;
+	float: left;
+	color: #0D7A41;
+	font-weight: 900;
+}
+#colophon p {
+	float: right;
+	display: inline;
+	font-size: .8rem;
+	font-weight: 100;
+	color: rgb(21,20,20);
+	line-height: 1.5rem;
+	vertical-align: bottom;
+	margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+	#footer-bottom {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#footer-d aside ul {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+@media (min-width: 992px) {
+	#footer-top #custom_html-3 {
+		margin-top: -4rem;
+		}
+	#colophon br {
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	#footer-top .text-wrapper:before {
+		display: none;
+	}
+	#colophon .site-title h3 {
+		margin-top: .5rem;
+		line-height: 2rem;
+		margin-bottom: 0;
+	}
+	.site-info {
+		float: left;
+		clear: both;
+		margin-top: 0;
+	}
+}
+/* End Copyright Section */
+/*--------------------------------------------------------------
+1.1 Home Page Code
+----------------------------------------------------------------*/
+
+/* Start CGG TopSlider Section */
+.mfp-iframe-holder .mfp-close {
+	right: 0;
+}
+.cgg-topslider h1 {
+	margin-top: 50px;
+	margin-bottom: 0;
+}
+.cgg-topslider h3 {
+	margin-top: 0;
+}
+.cgg-topslider h5 {
+	text-transform: none;
+	margin: 0;
+}
+.cgg-topslider .tp-revslider-mainul .slotholder:after {
+	background-color: rgba(0,0,0,0);
+}
+/* End CGG TopSlider Section */
+
+/* Start CGG Mission Section */
+.cgg-mission .well {
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(63,62,62,0.62);
+	-moz-box-shadow: 0px 3px 6px 0px rgba(63,62,62,0.62);
+	box-shadow: 0px 3px 6px 0px rgba(63,62,62,0.62);
+	background-color: white;
+}
+
+.cgg-mission .well .h3 {
+	font-weight: 400;
+}
+.cgg-mission .well p {
+	font-weight: 100;
+	font-size: 2.2rem;
+}
+.cgg-mission .wow {
+	margin-bottom: 0;
+}
+.site-main section.cgg-mission .container {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: -50px;
+}
+.content-area.page-builder .site-main section.cgg-mission .container {
+	padding: 0;
+}
+@media (min-width: 768px) { 
+	.cgg-mission .well {
+	padding: 4rem 9rem;
+}
+}
+/* End CGG Mission Section */
+
+/* Start CGG CTAs Section */
+.cgg-ctas h3 {
+	font-size: 4rem;
+}
+.cgg-ctas h3,
+.cgg-ctas h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-shadow: none;
+	margin-top: 0;
+	text-align: left;
+}
+.cgg-ctas h6 {
+	margin-top: 1rem;
+	letter-spacing: .45px;
+	font-size: 1.2rem;
+	font-weight: 900;
+	text-shadow: none;
+}
+.cgg-ctas div[class*="col"] h3 .light {
+	font-weight: 300;
+}
+/* these are autop tags that wordpress adds, the small text are h6's */
+.cgg-ctas .entry-content p {
+	margin-bottom: 0;
+}
+.cgg-ctas .row:first-child {
+	margin-bottom: 5rem;
+}
+.cgg-ctas .row:first-child div[class*="col"] img{
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.cgg-ctas .slide-img::before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(64,67,68,0.3);
+}
+/* End CGG CTAs Section */
+
+/* Begin Community Benefits Section */
+.community-benefits .h2 {
+	font-size: 7.4rem;
+}
+.community-benefits .h4 {
+	font-size: 3.7rem;
+	letter-spacing: 1px;
+}
+.community-benefits h3 {
+	display: inline;
+	text-align: left;
+}
+.community-benefits .dark-overlay:after {
+	opacity: .2;
+}
+/* End Community Benefits Section */
+
+/* Start Front Page Gardens Section */
+.front-page-gardens article {
+	background: #ececec;
+}
+.front-page-gardens article .entry-header {
+	text-align: center;
+}
+.front-page-gardens article .entry-header {
+	letter-spacing: 1px;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	color: #4e4d4d;
+}
+.front-page-gardens .entry-title {
+	margin-bottom: 0;
+	font-size: 2.3rem;
+	line-height: 3rem;
+	letter-spacing: 1px;
+}
+.front-page-gardens .magazine-article-content {
+	padding-bottom: 2rem;
+	text-align: center;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #4e4d4d;
+}
+.front-page-gardens article .magazine-article-header {
+}
+/* End Front Page Gardens Section */
+
+/* Start Sponsor Carousel Section */
+.sponsor-slider .flexcarousel {
+	position: relative;
+}
+.flex-control-nav {
+	bottom: -4rem;
+}
+.sponsor-slider .flex-direction-nav li a {
+	opacity: 1;
+}
+.sponsor-slider .flex-direction-nav li a:before {
+	color: #0d7b43;
+	text-shadow: none;
+}
+.sponsor-slider h2 {
+	font-size: 5.6rem;
+	font-weight: 300;
+	color: #555454;
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 7rem;
+	letter-spacing: 1px;
+}
+.sponsor-slider .flexslider {
+	margin-bottom: 10rem;
+	margin-top: 5rem;
+}
+.sponsor-slider .section-bg {
+	background-position: 80% 0;
+}
+.flexcarousel {
+	width: 80%;
+	margin: 5rem auto 10rem auto;
+}
+/* End Sponsor Carousel Section */
+
+h1.gateway-green {
+	margin-top: 0;
+}
+
+#secondary-top {
+	width: 92%;
+	margin: 0 auto;
+}
+
+.c9-footer-full-width .widget-cortex-mailchimp h3 {
+	float: left;
+}
+.c9-footer-full-width .widget-cortex-mailchimp h3:before {
+	content: "";
+}
+
+@media (min-width: 576px) {
+ }
+/*--------------------------------------------------------------
+1.1 Expressway Partnershp Program
+----------------------------------------------------------------*/
+/* expressway partnership impact section */
+.expressway-partnership-header .entry-content h1 {
+	font-weight: 500;
+	font-size: 8rem;
+	line-height: 9rem;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	width: 80%;
+	margin: 0 auto;
+}
+
+.express-partnership-impact .row div:first-child blockquote {
+	width: 80%;
+}
+.express-partnership-impact .row div:first-child blockquote p {
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+	letter-spacing: -1px;
+}
+.express-partnership-impact .row div:first-child {
+	padding-right: 15%;
+}
+.express-partnership-impact .row div:first-child p {
+	font-size: 1.6rem;
+	line-height: 3rem;
+	font-weight: 300;
+}
+.express-partnership-impact .row div:last-child p {
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	text-align: center;
+}
+.express-partnership-impact .row div:last-child h5,
+.express-partnership-impact .row div:last-child .h5
+{
+	margin-top: 0;
+	font-size: 1.8rem;
+	font-weight: 100;
+	line-height: 2.3rem;
+} 
+.express-partnership-impact .row div:last-child h5 span {
+	margin-top: 0;
+}
+.express-partnership-impact .row div:last-child a {
+	text-decoration: none;
+}
+.express-partnership-impact .row div:last-child a:hover {
+	text-decoration: none;
+}
+
+.express-partnership-impact .row div:last-child .fa {
+	text-decoration: none;
+	color: #15c232;
+	font-size: 2.6rem;
+	line-height: 4.5rem;
+	margin-right: 1rem;
+}
+.content-area.page-builder .site-main section.express-partnership-impact .pad50 {
+	padding-bottom: 4rem;
+}
+/* Express Partnership Impact End */
+/* US Forest Study Start */
+.us-forest-service-study-blurb h3,
+.us-forest-service-study-blurb h4 {
+    font-size: 3.6rem;
+    letter-spacing: -1px;
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+	margin-top: 0;
+}
+.us-forest-service-study-blurb h4 span {
+	font-size: 3.6rem;
+	margin-top: 0;
+}
+.us-forest-service-study-blurb h3 {
+	margin-bottom: .5rem;
+	line-height: 4.4rem;
+	font-weight: 500;
+	text-transform: none;
+}
+/* US Forest Study End */
+/* Begin Community and Environmental Benefits */
+#section-3.community-and-environmental-benefits h3 {
+	font-size: 5rem;
+	margin-bottom: 4rem;
+}
+#section-3.community-and-environmental-benefits ul {
+	list-style-position: inside;
+    padding: 0 1em;
+}
+#section-3.community-and-environmental-benefits li {
+	font-weight: 300;
+	margin-bottom: 3rem;
+    text-indent: -.45em;
+}
+.us-forest-service-study-blurb h4 .light {
+	font-weight: 200;
+}
+
+#section-3.community-and-environmental-benefits li:before
+  {  
+	font-size: 2.2rem;
+	font-family: 'FontAwesome';
+	content: "\f299";
+	color: #15c232;
+}
+/* End Community and Environmental Benefits */
+/* Begin Sponsor Benefits */
+#section-4.sponsor-benefits .h3 {
+	font-size: 5.4rem;
+	font-weight: 300;
+}
+#section-4.sponsor-benefits .h5 {
+	margin-bottom: 5rem;
+	margin-top: 0;
+	font-size: 2.2rem;
+	font-weight: 200;
+}
+#section-4.sponsor-benefits img {
+	width: 82%;
+}
+#section-4.sponsor-benefits p {
+	font-size: 1.6rem;
+	line-height: 3rem;
+	font-weight: 200;
+}
+#section-4.sponsor-benefits p:last-child {
+	margin-bottom: 0;
+}
+#section-4.sponsor-benefits ul {
+	margin-top: 0;
+	padding-left: 1em;
+	padding-right: 0;
+}
+#section-4.sponsor-benefits li {
+	padding-left: 1rem;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+	text-indent: -.2rem;
+}
+#section-4.sponsor-benefits li:before {
+	font-size: 1em;
+	font-family: 'FontAwesome';
+	content: "\f299";
+	color: #15c232;
+}
+/* End Sponsor Benefits */
+/* Begin Additional Benefits */
+.additional-benefits .row {
+	display: flex;
+	align-items: center;
+}
+.additional-benefits .btn {
+	padding: 2rem 5rem;
+}
+.additional-benefits .row .well {
+	background: #3f3e3e;
+}
+.additional-benefits .row .well .light {
+	font-weight: 300;
+}
+.additional-benefits .row .well p {
+	font-size: 1.8rem;
+	line-height: 3rem;
+}
+.additional-benefits .row .well ul {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.additional-benefits .row .well li {
+	padding-left: 1rem;
+	font-size: 1.6rem;	
+	letter-spacing: -1px;
+}
+.additional-benefits .row .well li:before {
+	font-size: 1em;
+	font-family: 'FontAwesome';
+	content: "\f299";
+	color: white;
+}
+/* End Additional Benefits */
+/* Begin Expressway Page Garden */
+.expressway-page-gardens .btn {
+	padding: 2rem;
+	width: auto;
+	background-color: #15c232;
+}
+.expressway-page-gardens a.btn:hover {
+	background-color: black;
+	color: white;
+}
+/* End Expressway Page Gardens Grid */
+/* Begin Sponsorship Opportunities */
+.sponsorship-opportunities h3, 
+.sponsorship-opportunities .h3  {
+	font-weight: 200;
+	font-size: 5.4rem;
+	line-height: 5rem;
+	margin-bottom: 3.5rem;
+}
+.sponsorship-opportunities p {
+	margin-bottom: 0;
+}
+.sponsorship-opportunities .row p {
+	text-transform: uppercase;
+	margin-top: 1.6rem;
+	line-height: 2rem;
+	font-size: 1.9rem;
+	letter-spacing: 0;
+}
+/* End Sponsorship Opportuties */
+/* Begin Partner Sponsors */
+.partner-sponsors .h2 {
+	font-size: 5.6rem;
+}
+.partner-sponsors .word-2 {
+	font-weight: 200;
+}
+/* End Partner Sponsors */
+
+/*--------------------------------------------------------------
+1.1 Expressway Partnershp Program
+----------------------------------------------------------------*/
+/* Start Green Tie Ball Hero */
+.green-tie-ball-hero .heading .hero-title {
+	font-size: 8rem;
+	color: #15c232;
+	letter-spacing: 0;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+}
+.green-tie-ball-hero .heading .hero-sub-title {
+	font-size: 5rem;
+	letter-spacing: .25px;
+	font-weight: 300;
+}
+.green-tie-ball-hero .btn {
+	margin-top: 2rem;
+}
+.green-tie-ball-hero .btn {
+	padding: 1.5rem 4rem;
+}
+/* End Green Tie Ball Hero */
+/* Start Ball Details */
+.ball-details .row {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.ball-details p {
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+}
+.ball-details .h5 {
+	font-size: 1.6rem;
+	line-height: 4.5rem;
+}
+.ball-details .h6 {
+	font-size: 1.2rem;
+	line-height: 2.1rem;
+}
+/* Middle column of three */
+.ball-details div[class*="col"]:nth-child(2) p {
+	font-size: 1.6rem;
+	line-height: 3rem;
+}
+.ball-details div[class*="col"]:last-child p {
+	text-align: center;
+}
+.ball-details div[class*="col"]:last-child h5 {
+	margin: 1.5rem auto;
+	width: 65%;
+	font-size: 1.6rem;
+	line-height: 2rem;
+}
+.ball-details div[class*="col"]:last-child .h5 {
+	font-size: 1.7rem;
+	line-height: 2.9rem;
+	letter-spacing: 1px;
+}
+.ball-details .btn {
+	background: #15c232;
+}
+.ball-details div[class*="col"]:last-child a {
+	background-image: none;
+	font-size: 2.6rem;
+	margin-right: .3rem;
+	margin-left: .3rem;
+	color: #15c232;
+}
+.ball-details div[class*="col"]:last-child .share {
+	margin-bottom: .5rem;
+}
+.ball-details div[class*="col"]:last-child a:hover {
+	color: black;
+}
+/* End Ball Details */
+/* Start Green Tie Ball Location */
+.green-tie-ball-location .content-area.page-builder .site-main section .container, .content-area.page-builder .site-main section .pad50 {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+.green-tie-ball-location h2 {
+	margin-bottom: 1rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+.green-tie-ball-location .h6 {
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+/* End Green Tie Ball Location */
+/* Start Green Tie Ball What You Missed */
+.green-tie-ball-what-you-missed .content-area.page-builder .site-main section .container, .content-area.page-builder .site-main section .pad50 {
+	padding-bottom: 9rem;
+}
+.green-tie-ball-what-you-missed .row {
+	display: flex;
+	align-items: center;
+}
+.green-tie-ball-what-you-missed h2 {
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+}
+.green-tie-ball-what-you-missed h4 {
+	font-size: 4.2rem;
+	font-weight: 900;
+	text-transform: none;
+}
+.green-tie-ball-what-you-missed h5 {
+	font-size: 2.2rem;
+	font-weight: 200;
+	text-transform: none;
+}
+.green-tie-ball-what-you-missed .btn {
+	background: #15c232;
+	padding: 1.5rem 4rem;
+}
+/* End Green Tie Ball What You Missed */
+/* Start Cgg News Posts */
+.cgg-news-posts .h5 {
+	position: absolute;
+    right: 2rem;
+    top: .2rem;
+	line-height: 1.3rem;
+	font-size: 1.2rem;
+}
+.cgg-news-posts h5.entry-title {
+	font-size: 2rem;
+	line-height: 2rem;
+	font-weight: 900;
+	letter-spacing: 0;
+}
+.cgg-news-posts .entry-image {
+	margin-bottom: 3rem;
+}
+.cgg-news-posts figure.magazine-image {
+	max-height: 150px;
+	overflow: hidden;
+}
+/* End Cgg News Posts */
+/* Start Restaurant Sponsors */
+.restaurant-sponsors .content-area.page-builder .site-main section .container, .content-area.page-builder .site-main section .pad50 {
+	padding-top: 5rem;
+}
+.restaurant-sponsors .well-md {
+	background: white;
+	border: 8px solid #3f3e3e;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 1.8rem;
+}
+.restaurant-sponsors h2 {
+	margin-bottom: 4rem;
+}
+.restaurant-sponsors .light {
+	font-weight: 300;
+}
+.restaurant-sponsors h5 {
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+.restaurant-sponsors p {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+.restaurant-sponsors p img {
+	min-height: 136px;
+	width: auto;
+}
+/* End Restaurant Sponsors */
+/* Begin CGG News Posts */
+.cgg-news-posts .view-more-btn .btn {
+	background: #15c232;
+	width: auto;
+	padding: 2rem;
+}
+.cgg-news-posts .view-more-btn .btn {
+	font-size: 1.4rem;
+	padding-right: 4rem;
+	padding-left: 4rem;
+}
+.cgg-news-posts .view-more-btn .btn:hover {
+	background: black;
+}
+/* End CGG News Posts */
+@media (min-width: 1200px) { 
+ }
+
+ @media (min-width: 1400px) { 
+ }
