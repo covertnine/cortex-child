@@ -5,9 +5,923 @@ Author: COVERT NINE
 Author URI: http://www.covertnine.com
 Description: A multi-purpose Wordpress Theme for Photographers, Agencies, Musicians, Labels, Magazines, and Music Festivals
 Template: cortex
-Version: 1.2.11
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cortex
 Tags: responsive, css3, html5, bootstrap, responsive-layout, featured-images, rtl-language-support, two-columns, three-columns, dark, light
 */
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+/* universal changes */
+/*********************************************************************************************/
+/*********************************************************************************************/
+.site-main .post-navigation,
+.event-basic .cortex-table .event-basic-cell.headline em {display: none !important;}
+.c9-loader-overlay {position: fixed;}
+
+body {
+   background: #ffffff url('/wp-content/uploads/2016/06/riot-fest-bg-1.jpg') top center no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
+}
+
+/* navigation edits */
+.header {z-index: 1010;}
+.navbar-default .navbar-collapse .nav li a {
+	margin: 0px 14px;
+}
+
+.small.subheading.h6 {display: block; margin-top: -10px;}
+.navbar-default .nav li.menu-item-has-children a:after {padding-left: 0px;}
+.navbar-default .navbar-collapse .nav li:nth-child(2) a {margin-left: 0px;}
+
+.no-js body {opacity: 1 !important;}
+
+.content-portfolio-body {background-color: #ffffff;}
+
+.alternate:after {opacity: 1;}
+
+.alternate.h1 a, .alternate.h2 a, .alternate.h3 a, .alternate.h4 a, .alternate.h5 a, .alternate.h6 a {margin: 0px 15px;}
+
+textarea, input[type="number"], .input-text, .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea, select, .woocommerce form .form-row select, .wpcf7-form input[type="text"], .wpcf7-form input[type="password"], .wpcf7-form input[type="number"], .wpcf7-form input[type="email"], .wpcf7-form input[type="tel"], .wpcf7-form select, .cortex-woocommerce .product input[type="text"], .woocommerce-page #content .shop_table tr .actions .coupon .input-text, .select2-container .select2-choice {
+	border: none;
+	border: 1px solid #aa3134;
+}
+
+.navbar-default .navbar-collapse .nav .dropdown-header {
+	text-transform: uppercase;
+	padding-left: 5px;
+	font-size: 14px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	line-height: 14px;
+	font-weight: 400;
+	color: #8d99ae;
+}
+
+.navbar-default .navbar-collapse .nav .dropdown .dropdown-menu li a {margin-left: 7px;}
+
+
+.dark-overlay:after {
+	opacity: .75;
+}
+
+.ticket-banner.full_width_image .slide-header .slide-img {
+	background-size: contain;
+	padding: 15.7% 0% 0% 0%;
+}
+
+.entry-content .row .event-location {
+	margin-bottom: 0px;
+}
+
+.entry-content .small-header h1 {margin-top: 0px;}
+.riot_subheading.subheading.h5 {
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 0px;
+	margin-bottom: 4px;
+}
+
+.home .blog_latest .entry-content {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+/* search page */
+.page-search article:last-child {margin-bottom: 0px;}
+.page-search .btn.light-color-text.cortex_the_excerpt {margin-bottom: 0px; margin-top: 15px;}
+.page-search .entry-header .entry-title.blog_latest_title,
+.page-search .entry-header .entry-title {font-size: 3.6rem;}
+.page-search .entry-header .entry-title {font-size: 2.4rem;}
+
+#social-media-icons .widget_cortex_subscribe_widget ul li a:before {color: #ffffff;}
+
+.oops-riotfest-broke-it,
+.page-search .blog-latest-header .blog_latest_title,
+.page-search .entry-header .entry-title {
+	background-color: rgba(189,30,45,1);
+	color: #fff !important;
+	padding: 20px;
+}
+
+.page-search .entry-header .entry-title:after,
+.page-search .blog-latest-header .blog_latest_title:after {
+	display: none !important;
+}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* universal font changes */
+/*********************************************************************************************/
+.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a,
+#secondary-bottom .widget_text ul li a, #menu-riot-fest-tickets li a, .btn-ticket, .riot_subheading.subheading.h5 {
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+}
+ .navbar-default .navbar-collapse .nav li a {font-weight: bold;}
+.entry-content .btn.light-color-text.cortex_the_excerpt, input[type="submit"], .event-basic .cortex-table .event-basic-cell.button_links .btn.btn-sm, .navbar-default .navbar-collapse .nav li .dropdown-menu li a, .dropdown-header {
+	font-size: 2.2rem;
+}
+
+.magazine-article .entry-content {font-size: 1.8rem; line-height: 2.8rem;}
+
+h6, .h6 {
+	font-size: 1.5rem;
+}
+
+.site-info {font: normal 11px/11px 'benchNine', helvetica, verdana !important; letter-spacing: 1px;}
+
+.navbar-default .navbar-collapse .nav li a{
+	font-size: 3.2rem;
+}
+ .nav-search a .fa {
+	 font-size: 2.8rem;
+ }
+
+.blog_latest .entry-content, .entry-content,
+.widget_cortex_upcoming_events .bg-container-sm .magazine-article-date .h6,
+.btn-sm, .btn, #submit, .woocommerce .button.add_to_cart_button, .woocommerce #content button, .entry-content  .woocommerce a.button, .woocommerce .button, .widget_search .search-submit, .woocommerce #content .button, .btn, #submit, .woocommerce .button.add_to_cart_button, .woocommerce #content button, .woocommerce a.button, .woocommerce .button, .widget_search .search-submit, .woocommerce #content .button, .woocommerce .shop_table tr td .button, .woocommerce .shipping-calculator-form .button, .woocommerce form .button, .woocommerce .form-row.place-order .button, .button.button.alt, .author-info p, .entry-content p, .entry-content div, p, .entry-content ul li {
+	font-size: 1.8rem;
+	line-height: 3.1rem;
+}
+
+.author-social li a:before {line-height: 1.8rem !important}
+.author-about .avatar {width: 100%; height: 100%; padding: 0px;}
+
+.content-single .entry-content p:last-child {margin-bottom: 0px;}
+.bg-container-sm .opener {
+	font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	letter-spacing: .1rem;
+}
+
+.entry-meta {text-transform: uppercase;}
+
+.sidebar .widget_search .search-form label, .sidebar .widget_search .search-field, .sidebar .widget_search input[type="submit"] {line-height: 1.8rem;}
+
+.secondary-font, .btn, input[type="submit"], #submit, .woocommerce .button.add_to_cart_button, .woocommerce #content button, .entry-content .btn.light-color-text.cortex_the_excerpt:visited, .entry-content .btn.light-color-text.cortex_the_excerpt, .cortex-woocommerce .woocommerce-tabs .tabs>li a, button, input[type="button"], input[type="reset"], input[type="submit"], .button.button.alt, .woocommerce div.product form.cart .button, .woocommerce #content .button, .widget_search .search-submit, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a, .navbar-default .navbar-collapse .nav li a, .tp-button, .category .masonry_posts .isotope-item .masonry_portfolio_heading, .blog_latest .blog_latest_title .subtitle, .subtitle, .project_masonry_description, .events_description, .content-area .site-main .masonry_project .isotope-item h3 .masonry_project_heading, .woocommerce .buttons .button, .woocommerce .sidebar .buttons .button, .woocommerce .sidebar .buttons .button, .woocommerce form .button, .woocommerce .buttons .button.wc-forward, .woocommerce .sidebar .button.wc-forward, .woocommerce .sidebar .button.wc-forward, .content-area .site-main .masonry_portfolio .container .isotope-item .masonry_portfolio_heading, .category .masonry_posts .isotope-item .masonry_portfolio_heading, .entry-content .nav-tabs>li a, .cortex-woocommerce .woocommerce-tabs .tabs>li a, .entry-content .nav-tabs>li a, .cortex-woocommerce .woocommerce-tabs .tabs>li a, .dropdown-header, .woocommerce #review_form #respond .form-submit #submit, .woocommerce a.button, .woocommerce .button, .subheading.h1, .subheading.h2, .subheading.h3, .subheading.h4, .subheading.h5, .subheading.h6, .navbar .dropdown-header, .dropdown-header, .navbar-default .navbar-collapse .nav.center .dropdown-header {letter-spacing: .1rem;}
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* color changes */
+/*********************************************************************************************/
+.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a .entry-date {color: #fff;}
+.comment-list .comment article .reply a:hover {color: #000;}
+
+.navbar-default .navbar-collapse .nav .current-menu-parent a,
+.nav2.navbar-default .navbar-collapse .nav .current-menu-parent a {color: #5a5a5a;}
+
+/****************************************
+light cortex theme color styling
+****************************************/
+/* cortex theme styling done in Appearance > Customize under Colors */
+/****************************************
+accent color styling
+****************************************/
+.btn.btn-default, .alternate:after, hr, .btn-default, input[type="submit"], #submit, .accent-color, button, input[type="button"], input[type="reset"], .widget_search .search-submit, .nav-links .page-numbers, .single-social-share li a, .comment-list .comment article .reply a:after, .tp-button.red, .accent-color-bg, .tp-button, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, .btn.light-color-text.cortex_the_excerpt, .entry-content .btn.light-color-text.cortex_the_excerpt:visited, .entry-content .btn.light-color-text.cortex_the_excerpt, .woocommerce .button.add_to_cart_button, .woocommerce .buttons .button, .woocommerce-message .button.wc-forward, mark, ins, .dropdown-menu .divider, button, .button.button.alt, .woocommerce div.product form.cart .button, .woocommerce #content .button, .search-submit, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers, .woocommerce input.button, .woocommerce a.button.alt, .woocommerce .form-row.place-order .button, .cortex .tp-bullet.active,.cortex .tp-bullet.selected,.cortex .tp-bullet:hover,.cortex .tp-bullet:focus, .woocommerce .button, .woocommerce a.button, input[type="checkbox"]:checked, input[type="radio"]:checked {
+background-color: #bd1e2d;
+}
+
+.tp-caption .tp-button:hover {
+background-color: #bd1e2d !important;
+}
+
+.entry-content ul li:before,.widget_archive ul li:before,.widget_categories ul li:before,.widget_categories ul li:before,.widget_pages ul li:before,.widget_meta ul li:before,.widget_recent_comments ul li:before,.widget_recent_entries ul li:before,.widget_rss ul li:before,.widget_text ul li:before,.widget_nav_menu ul li:before, .widget_calendar #wp-calendar caption, a:hover, a:focus, a:active, #secondary-top .widget-cortex-mailchimp h3:before, .entry-meta .cat-links:before, .entry-meta .tags-links:before, .entry-meta a:hover, .nav-links .nav-previous:hover, .nav-links .nav-next:hover, .nav-links .prev:before, .nav-links .nav-previous:before, .nav-links .next:before, .nav-links .nav-next:before, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a, blockquote:before, .author-social li a:hover, .author-social li a:before, .site-info a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active, .navbar-default .navbar-collapse .nav li a:hover, .navbar-default .navbar-collapse .nav li a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .full_page_slider .tp-caption h2, .content-area .site-main .masonry_portfolio .container .isotope-item .masonry_portfolio_sub_heading, .blog_latest a:hover, .small-link:hover, .comment-reply-link:hover, .comment-author .fn .url:hover, .comment-metadata a:hover, .blog_latest .blog_latest_title .subtitle, .twitter-tweet ul li:before, .action-link:after, .project_masonry_description, .subtitle, .widget-cortex-contact .email:before, .widget-cortex-contact .tel:before, .widget-cortex-contact .street-address:before, .widget_cortex_twitter_widget ul li:before, .masonry_project_sub_heading, .isotope-item h3 .masonry_project_heading:hover, .events_description .accent-color-text, .accent-color-text, .tp-caption.-cortex-h2, .-cortex-h2, .content-area .site-main .masonry_project .isotope-item .masonry_project_sub_heading, .content-area .site-main .masonry_project .isotope-item .masonry_project_heading:hover, .content-area .site-main .masonry_portfolio .container .isotope-item .masonry_portfolio_heading:hover, .nav-links .nav-previous:hover, a:hover span, .entry-content ul li:after, .widget_archive ul li:after, .widget_categories ul li:after, .widget_categories ul li:after, .widget_pages ul li:after, .widget_meta ul li:after, .widget_recent_comments ul li:after, .widget_recent_entries ul li:after, .widget_rss ul li:after, .widget_text ul li:after, .widget_nav_menu ul li:after, .widget_product_categories ul li:after, .nav-links .next:after, .nav-links .nav-next:after, .widget_cortex_twitter_widget .date a:hover, .widget_cortex_twitter_widget ul li a:hover, .events-header-text.next-event h5:first-child, .event-single header .events-header-text .light.secondary-font, .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu .active a, .entry-content ul li:before, .widget_archive ul li:before, .widget_categories ul li:before, .widget_categories ul li:before, .widget_pages ul li:before, .widget_meta ul li:before, .widget_recent_comments ul li:before, .widget_recent_entries ul li:before, .widget_rss ul li:before, .widget_text ul li:before, .widget_nav_menu ul li:before, .widget_product_categories ul li:before, .nav-links .nav-previous:hover, .nav-links .nav-next:hover, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers:hover, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers.next:hover,.accent-color-text.h1,.accent-color-text.h2,.accent-color-text.h3,.accent-color-text.h4,.accent-color-text.h5,.accent-color-text.h6, .accent-color-text, .entry-tags .entry-meta .tags-links a:before, .nav2.navbar-default .navbar-collapse .nav li a:hover, .entry-content ol li:before, .sticky .entry-meta:before, .entry-meta .cat-links:before, .entry-meta .tags-links:before, .entry-tags .entry-meta .tags-links a:before, .navbar-default .navbar-nav .open .dropdown-menu > .active > a,.navbar-default .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu .active a, .panel-group .panel-heading .panel-title .accordion-toggle.collapsed:hover, .panel-group .panel-heading .panel-title .accordion-toggle {
+color: #bd1e2d;
+}
+
+.-cortex-h2, .tp-caption.-cortex-h2 {
+color:  #bd1e2d !important;
+}
+
+@media (max-width: 767px) {
+	.bright .nav1.navbar-default .navbar-collapse .nav li a:hover {
+	color: #bd1e2d;
+	}
+}
+
+textarea, select, textarea, input[type="number"], .input-text, .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea, select, .woocommerce form .form-row select, .wpcf7-form input[type="text"], .wpcf7-form input[type="password"], .wpcf7-form input[type="number"], .wpcf7-form input[type="email"], .wpcf7-form input[type="tel"], .wpcf7-form select, .cortex-woocommerce .product input[type="text"], .woocommerce-page #content .shop_table tr .actions .coupon .input-text, input[type="checkbox"], input[type="radio"] {
+border: 1px solid #bd1e2d;
+}
+
+.input__label--cortex:before,
+.input__label--cortex:after {
+border-bottom: 1px solid #bd1e2d;
+}
+
+.input__label--cortex:after, .widget .widget-title:after, .entry-meta:after, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1:after, .author-about-title h5:after, #comments h3:after, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1:after, .blog-latest-header .entry-header-standard .blog_latest_title:after, .cortex-woocommerce .page-title:after, .widget .widget-title:after, .widget .widgettitle:after{
+border-bottom: 2px solid #bd1e2d;
+}
+
+.input__label--cortex-color-1:after {
+border-color: #bd1e2d;
+}
+
+.widget_search .search-field, .search-form .search-field, .widget_search .search-field, .widget_product_search .search-field {
+border: 3px solid #bd1e2d;
+}
+
+blockquote, .comment.bypostauthor {
+border-left: 3px solid #bd1e2d;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+border-bottom: 1px solid #bd1e2d;
+}
+/****************************************
+cortex nav bg when scrolled, mobile, or opaque setting
+****************************************/
+.navbar-bg, .navbar-bg-solid {
+	background-color: #ffffff;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-default, .navbar-default.navbar-small {
+		background-color: #ffffff !important;
+	}
+}
+
+/****************************************
+cortex dropdown menus bg when scrolled, mobile, or opaque setting
+****************************************/
+.navbar-collapse .nav .dropdown .dropdown-menu,
+.navbar .navbar-collapse .nav .dropdown .dropdown-menu,
+.navbar-collapse .nav .dropdown > .dropdown-menu .dropdown-submenu .dropdown-menu {
+	background-color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+.navbar-collapse,
+.navbar .navbar-collapse .nav .dropdown .dropdown-menu {
+	background-color: #ffffff;
+}
+}
+/****************************************
+cortex nav links (top level)
+****************************************/
+.navbar-default .navbar-collapse .nav li a,
+.bright .nav1.navbar-small.navbar-default .navbar-collapse > .nav > li > a,
+.nav2.navbar-default .navbar-collapse .nav li a {
+	color: #000000;
+}
+.navbar-default .navbar-collapse .nav li a:hover, .bright .nav1.navbar-small.navbar-default .navbar-collapse > .nav > li > a:hover, .nav2.navbar-default .navbar-collapse .nav li a:hover {
+	color: #bd1e2d;
+}
+/****************************************
+cortex secondary nav links (second and third level)
+****************************************/
+.navbar-default .navbar-collapse .nav li .dropdown-menu li a {
+	color: #0c0c0c;
+}
+
+/**************************************** cortex nav bg when scrolled, mobile, or opaque setting ****************************************/
+.navbar-bg, .navbar-bg-solid { background-color: rgba(255,255,255,1); } @media (max-width: 767px) { .navbar-default, .navbar-default.navbar-small { background-color: rgba(255,255,255,1) !important; } }
+
+/**************************************** cortex dropdown menus bg when scrolled, mobile, or opaque setting ****************************************/
+.navbar-collapse .nav .dropdown .dropdown-menu, .navbar .navbar-collapse .nav .dropdown .dropdown-menu, .navbar-collapse .nav .dropdown > .dropdown-menu .dropdown-submenu .dropdown-menu { background-color: rgba(255,255,255,.9); } @media screen and (max-width: 767px) { .navbar-collapse, .navbar .navbar-collapse .nav .dropdown .dropdown-menu { background-color: rgba(255,255,255,.7); } }
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* pagination and previous and next links */
+/*********************************************************************************************/
+.content-single .nav-links .nav-previous a:before, .content-single .nav-links .nav-next a:after {
+	line-height: 2.5rem;
+	display: inline-block;
+    margin-right: 4px;
+    color: #ca292c;
+    font-family: 'FontAwesome';
+    content: "\f104";
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+.content-single .nav-links .nav-next a:after {
+	content: "\f105";
+	margin-right: 0px;
+	margin-left: 4px;
+}
+
+.nav-links .nav-next a,
+.nav-links .nav-previous a {
+	padding: 0px 25px;
+}
+
+.nav-links .nav-next a {margin-left: -20px;}
+.nav-links .nav-previous a  {margin-right: -20px;}
+.nav-links .nav-next:after, .nav-links .nav-previous:before {display: none;}
+
+.nav-links .nav-next a,
+.nav-links .nav-previous a,
+.nav-links .page-numbers.next,
+.nav-links .page-numbers.prev {
+	background-color: rgba(255,255,255,.95);
+}
+
+.nav-links .page-numbers.next:hover,
+.nav-links .page-numbers.prev:hover {
+	background-color: rgba(0,0,0,.95);
+}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* content-single-left single page template */
+/*********************************************************************************************/
+.author-social li a:before {line-height: 2.3rem;}
+.author-about, .comment-list {margin-bottom: 0px;}
+#comments #reply-title {margin-top: 0px;}
+#author-bio {padding-left: 0px;}
+
+#respond .form-submit {margin-top: 15px; margin-bottom: 0px;}
+
+/* RELATED ITEMS */
+.yarpp-related {margin: 20px auto !important;}
+.yarpp-related h3 {
+	font-size: 3.2rem !important;
+	margin: 0px 0px 10px 0px !important;
+	padding: 0px !important;
+	line-height: 3.2rem;
+}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* homepage modifications */
+/*********************************************************************************************/
+.blog_latest:first-child {padding-top: 30px;}
+
+.blog_latest .post {margin-bottom: 0px;}
+
+.blog_latest .post .cortex_the_excerpt {margin-bottom: 0px;}
+
+.blog_latest .article-container {
+	margin-bottom: 80px;
+}
+
+.magazine_latest .magazine-article-header h5 {margin-top: 0px; margin-bottom: 0px;}
+
+/* blue color for riot feast*/
+.navbar-default .navbar-collapse .nav li.riotfeastblue a,
+.navbar-default .navbar-collapse .nav li.riotfeastblue.active a,
+.navbar-default .navbar-collapse .nav li.riotfeastblue a span,
+.navbar-default .navbar-collapse .nav li.riotfeastblue.active a span { color: #333395 !important; }
+.navbar-default .navbar-collapse .nav li.riotfeastblue a:hover,
+.navbar-default .navbar-collapse .nav li.riotfeastblue.active a:hover { color: #bd1e2d !important; }
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+/*********************************************************************************************/
+/* caegory pages */
+/*********************************************************************************************/
+.category .content-category .post.hentry:first-child {margin-top: 0px;}
+.content-single.content-category .post .entry-content {
+	padding: 0px;
+	background-color: transparent;
+}
+
+.category-blog .article-container {margin-top: 20px;}
+
+.category .content-category .post.hentry, .category .cortex_the_excerpt {margin-bottom: 0px;}
+
+.content-area .site-main .masonry_portfolio .container .isotope-item figure:before, .category .masonry_posts .isotope-item figure:before {opacity: .8;}
+
+.navbar-default .navbar-collapse .nav .current-menu-parent .dropdown-menu .current_page_item .active a,
+.nav2.navbar-default .navbar-collapse .nav .current-menu-parent .dropdown-menu .current_page_item .active a {color: #bd1e2d !important;}
+
+.navbar-default .navbar-collapse .nav .current-menu-parent li:not(.active) a,
+.nav2.navbar-default .navbar-collapse .nav .current-menu-parent li:not(.active) a {color: #121212;}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* classes for background colors on individual modules and things */
+/*********************************************************************************************/
+.content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a {
+	padding: 0px 15px;
+	background-color: rgba(189,30,45,.95);
+}
+
+.avatar, .article-container, .content-single .post .entry-content, .wp_editor .entry-content, .content-single .page .entry-content {
+	padding: 20px;
+	background-color: rgba(255,255,255,.95);
+}
+
+.cta-bar.wp_editor .entry-content {
+	background-color: transparent;
+	color: #fff;
+	padding: 0px;
+}
+
+.cta-bar.wp_editor .entry-content .h1,
+.cta-bar.wp_editor .entry-content .h2,
+.cta-bar.wp_editor .entry-content .h3,
+.cta-bar.wp_editor .entry-content .h4,
+.cta-bar.wp_editor .entry-content .h5,
+.cta-bar.wp_editor .entry-content .h6 {color: #ffffff; font-weight: 400;}
+
+.cta-bar.wp_editor .entry-content .btn {
+	background-color: #fff;
+	color: #121212;
+}
+
+.cta-bar.wp_editor .entry-content .btn:hover {
+	background-color: #121212;
+	color: #ffffff;
+}
+
+.bg-container-sm,
+.sidebar .widget-cortex-mailchimp form,
+.sidebar .widget_cortex_latest_cat_posts .magazine-recent-posts,
+.sidebar .widget-cortex-instagram,
+.content-category .magazine-article {
+	padding: 10px;
+	background-color: rgba(255,255,255,.95);
+}
+
+.sidebar .widget-cortex-mailchimp form,
+.sidebar .widget_cortex_latest_cat_posts .magazine-recent-posts {
+	padding-top: 0px;
+}
+
+.sidebar .widget_cortex_latest_cat_posts .magazine-recent-posts article:last-child {
+	margin-bottom: 0px;
+}
+
+.sidebar .widget_cortex_latest_cat_posts .magazine-recent-posts
+
+.magazine_latest_title.col-md-12.mar30B,
+.magazine_latest .magazine_latest_title,
+.event-basic .cortex-table tr:nth-child(even),
+.event-big:nth-child(odd),
+.events-heading .h1,
+.cortex-page-builder-sidebar-main .basic_title_text {
+	background-color: rgba(255,255,255,.95);
+}
+
+.rf-date {
+	background-color: rgba(189,30,45,1);
+	color: #fff !important;
+	padding: 0px 15px;
+}
+
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+/*********************************************************************************************/
+/* widget adjustments */
+/*********************************************************************************************/
+.widget {margin-bottom: 30px;}
+
+.widget_cortex_subscribe_widget ul {
+	margin: 0px;
+}
+
+.sidebar .widget .widgettitle,
+.sidebar aside .widget-title,
+.sidebar .widget .widgettitle:after,
+.sidebar .popular-posts .widget-title:after,
+.sidebar .widget_cortex_latest_cat_posts .widget-title:after,
+.sidebar .widget-cortex-mailchimp .widget-title:after,
+.sidebar .widget_cortex_upcoming_events .widget-title:after {
+	display: none;
+}
+
+.sidebar li.widget {list-style: none;}
+
+.sidebar .widget_cortex_subscribe_widget ul li a:before {font-size: 3.4rem !important;}
+.sidebar .widget_cortex_subscribe_widget ul li {width: 40px;}
+
+.widget_cortex_upcoming_events .entry-title {margin-top: 0px; margin-bottom: 2px;}
+.widget_cortex_upcoming_events .bg-container-sm .row .col-md-5 {margin-right: -6% !important;}
+.widget_cortex_upcoming_events .event-tickets-small .btn-xs {line-height: 1.6rem; font-size: 1.6rem;}
+.widget_cortex_upcoming_events .h6.alternate, .widget_cortex_upcoming_events .venue {display: inline-block;}
+.widget_cortex_upcoming_events article:last-child {margin-bottom: 0px;}
+
+#footer-top .widget-cortex-mailchimp h3,
+#footer-d .widget_nav_menu ul li a {
+	color: #ffffff;
+	text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.7);
+	font-size: 2.6rem;
+	letter-spacing: 1px;
+}
+
+#footer-d .widget_nav_menu ul li a {
+	font-size: 1.6rem;
+	transition: all .3s;
+}
+
+#footer-d .widget_nav_menu ul li a:hover {color: #BD1E2D;}
+
+#footer-top .widget-cortex-mailchimp input[type="text"] {
+	background-color: #ffffff;
+}
+
+#footer-top .widget-cortex-mailchimp .error {background-color: #ffffff; display: block; color: #000000; border: 1px solid red;}
+
+/* wordpress popular posts widget changes */
+.sidebar .popular-posts .widget-title,
+.sidebar .widget_cortex_latest_cat_posts .widget-title,
+.sidebar .widget-cortex-mailchimp .widget-title,
+.sidebar .widget.popular-posts .widgettitle,
+.sidebar .widget_cortex_upcoming_events .widget-title {
+	display: block;
+	padding: 10px;
+	background-color: rgba(255,255,255,.95);
+	font-size: 2.6rem;
+	margin-bottom: 0px;
+	letter-spacing: .1rem;
+}
+
+.popular-posts .wpp-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.popular-posts .wpp-list li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 15px 0px;
+	background-color: rgba(255,255,255,.95);
+}
+
+.popular-posts .wpp-list li a {
+	margin: 0px 10px;
+	font-family: "franklin-gothic-urw-comp", sans-serif;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	display: block;
+}
+
+.popular-posts .wpp-list li .wpp-post-title {
+	margin: 10px;
+}
+
+.popular-posts .wpp-list li:last-child {padding-bottom: 10px;}
+
+/* riot fest tickets and custom menu widgets */
+.page-id-4304 .entry-content .panel-title {margin-bottom: 0px;}
+
+#menu-riot-fest-tickets li,
+#menu-chicago-sidebar li,
+#menu-denver-sidebar li {margin-left: 0px; padding-left: 0px;}
+
+#menu-chicago-sidebar li:before,
+#menu-denver-sidebar li:before {display: none;}
+
+#menu-riot-fest-tickets li a,
+#menu-chicago-sidebar li a,
+#menu-denver-sidebar li a {
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #5a5a5a;
+	padding: 15px 25px;
+	text-align: center;
+	margin: 0px auto;
+	width: 100%;
+	display: block;
+	font-size: 22px;
+	letter-spacing: 1px;
+	transition: all .2s;
+	background-image: none;
+}
+
+#menu-riot-fest-tickets .red a,
+#menu-chicago-sidebar .red a,
+#menu-denver-sidebar .red a {
+	background-color: #bd1e2d;
+}
+
+#menu-riot-fest-tickets .blue a,
+#menu-chicago-sidebar .blue a,
+#menu-denver-sidebar .blue a {
+	background-color: #79b8d7;
+}
+
+#menu-riot-fest-tickets .current_page_item a,
+#menu-chicago-sidebar .current_page_item a,
+#menu-denver-sidebar .current_page_item a {
+	background-color: #8d99ae;
+}
+
+#menu-riot-fest-tickets li a:hover,
+#menu-chicago-sidebar li a:hover,
+#menu-denver-sidebar li a:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* latest news */
+.sidebar .magazine-recent-posts .alternate.h6 a {
+	margin: 0px 4px;
+	font-size: 1.2rem;
+}
+
+.sidebar .magazine-recent-posts .single-article .single-article-title .magazine-article-date {
+	margin-top: -3px;
+}
+
+/* instagram */
+.sidebar .widget-cortex-instagram .widgettitle {margin-top: 0px;}
+.sidebar .widget-cortex-instagram p {margin-bottom: 0px;}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* footer */
+/*********************************************************************************************/
+
+#secondary-bottom .menu-riot-fest-footer-menu-container, #secondary-bottom .menu-riot-fest-footer-menu-container ul {
+	margin: 0px auto;
+	text-align: center;
+}
+
+#secondary-bottom .menu-riot-fest-footer-menu-container,
+#secondary-bottom .widget_nav_menu {width: 100%; max-width: 100%;}
+
+#secondary-bottom .menu-riot-fest-footer-menu-container {margin-bottom: 20px;}
+
+#secondary-bottom .menu-riot-fest-footer-menu-container ul {display: block;}
+
+#secondary-bottom .menu-riot-fest-footer-menu-container ul li {list-style: none; margin: 0px; padding: 0px; display: inline-block;}
+
+#secondary-bottom .menu-riot-fest-footer-menu-container ul li a {
+	padding: 0px 30px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background-image: none;
+	font-weight: bold;
+	text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.7);
+}
+#secondary-bottom .menu-riot-fest-footer-menu-container ul li a:hover {color: #aa3134;}
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+/* universal hiding */
+/*********************************************************************************************/
+.author-about-title h5:after, #comments h3:after, .oops-riotfest-broke-it:after, #secondary-bottom .menu-riot-fest-footer-menu-container ul li:before, #menu-riot-fest-tickets li:before, .page-events .event-listing .nav-tabs  {display: none !important;}
+
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+/*********************************************************************************************/
+/* reusable classes */
+/*********************************************************************************************/
+.pad0B {padding-bottom: 0px !important;}
+
+.btn-ticket {
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #5a5a5a;
+	padding: 20px 30px;
+	text-align: center;
+	margin: 0px auto 25px auto;
+	width: 100%;
+	display: block;
+	font-size: 22px;
+	letter-spacing: 1px;
+	transition: all .2s;
+	background-image: none;
+}
+
+.btn-ticket-red, .red-div p {
+	background-color: #e73035;
+}
+
+.btn-ticket-blue, .blue-div p {
+	background-color: #57bad7;
+}
+
+.btn-ticket-purple {
+	background-color: #202f64;
+}
+
+.btn-ticket-yellow, .yellow-div p {
+	background-color: #fcd008;
+	color: #000000 !important;
+}
+
+.sep p {
+	width: 100%;
+	padding: 5px 0px;
+	text-align: center;
+	margin: 0px auto;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* contest CSS */
+.legal {display: block; font-size: .8rem; line-height: 1rem; margin-bottom: 20px; color: #666666;}
+.checkbox input[type="checkbox"] {margin-top: 7px;}
+.wpcf7-recaptcha {margin-top: 20px;}
+.content-area.page-builder .site-main .contest-title .container { padding-top: 0px; padding-bottom: 0px;}
+.contest-container input[type="submit"] {margin-bottom: 20px;}
+.contest-container input[type="submit"]:hover {
+	padding: 11px 15px 7px;
+	width: 135px;
+	height: 35px;
+}
+
+/* tickets table css*/
+.riot-tickets-table tr td {color: #121212; font-size: 1.4rem; line-height: 21px;}
+.riot-tickets-table tr td .btn {font-family: "franklin-gothic-urw-comp",sans-serif; font-size: 1.4rem; width: 188px;}
+.riot-tickets-table tr td a .btn-disabled {background-color: #373737 !important;}
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*welcome window & responsive youtube embed*/
+.page-template-page_welcome-window, .page-template-page_welcome-window .container {
+	width: 960px;
+}
+.mfp-close-btn-in .mfp-close {color: #ffffff;}
+.c9-video-embed {
+	position: relative;
+	padding-bottom: 52.25%; /* 16:9 */
+	height: 0;
+}
+.c9-video-embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+/*********************************************************************************************/
+/* media query adjustments */
+/*********************************************************************************************/
+
+@media screen and (min-width: 1700px) {
+	body {background-size: cover;}
+}
+
+@media screen and (min-width: 992px) {
+
+	.sidebar .widget_search .search-form label {
+		max-width: 50%;
+	}
+
+	.sidebar .widget_search input[type="submit"] {
+		width: 50%;
+	}
+
+	.search-form .search-field, .widget_search .search-field, .widget_product_search .search-field {width: 100%;}
+
+	.widget_search .search-submit {margin: -1px 0px 0px 0px;}
+
+}
+
+@media screen and (max-width: 1199px ) {
+	.instagram-pics.thumbs li a, .instagram-pics.thumbs li a img {width: 47%; height: 47%;}
+
+	.navbar-collapse .nav .dropdown > .dropdown-menu, .navbar-collapse .nav .dropdown > .dropdown-menu .dropdown-submenu .dropdown-menu {
+		width: 160px;
+	}
+
+	.dropdown-submenu .dropdown-menu {
+		margin-left: 10px;
+	}
+
+	.navbar-default .navbar-collapse .nav li .dropdown-menu li {
+		min-width: 160px;
+	}
+
+	.navbar-default .navbar-collapse .nav li .dropdown-menu li a,
+	.dropdown-header, .navbar-default .navbar-collapse .nav.center .dropdown-header {
+		margin: 0px 7px;
+	}
+
+	.dropdown-header, .navbar-default .navbar-collapse .nav .dropdown-header {
+		padding-left: 0px !important;
+	}
+
+	.sidebar .widget_cortex_subscribe_widget ul li {width: 32px;}
+
+	.navbar-default .navbar-collapse .nav li a{
+		font-size: 2.2rem;
+		margin: 0px 14px;
+	}
+	 .nav-search a .fa {
+		 font-size: 2.2rem;
+	 }
+
+}
+@media screen and (max-width: 970px) {
+
+	.magazine-recent-posts .single-article .single-article-title .magazine-article-date span {
+		font-size: 2rem;
+	}
+
+	.sidebar .widget_cortex_upcoming_events .magazine-recent-posts .single-article .event-buttons .btn {
+		margin-bottom: 15px;
+	}
+
+	.navbar-default .navbar-collapse .nav li a {margin: 0px 12px;}
+	.navbar-default .navbar-collapse .nav li:last-child a {margin-right: 0px;}
+
+	#secondary-bottom .menu-riot-fest-footer-menu-container ul li a {padding: 0px 15px;}
+
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.search-form .search-field, .widget_search .search-field, .widget_product_search .search-field, .sidebar .widget_search .search-form .search-field, .widget_search .search-field, .sidebar .widget_search .widget_product_search .search-field {width: 100%;}
+
+	.sidebar .widget_search .search-form label {
+		max-width: 50%;
+	}
+
+	.sidebar .widget_search input[type="submit"] {
+		width: 50%;
+	}
+
+	.page-content.nav2, .post-content.nav2, .page-builder.nav2, .content-area.nav2 {
+		margin-top: 0px;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.sidebar .widget_cortex_upcoming_events .bg-container-sm .row .col-md-5 {
+		margin-right: auto !important;
+	}
+
+	.sidebar .bg-container-sm .opener {font-size: 2.5rem;}
+
+	.sidebar {margin-top: 60px;}
+
+	.instagram-pics.thumbs li a, .instagram-pics.thumbs li a img {width: 32%; height: 32%;}
+	.navbar-collapse .nav .dropdown > .dropdown-menu, .navbar-collapse .nav .dropdown > .dropdown-menu .dropdown-submenu .dropdown-menu {width: 100%;}
+	.dropdown-submenu .dropdown-menu {
+		padding: 0px 10px 15px 5px;
+		margin: 0px;
+	}
+
+	body {
+		background-attachment: scroll !important;
+		background-repeat: repeat !important;
+		background-size: auto !important;
+	}
+
+	#chimpy_dismiss, #chimpy_popup_submit {margin: 0px auto !important; display: block !important; text-align: center !important;}
+	#chimpy_dismiss {margin-bottom: 15px !important; float: none !important;}
+	#chimpy_popup_submit {float: none !important;}
+	.content-single .entry-header {overflow: hidden;}
+
+}
+
+@media screen and (max-width: 568px) {
+	.sidebar .widget_cortex_subscribe_widget ul li {width: 40px;}
+
+	.instagram-pics.thumbs li a, .instagram-pics.thumbs li a img {width: 47%; height: 47%;}
+
+	/*tickets table*/
+	.riot-tickets-table {max-width: 100%; margin-bottom: 0px; border: none;}
+	.riot-tickets-table tr td {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.riot-tickets-table tr td .btn {margin: 0px auto; text-align: center; display: block;	}
+	.riot-tickets-table tr th .h5 {text-align: center;}
+
+	.page-id-39426 .hero-holder .hero-inner {overflow: scroll;}
+
+	.page-content.nav2, .post-content.nav2, .page-builder.nav2, .content-area.nav2 {
+		margin-top: 0px;
+	}
+
+
+
+}
+

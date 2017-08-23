@@ -1365,7 +1365,7 @@
                             "label": "Content",
                             "name": "content",
                             "type": "wysiwyg",
-                            "instructions": "Enter any content you'd like to display over the full width image. Content will be vertically centered over the image with around 200px of padding on the top and bottom to accommodate the image. If you need more space to show more of the full width image, adjust the section padding in the option below, or insert a spacer short code using the editor buttons below.",
+                            "instructions": "Enter any content you'd like to display over the image",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1399,27 +1399,6 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_5983b8a8e563a",
-                            "label": "Section Padding",
-                            "name": "custom_section_spacing",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "field_598140ce5f74e"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        },
-                        {
                             "key": "field_559ec22d9a496",
                             "label": "Custom Class",
                             "name": "custom_class",
@@ -1439,6 +1418,27 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_5983b8a8e563a",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -1669,11 +1669,11 @@
                             "label": "Heading",
                             "name": "title",
                             "type": "text",
-                            "instructions": "Optional field for a title above your posts",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -1681,18 +1681,20 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_55109c2bf51d3",
                             "label": "Sub Heading",
                             "name": "sub_title",
                             "type": "text",
-                            "instructions": "Optional field for a sub title below the heading",
+                            "instructions": "Optional field for a subtitle which will show up below the main title",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -1700,7 +1702,9 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_57bb23e4aea46",
@@ -1971,18 +1975,19 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "category",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
+                            "load_save_terms": 1,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
                         },
                         {
                             "key": "field_555a0a6ba03ef",
@@ -1993,18 +1998,19 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "post_format",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
+                            "load_save_terms": 1,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
                         },
                         {
                             "key": "field_559c095c00e42",
@@ -2015,7 +2021,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2024,24 +2030,26 @@
                             "prepend": "",
                             "append": "",
                             "min": 1,
-                            "max": 50,
-                            "step": 1
+                            "max": 100,
+                            "step": 1,
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_559c089e00e40",
                             "label": "Display view more button?",
                             "name": "view_more_btn",
                             "type": "true_false",
-                            "instructions": "",
+                            "instructions": "Display a \"view more\" button",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "message": "",
-                            "default_value": 0,
+                            "default_value": 1,
                             "ui": 0,
                             "ui_on_text": "",
                             "ui_off_text": ""
@@ -2074,27 +2082,6 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
-                        },
-                        {
-                            "key": "field_598a82bcf8aa8",
-                            "label": "Section Padding",
-                            "name": "custom_section_spacing",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "field_598140ce5f74e"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
                         },
                         {
                             "key": "field_54f911b85d26d",
@@ -2510,11 +2497,11 @@
                             "label": "Heading",
                             "name": "title",
                             "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading",
+                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2522,7 +2509,9 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_559c1f74e3cf9",
@@ -2533,7 +2522,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2541,7 +2530,9 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_559c1f74e3cfa",
@@ -2727,7 +2718,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2746,7 +2737,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "34",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2765,7 +2756,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "33",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2845,18 +2836,19 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "category",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
+                            "load_save_terms": 1,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
                         },
                         {
                             "key": "field_559c1f74e3d01",
@@ -2867,18 +2859,19 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "taxonomy": "post_format",
                             "field_type": "multi_select",
                             "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
+                            "load_save_terms": 1,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 1
                         },
                         {
                             "key": "field_559c1f74e3d02",
@@ -2908,7 +2901,7 @@
                             "label": "Display view more button?",
                             "name": "view_more_btn",
                             "type": "true_false",
-                            "instructions": "",
+                            "instructions": "Display a \"view more\" button",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2950,27 +2943,6 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
-                        },
-                        {
-                            "key": "field_598509685d579",
-                            "label": "Section Padding",
-                            "name": "custom_section_spacing",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "field_598140ce5f74e"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
                         },
                         {
                             "key": "field_559c1f74e3d05",
@@ -6230,5 +6202,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1502249791
+    "modified": 1501804903
 }

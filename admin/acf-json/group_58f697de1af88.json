@@ -1,0 +1,77 @@
+{
+    "key": "group_58f697de1af88",
+    "title": "Riot Fest Post Options",
+    "fields": [
+        {
+            "key": "field_58f69892c83c5",
+            "label": "Sub Heading",
+            "name": "c9_post_sub_heading",
+            "type": "text",
+            "instructions": "Enter in an optional subheading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58f698b7c83c6",
+            "label": "Enable Excerpt?",
+            "name": "c9_enable_excerpt",
+            "type": "true_false",
+            "instructions": "Enable the excerpt on some page builder layouts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "project"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "event"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1501888289
+}
