@@ -33,6 +33,8 @@ body {
 	margin: 0px 14px;
 }
 
+#search {z-index: -1;}
+#search input[type="search"] {color:#121212;}
 .small.subheading.h6 {display: block; margin-top: -10px;}
 .navbar-default .nav li.menu-item-has-children a:after {padding-left: 0px;}
 .navbar-default .navbar-collapse .nav li:nth-child(2) a {margin-left: 0px;}
@@ -206,6 +208,58 @@ color: #bd1e2d;
 .-cortex-h2, .tp-caption.-cortex-h2 {
 color:  #bd1e2d !important;
 }
+
+/*********************************************************************************************/
+/* ticketing page 2017 */
+/*********************************************************************************************/
+.page-id-4304 .hero-description.entry-content .btn {margin-bottom: 8px;}
+
+.riot-tickets .well {
+	min-height: 725px;
+	height: 725px;
+	position: relative;
+	width: 100%;
+	padding-top: 14px;
+}
+.riot-tickets .general-admission .well {background: #121212 url(img/single-day-bg.jpg) top center no-repeat;}
+.riot-tickets .vip-admission .well {background: #121212 url(img/vip-bg.jpg) top center no-repeat;}
+.riot-tickets .deluxe-vip .well {background: #121212 url(img/deluxe-vip-bg.jpg) top center no-repeat;}
+.riot-tickets .ultimate-vip .well {background: #121212 url(img/ultimate-vip-bg.jpg) top center no-repeat;}
+.riot-tickets div .well {background-size: cover !important;}
+
+.riot-tickets .well p {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 18px;
+}
+
+.riot-tickets .well p:first-child {margin-bottom: 10px;}
+.riot-tickets .well p:first-child .h6 {font-size: 1.4rem;margin-top: 0px;}
+
+.riot-tickets .well .riot-ticket-buttons {position: absolute; bottom: 6px; width: 85%;}
+.riot-tickets .well p:nth-last-child(2) {
+	width: 100%;
+	margin: 0px auto;
+	display:  block;
+}
+
+.riot-tickets .well p:last-child {
+	width: 100%;
+	margin: 0px auto;
+	display:  block;
+}
+
+.riot-tickets .well p,
+.riot-tickets .well p span {color: #fff;}
+.riot-tickets .well p .btn {max-width: 100%; width: 100%; display: block; margin: 0px auto 14px auto;}
+
+.btn-info, .btn-info.body-color-text, .entry-content .btn.body-color-text.btn-info {background-color: #ffffff;}
+.btn-info:hover, .btn-info.body-color-text:hover, .entry-content .btn.body-color-text.btn-info:hover {color: #ffffff !important; background-color: #121212 !important;}
+.riot-tickets-single .entry-content a .btn-lg {width: 210px;}
+/*********************************************************************************************/
+/* end ticketing page 2017 */
+/*********************************************************************************************/
 
 @media (max-width: 767px) {
 	.bright .nav1.navbar-default .navbar-collapse .nav li a:hover {
@@ -853,7 +907,7 @@ cortex secondary nav links (second and third level)
 
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (max-width: 768px) {
 	.search-form .search-field, .widget_search .search-field, .widget_product_search .search-field, .sidebar .widget_search .search-form .search-field, .widget_search .search-field, .sidebar .widget_search .widget_product_search .search-field {width: 100%;}
 
 	.sidebar .widget_search .search-form label {
@@ -866,6 +920,10 @@ cortex secondary nav links (second and third level)
 
 	.page-content.nav2, .post-content.nav2, .page-builder.nav2, .content-area.nav2 {
 		margin-top: 0px;
+	}
+
+	.riot-tickets .well {
+		margin-bottom: 20px !important;
 	}
 }
 
@@ -905,23 +963,10 @@ cortex secondary nav links (second and third level)
 
 	.instagram-pics.thumbs li a, .instagram-pics.thumbs li a img {width: 47%; height: 47%;}
 
-	/*tickets table*/
-	.riot-tickets-table {max-width: 100%; margin-bottom: 0px; border: none;}
-	.riot-tickets-table tr td {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-	.riot-tickets-table tr td .btn {margin: 0px auto; text-align: center; display: block;	}
-	.riot-tickets-table tr th .h5 {text-align: center;}
-
 	.page-id-39426 .hero-holder .hero-inner {overflow: scroll;}
 
 	.page-content.nav2, .post-content.nav2, .page-builder.nav2, .content-area.nav2 {
 		margin-top: 0px;
 	}
 
-
-
 }
-
