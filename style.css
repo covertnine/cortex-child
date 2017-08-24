@@ -109,7 +109,7 @@ textarea, input[type="number"], .input-text, .woocommerce form .form-row input.i
 
 .oops-riotfest-broke-it,
 .page-search .blog-latest-header .blog_latest_title,
-.page-search .entry-header .entry-title {
+.page-search .entry-header-page .entry-title {
 	background-color: rgba(189,30,45,1);
 	color: #fff !important;
 	padding: 20px;
@@ -119,6 +119,10 @@ textarea, input[type="number"], .input-text, .woocommerce form .form-row input.i
 .page-search .blog-latest-header .blog_latest_title:after {
 	display: none !important;
 }
+
+/* labels for newsletter */
+.input__label-content--cortex {bottom: 0px;}
+.input__field--cortex {margin-top: 15px;}
 /*********************************************************************************************/
 /*********************************************************************************************/
 
@@ -212,7 +216,7 @@ color:  #bd1e2d !important;
 /*********************************************************************************************/
 /* ticketing page 2017 */
 /*********************************************************************************************/
-.page-id-4304 .hero-description.entry-content .btn {margin-bottom: 8px;}
+.hero-description.entry-content .btn {margin-bottom: 8px;}
 
 .riot-tickets .well {
 	min-height: 725px;
@@ -256,7 +260,21 @@ color:  #bd1e2d !important;
 
 .btn-info, .btn-info.body-color-text, .entry-content .btn.body-color-text.btn-info {background-color: #ffffff;}
 .btn-info:hover, .btn-info.body-color-text:hover, .entry-content .btn.body-color-text.btn-info:hover {color: #ffffff !important; background-color: #121212 !important;}
-.riot-tickets-single .entry-content a .btn-lg {width: 210px;}
+.riot-tickets-single .entry-content a .btn-lg {width: 205px;}
+.riot-tickets-single .entry-content .green a .btn-lg {background-color: #01716B;}
+.riot-tickets-single .entry-content .maroon a .btn-lg {background-color: #822725;}
+.riot-tickets-single .entry-content .red a .btn-lg {background-color: #B22025;}
+.riot-tickets-single .entry-content a .btn-lg:hover {background-color: #121212;}
+.riot-tickets-single .row.vcenter {justify-content: flex-start;}
+
+@media (max-width: 768px) {
+	.riot-tickets-single .row.vcenter {display: block;}
+}
+@media (max-width: 568px) {
+	.riot-tickets-single .row.vcenter .btn-lg {margin: 5px auto;display: block;}
+	.riot-tickets-single .row.vcenter div:first-child img {margin: 0px auto; display: block;}
+	.riot-tickets-single .row.vcenter div:last-child {margin-bottom: 30px;}
+}
 /*********************************************************************************************/
 /* end ticketing page 2017 */
 /*********************************************************************************************/

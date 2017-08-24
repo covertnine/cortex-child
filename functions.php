@@ -11,6 +11,7 @@ function cortex_enqueue_child_styles() {
 
 		//wp_deregister_script('cortex-js');
 		wp_deregister_style('yarppWidgetCss');
+		wp_enqueue_script( 'classie-js', get_stylesheet_directory_uri() . '/js/rclassie.js', 'jquery', '20170824', true );
 		wp_enqueue_script( 'riot-js', get_stylesheet_directory_uri() . '/js/riotfest.js', 'jquery', '20170418', true );
     	wp_enqueue_style( 'cortex-child-style', get_stylesheet_directory_uri() . '/style.css', array( 'cortex-style-light' ) );
 
