@@ -7,7 +7,7 @@
             "label": "Change Header Navigation Type",
             "name": "navigation_type_override",
             "type": "radio",
-            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can add an opaque or transparent background with this setting.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -20,11 +20,11 @@
                 "nav1": "Transparent Background",
                 "nav2": "Opaque Background"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "default",
             "layout": "vertical",
-            "allow_null": 0,
             "return_format": "value"
         },
         {
@@ -382,12 +382,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496510210
+    "modified": 1503589084
 }
