@@ -5,7 +5,7 @@ Author: COVERT NINE
 Author URI: http://www.covertnine.com
 Description: A multi-purpose Wordpress Theme for Photographers, Agencies, Musicians, Labels, Magazines, and Music Festivals
 Template: cortex
-Version: 1.2.11
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cortex
@@ -14,51 +14,56 @@ Tags: responsive, css3, html5, bootstrap, responsive-layout, featured-images, rt
 /*--------------------------------------------------------------
 0.0 Special Styles
 ----------------------------------------------------------------*/
+.navbar-collapse {
+    display: block !important;
+}
+.navbar-header {
+    display: none !important;
+}
 /* To get the section background on sponsor benefits to extend well into additional benefits -- Sam */
-#section-4.sponsor-benefits .section-bg {
+section.sponsor-benefits .section-bg {
 	padding-bottom: 25rem;
 	margin-bottom: -31rem;
 }
-
 /*--------------------------------------------------------------
 1.0 Body & Global Definitions
 ----------------------------------------------------------------*/
-body {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	color: #555454;
 }
 h1, .h1 {
-	font-size: 8rem;
+	font-size: 6rem;
 	letter-spacing: 1px;
 }
 h2, .h2 {
-	font-size: 4.8rem;
+	font-size: 5rem;
 	letter-spacing: 1px;
 }
-h3 {
-	font-size: 4.3rem;
-	line-height: 5rem;
-}
-h5 {
-	margin-top: 0;
-}
-.entry-content h2, 
-.entry-content .h2,
-.entry-content h3 {
-	font-size: 6rem;
+h3, .h3 {
+	font-size: 4rem;
 	letter-spacing: 1px;
-}  
-.entry-content h5,
-.entry-content h6,
-.entry-content .h5,
-.entry-content .h6 {
-	font-size: 2.2rem;
+}
+h4, .h4 {
+	font-size: 3rem;
+}
+h5, .h5 {
+	font-size: 2rem;
 	margin-top: 0;
 }
-p, .entry-content p {
+/* not sure what this is, but somewhere there's a margin-top of 50px */
+.entry-content h5 {
+	margin-top: 0;
+}
+h6, .h6 {
+	font-size: 1.4rem;
+}
+p {
 	font-size: 1.6rem;
-	font-weight: 300;
-	line-height: 3rem;
+	line-height: 1.9rem;
 }
 blockquote {
+	font-size: 2rem;
+	line-height: 3rem;
 	border-left: none;
 	margin: 0;
 	padding: 0;
@@ -82,15 +87,6 @@ blockquote p:last-child:after {
     left: 10px;
     margin-left: .8rem;
 }
-.full_width_image {
-	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
-	color: white;
-}
-.hero-sub-title {
-	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
-	color: white;
-	font-weight: 200;
-}
 .light {
 	font-weight: 200;
 }
@@ -101,35 +97,117 @@ blockquote p:last-child:after {
 	font-weight: 900;
 	text-shadow: none !important;
 	letter-spacing: .45;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 .btn-primary {
 	background-color: #15c232;
 }
-.entry-content p a.btn-primary:hover {
-	background-color: black;
+.btn-scrolltop {
+	background-color: #00783f;
+	opacity: 1;
+	border-radius: 8px;
+}
+.btn-scrolltop:hover .fa-angle-up:before {
+	color: white !important;
+}
+
+article .entry-content  {
+	padding: 0 15px;
+}
+a.btn:hover {
+	background-color: #555454; 
 	color: white;
+}
+/*--------------------------------------------------------------
+1.0 Global Component Definitions
+----------------------------------------------------------------*/
+.full_page_slider h1,
+.full_page_slider h2,
+.full_page_slider h3,
+.full_page_slider h4,
+.full_page_slider h5,
+.full_page_slider h6 {
+	margin-top: 0 !important;
+}
+.magazine_latest .h2 span {
+	font-weight: 200;
+}
+.magazine_latest .h2 span .word-1 {
+	font-weight: 700;
+}
+.magazine_latest .entry-title {
+	margin-top: 16px;
+}
+.magazine_latest figure.magazine-image {
+	overflow: hidden;
+	transition: opacity, .5s;
+	width: 100%;
+}
+.magazine_latest .col-md-3 figure.magazine-image {
+		max-height: 145px;
+}
+.magazine_latest figure.magazine-image img {
+	width: 100%;
+}
+.magazine_latest figure.magazine-image:hover {
+	opacity: .8;
 }
 input[type="text"] {
 	color: black;
 }
-@media (max-width: 767px) { 
-	.entry-content h2, 
-	.entry-content .h2,
-	.entry-content h3 {
-		font-size: 3rem;
-		letter-spacing: .5px;
-	}  
-	.entry-content h5,
-	.entry-content h6,
-	.entry-content .h5,
-	.entry-content .h6 {
-		font-size: 1.1rem;
-	}
-	p, .entry-content p {
-		font-size: .9rem;
-		line-height: 2rem;
-	}
- }
+.widget-cortex-mailchimp input[type="submit"]:hover {
+	color: white;
+}
+.full_width_image {
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	color: white;
+}
+.hero_builder .heading .h2 {
+	font-weight: 500;
+	font-size: 8rem;
+	line-height: 9rem;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	width: 80%;
+	margin: 0 auto;
+}
+.hero_builder.arrow-after .heading .h2:after {
+	content: " \f18e";
+	font-family: FontAwesome;
+}
+.hero-sub-title {
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+	color: white;
+	font-weight: 200;
+}
+.hero_builder .dark-overlay:after {
+	opacity: .6;
+}
+#skrollr-body {
+	margin-top: 0;
+}
+#skrollr-body .nav-links {
+	display: none;
+}
+#skrollr-body .entry-content a {
+	background-image: none;
+}
+#skrollr-body article.page {
+	background: white;
+}
+.mfp-close {
+	color: white !important;
+}
+.magazine_latest .entry-title {
+	font-weight: 900;
+	letter-spacing: 0;
+}
+.entry-header .alternate .posted-on a:hover {
+	color: white;
+}
 /*--------------------------------------------------------------
 1.05 Header and Nav Code
 ----------------------------------------------------------------*/
@@ -147,63 +225,134 @@ input[type="text"] {
 	color: white;
 }
 
-.nav-contain .container {
-  overflow: hidden;
+.logo-header {
+	max-width: 147px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
 
-.logo-header {
-  height: 100%;
+#mega-menu-wrap-primary {
+	position: absolute !important;
+	left: auto !important;
+	top: 0px !important;
+	right: 0px !important;
+	width: 90% !important;
+	background: transparent !important;
+	padding: 18px 0px 0px 0px !important;
 }
-/* Header Media Queries */
-@media (max-width: 767px) {
-	 #navbar-collapse-1 {
-		background: white;
-		border-top: 3px solid #15c232;
-		margin-bottom: 3px;
-	}
-	#navbar-collapse-1 ul {
-		margin-bottom: 3px;
-	}
-	/*.navbar-default .container .in ul li.donate-menu {
-	background: #15c232;
-}*/
+#mega-menu-wrap-primary #mega-menu-primary img {
+	transition: opacity, .5s;
 }
-@media (min-width: 768px) { 
-	.navbar-header {
-    height: 200px;
+#mega-menu-wrap-primary #mega-menu-primary img:hover {
+	opacity: .8;
 }
+#mega-menu-wrap-primary .widget_nav_menu ul li {margin: 0px !important;}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+	font: bold 16px/16px 'Montserrat', arial, helvetica !important;
+	text-transform: uppercase !important;
+	color: #555454 !important;
+	margin: 0px 17px !important;
+	padding: 0px 17px !important;
+	letter-spacing: .5px !important;
+	background: transparent !important;
+	height: 55px;
 }
-@media (min-width: 992px) { 
-  #logo img {
-	  height: 100%;
-	  position: absolute;
-	  top: -20px;
-	}
- #menu-header-menu li {
-	margin-left: 1rem;
-	margin-right: 1rem;
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
+	background: transparent !important;
+	color: #007A47 !important;
 }
-.navbar-small .navbar-bg-solid {
+/* To get dropdowns at correct height on scroll */
+.navbar-small-to-top #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
+	margin-top: 0 !important;
+}
+/* megamenu css */
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+	margin-top: 13px !important;
+	border-top: 7px solid #0d7b43 !important;
+	background: #ffffff !important;
+	width: auto !important;
+	left: auto !important;
+	padding: 23px 30px !important;
+}
+/* flyout menu css */
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout > ul.mega-sub-menu {
+	padding-top: 4px !important;
+	margin-top: 13px !important;
+	border-top: 7px solid #0d7b43 !important;
+	background: #ffffff !important;
+	width: 270px !important;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout > ul.mega-sub-menu li a {
+	font: 14/22px !important;
+	letter-spacing: 1px;
+	font-weight: 900 !important;
+	margin-left: 10px !important;
+	padding: 0 10px !important;
+	text-transform: uppercase !important;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li {
+	padding: 0 !important;
+	list-style-position: inside !important;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > .mega-sub-menu li:before {
+	margin: 0 10px 0 0;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > .mega-sub-menu li {
+	width: auto !important;
+	margin-right: 30px;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > .mega-sub-menu li.widget_media_image {
+	margin-right: 0;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > .mega-sub-menu li a {
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+	font: 900 12px/16px 'Montserrat', arial, helvetica !important;
+	letter-spacing: 1px !important;
+}
+h4.mega-block-title {
+	font-weight: 200 !important;
+	letter-spacing: 1px !important;
+}
+button.mfp-close:hover {
+	background: none;
+}
+/*.navbar-small .navbar-bg-solid {
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
 	box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
-}
-}
+}*/
 /*--------------------------------------------------------------
 1.06 Footer Code
 ----------------------------------------------------------------*/
 /* Start Footer-top/Contact Section */
+#primary {
+	z-index: 5;
+	position: relative;
+}
+.c9-footer-full-width aside {
+	overflow: visible;
+}
 #footer-top:before {
 	content: url("/wp-content/uploads/2017/08/chicago-skyline.png");
 	position: absolute;
-	bottom: 15rem;
+	bottom: 13rem;
 	right: 7rem;
+	z-index: -1;
 }
 #footer-top {
-/*	z-index: -1;
-*/	position: relative;
+	position: relative;
 	background: #d1d1d1;
 	height: 200px;
+}
+#footer-top .container {
+	padding-top: 40px;
 }
 #footer-top aside:first-child {
 	top: -20px;
@@ -216,7 +365,8 @@ input[type="text"] {
 	margin-right: 1rem;
 }
 #footer-top .text-wrapper {
-	padding-top: 8rem;
+	padding-top: 5px;
+	text-align: left;
 }
 #footer-top .text-wrapper:before {
 	content: url("/wp-content/uploads/2017/08/subscribe-tree.png");
@@ -243,8 +393,7 @@ input[type="text"] {
 	float: left;
 }
 #footer-top #widget_cortex_mailchimp-2 {
-	margin-top: 3.5rem;
-	width: 50%;
+	width: 100%;
 	float: right;
 }
 .c9-footer-full-width .widget-cortex-mailchimp form {
@@ -254,12 +403,12 @@ input[type="text"] {
 	display: block;
 }
 /* First Name Field */
-.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(1) {
+.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex.first-name {
 	width: 49%;
 	float: left;
 }
 /* Last Name Field */
-.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(2) {
+.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex.last-name {
 	width: 49%;
 	float: right;
 }
@@ -270,6 +419,7 @@ input[type="text"] {
 }
 .input__field--cortex {
 	background: #fff;
+	margin-top: 8px;
 }
 #footer-top .input_field {
 	text-decoration: none;
@@ -291,7 +441,7 @@ input[type="text"] {
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 1px;
-	color: #3f3e3e;
+	color: #555454;
 	position: relative;
     bottom: 0;
     left: 0;
@@ -324,9 +474,10 @@ input[type="text"] {
 /* End Footer-top/Contact Section */
 /* Start Footer-bottom */
 #footer-bottom {
-	padding-top: 30px;
+	padding-top: 2.5rem;
 }
 #footer-bottom .widget_cortex_subscribe_widget ul li a:before {
+	color: white;
 	opacity: 1;
 }
 #footer-bottom {
@@ -365,8 +516,14 @@ input[type="text"] {
 	content: "\f18e";
 	font-family: FontAwesome;
 }
+#footer-b .widget {
+	font-size: 1.2rem;
+}
 #footer-b aside {
 	width: 100%;
+}
+#footer-b .textwidget {
+	width: 80%;
 }
 #footer-b .textwidget > p {
 	margin-bottom: 1rem;
@@ -395,11 +552,14 @@ input[type="text"] {
 	float: left;
 }
 #colophon .site-title h3 {
-	margin-top: 0;
+	margin-top: 20px;
 	float: left;
 	color: #0D7A41;
 	font-weight: 900;
 }
+#colophon .site-info {
+	font-weight: 400;
+	}
 #colophon p {
 	float: right;
 	display: inline;
@@ -410,40 +570,7 @@ input[type="text"] {
 	vertical-align: bottom;
 	margin-bottom: 10px;
 }
-@media (max-width: 767px) {
-	#footer-bottom {
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	#footer-d aside ul {
-		width: 60%;
-		margin: 0 auto;
-	}
-}
-@media (min-width: 992px) {
-	#footer-top #custom_html-3 {
-		margin-top: -4rem;
-		}
-	#colophon br {
-		display: none;
-	}
-}
-@media (max-width: 991px) {
-	#footer-top .text-wrapper:before {
-		display: none;
-	}
-	#colophon .site-title h3 {
-		margin-top: .5rem;
-		line-height: 2rem;
-		margin-bottom: 0;
-	}
-	.site-info {
-		float: left;
-		clear: both;
-		margin-top: 0;
-	}
-}
+
 /* End Copyright Section */
 /*--------------------------------------------------------------
 1.1 Home Page Code
@@ -483,6 +610,7 @@ input[type="text"] {
 .cgg-mission .well p {
 	font-weight: 100;
 	font-size: 2.2rem;
+	line-height: 3.5rem;
 }
 .cgg-mission .wow {
 	margin-bottom: 0;
@@ -494,11 +622,6 @@ input[type="text"] {
 }
 .content-area.page-builder .site-main section.cgg-mission .container {
 	padding: 0;
-}
-@media (min-width: 768px) { 
-	.cgg-mission .well {
-	padding: 4rem 9rem;
-}
 }
 /* End CGG Mission Section */
 
@@ -528,12 +651,16 @@ input[type="text"] {
 .cgg-ctas .entry-content p {
 	margin-bottom: 0;
 }
-.cgg-ctas .row:first-child {
+.cgg-ctas .row {
 	margin-bottom: 5rem;
 }
-.cgg-ctas .row:first-child div[class*="col"] img{
+
+.cgg-ctas .row div[class*="col"] img{
 	float: left;
+	margin-top: 12px;
 	margin-right: 1.5rem;
+	height: 100%;
+	width: auto;
 }
 
 .cgg-ctas .slide-img::before {
@@ -545,6 +672,13 @@ input[type="text"] {
     left: 0;
     width: 100%;
     background-color: rgba(64,67,68,0.3);
+}
+.cgg-ctas h5 {
+	margin-bottom: 0;
+}
+.content-area.page-builder .site-main section.cgg-ctas .pad50 {
+	padding-bottom: 0;
+	padding-top: 6rem;
 }
 /* End CGG CTAs Section */
 
@@ -571,16 +705,15 @@ input[type="text"] {
 }
 .front-page-gardens article .entry-header {
 	text-align: center;
-}
-.front-page-gardens article .entry-header {
+	padding: 0 15px;
 	letter-spacing: 1px;
 	margin-top: 2rem;
 	margin-bottom: 0;
 	color: #4e4d4d;
-}
+} 
 .front-page-gardens .entry-title {
 	margin-bottom: 0;
-	font-size: 2.3rem;
+	font-size: 2rem;
 	line-height: 3rem;
 	letter-spacing: 1px;
 }
@@ -593,13 +726,33 @@ input[type="text"] {
 	letter-spacing: 1px;
 	color: #4e4d4d;
 }
-.front-page-gardens article .magazine-article-header {
-}
 /* End Front Page Gardens Section */
 
 /* Start Sponsor Carousel Section */
+li.img_slide_container {
+}
+.sponsor-slider .h3 {
+	font-size: 5.6rem;
+	font-weight: 300;
+	display: inline;
+}
+.sponsor-slider div.slide-img {
+	height: auto;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+.sponsor-slider .slide-img img {
+	width: 100% !important;
+	margin: 0 auto;
+}
 .sponsor-slider .flexcarousel {
 	position: relative;
+}
+.sponsor-slider .flexcarousel ul {
+	display: flex;
+	align-items: center;
+	max-height: 100px;
 }
 .flex-control-nav {
 	bottom: -4rem;
@@ -628,18 +781,13 @@ input[type="text"] {
 	background-position: 80% 0;
 }
 .flexcarousel {
-	width: 80%;
+	width: 75%;
 	margin: 5rem auto 10rem auto;
 }
 /* End Sponsor Carousel Section */
 
 h1.gateway-green {
 	margin-top: 0;
-}
-
-#secondary-top {
-	width: 92%;
-	margin: 0 auto;
 }
 
 .c9-footer-full-width .widget-cortex-mailchimp h3 {
@@ -649,10 +797,8 @@ h1.gateway-green {
 	content: "";
 }
 
-@media (min-width: 576px) {
- }
 /*--------------------------------------------------------------
-1.1 Expressway Partnershp Program
+1.1 Expressway Partnership Program
 ----------------------------------------------------------------*/
 /* expressway partnership impact section */
 .expressway-partnership-header .entry-content h1 {
@@ -664,54 +810,54 @@ h1.gateway-green {
 	margin: 0 auto;
 }
 
-.express-partnership-impact .row div:first-child blockquote {
+.landing-page-impact .row div:first-child blockquote {
 	width: 80%;
 }
-.express-partnership-impact .row div:first-child blockquote p {
+.landing-page-impact .row div:first-child blockquote p {
 	font-size: 2.4rem;
 	line-height: 3.6rem;
 	letter-spacing: -1px;
 }
-.express-partnership-impact .row div:first-child {
+.landing-page-impact .row div:first-child {
 	padding-right: 15%;
 }
-.express-partnership-impact .row div:first-child p {
+.landing-page-impact .row div:first-child p {
 	font-size: 1.6rem;
 	line-height: 3rem;
 	font-weight: 300;
 }
-.express-partnership-impact .row div:last-child p {
+.landing-page-impact .row div:last-child p {
 	font-size: 1.8rem;
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	text-align: center;
 }
-.express-partnership-impact .row div:last-child h5,
-.express-partnership-impact .row div:last-child .h5
+.landing-page-impact .row div:last-child h5,
+.landing-page-impact .row div:last-child .h5
 {
 	margin-top: 0;
 	font-size: 1.8rem;
 	font-weight: 100;
 	line-height: 2.3rem;
-} 
-.express-partnership-impact .row div:last-child h5 span {
+}
+.landing-page-impact .row div:last-child h5 span {
 	margin-top: 0;
 }
-.express-partnership-impact .row div:last-child a {
+.landing-page-impact .row div:last-child a {
 	text-decoration: none;
 }
-.express-partnership-impact .row div:last-child a:hover {
+.landing-page-impact .row div:last-child a:hover {
 	text-decoration: none;
 }
 
-.express-partnership-impact .row div:last-child .fa {
+.landing-page-impact .row div:last-child .fa {
 	text-decoration: none;
 	color: #15c232;
 	font-size: 2.6rem;
 	line-height: 4.5rem;
 	margin-right: 1rem;
 }
-.content-area.page-builder .site-main section.express-partnership-impact .pad50 {
+.content-area.page-builder .site-main section.landing-page-impact .pad50 {
 	padding-bottom: 4rem;
 }
 /* Express Partnership Impact End */
@@ -719,7 +865,7 @@ h1.gateway-green {
 .us-forest-service-study-blurb h3,
 .us-forest-service-study-blurb h4 {
     font-size: 3.6rem;
-    letter-spacing: -1px;
+    letter-spacing: .5px;
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
 	margin-top: 0;
 }
@@ -735,25 +881,26 @@ h1.gateway-green {
 }
 /* US Forest Study End */
 /* Begin Community and Environmental Benefits */
-#section-3.community-and-environmental-benefits h3 {
-	font-size: 5rem;
+section.community-and-environmental-benefits h3 .h2 {
 	margin-bottom: 4rem;
+	letter-spacing: 0;
 }
-#section-3.community-and-environmental-benefits ul {
+section.community-and-environmental-benefits ul {
 	list-style-position: inside;
     padding: 0 1em;
 }
-#section-3.community-and-environmental-benefits li {
+section.community-and-environmental-benefits li {
 	font-weight: 300;
 	margin-bottom: 3rem;
-    text-indent: -.45em;
+    text-indent: -.25em;
+    font-size: 2.2rem;
 }
 .us-forest-service-study-blurb h4 .light {
 	font-weight: 200;
 }
 
-#section-3.community-and-environmental-benefits li:before
-  {  
+section.community-and-environmental-benefits li:before
+  {
 	font-size: 2.2rem;
 	font-family: 'FontAwesome';
 	content: "\f299";
@@ -761,33 +908,44 @@ h1.gateway-green {
 }
 /* End Community and Environmental Benefits */
 /* Begin Sponsor Benefits */
-#section-4.sponsor-benefits .h3 {
+section.sponsor-benefits .section-bg {
+	position: relative;
+}
+section.sponsor-benefits .section-bg:before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: .15;
+	background-color: white;
+}
+section.sponsor-benefits .h3 {
 	font-size: 5.4rem;
 	font-weight: 300;
 }
-#section-4.sponsor-benefits .h5 {
+section.sponsor-benefits .h5 {
 	margin-bottom: 5rem;
 	margin-top: 0;
 	font-size: 2.2rem;
 	font-weight: 200;
 }
-#section-4.sponsor-benefits img {
+section.sponsor-benefits img {
 	width: 82%;
 }
-#section-4.sponsor-benefits p {
+section.sponsor-benefits p {
 	font-size: 1.6rem;
 	line-height: 3rem;
 	font-weight: 200;
 }
-#section-4.sponsor-benefits p:last-child {
+section.sponsor-benefits p:last-child {
 	margin-bottom: 0;
 }
-#section-4.sponsor-benefits ul {
+section.sponsor-benefits ul {
 	margin-top: 0;
 	padding-left: 1em;
 	padding-right: 0;
 }
-#section-4.sponsor-benefits li {
+section.sponsor-benefits li {
 	padding-left: 1rem;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
@@ -795,7 +953,7 @@ h1.gateway-green {
 	margin-bottom: 1rem;
 	text-indent: -.2rem;
 }
-#section-4.sponsor-benefits li:before {
+section.sponsor-benefits li:before {
 	font-size: 1em;
 	font-family: 'FontAwesome';
 	content: "\f299";
@@ -811,7 +969,15 @@ h1.gateway-green {
 	padding: 2rem 5rem;
 }
 .additional-benefits .row .well {
-	background: #3f3e3e;
+	background: #555454;
+}
+.additional-benefits .row .well p:last-child {
+	width: 90%;
+	margin: 0 auto;
+}
+.additional-benefits .row .col-sm-6 {
+	padding-left: 0;
+	padding-right: 0;
 }
 .additional-benefits .row .well .light {
 	font-weight: 300;
@@ -819,6 +985,7 @@ h1.gateway-green {
 .additional-benefits .row .well p {
 	font-size: 1.8rem;
 	line-height: 3rem;
+	letter-spacing: .5px;
 }
 .additional-benefits .row .well ul {
 	margin-top: 2rem;
@@ -826,8 +993,8 @@ h1.gateway-green {
 }
 .additional-benefits .row .well li {
 	padding-left: 1rem;
-	font-size: 1.6rem;	
-	letter-spacing: -1px;
+	font-size: 1.6rem;
+	letter-spacing: 0;
 }
 .additional-benefits .row .well li:before {
 	font-size: 1em;
@@ -837,18 +1004,20 @@ h1.gateway-green {
 }
 /* End Additional Benefits */
 /* Begin Expressway Page Garden */
+.expressway-page-gardens .entry-header {
+	padding: 0;
+}
+.expressway-page-gardens .entry-title {
+	margin-top: 16px;
+}
 .expressway-page-gardens .btn {
 	padding: 2rem;
 	width: auto;
 	background-color: #15c232;
 }
-.expressway-page-gardens a.btn:hover {
-	background-color: black;
-	color: white;
-}
 /* End Expressway Page Gardens Grid */
 /* Begin Sponsorship Opportunities */
-.sponsorship-opportunities h3, 
+.sponsorship-opportunities h3,
 .sponsorship-opportunities .h3  {
 	font-weight: 200;
 	font-size: 5.4rem;
@@ -867,9 +1036,7 @@ h1.gateway-green {
 }
 /* End Sponsorship Opportuties */
 /* Begin Partner Sponsors */
-.partner-sponsors .h2 {
-	font-size: 5.6rem;
-}
+/* Begin Green Tie Ball Sponsors */
 .partner-sponsors .word-2 {
 	font-weight: 200;
 }
@@ -880,6 +1047,7 @@ h1.gateway-green {
 ----------------------------------------------------------------*/
 /* Start Green Tie Ball Hero */
 .green-tie-ball-hero .heading .hero-title {
+	font-weight: 900;
 	font-size: 8rem;
 	color: #15c232;
 	letter-spacing: 0;
@@ -894,7 +1062,10 @@ h1.gateway-green {
 	margin-top: 2rem;
 }
 .green-tie-ball-hero .btn {
-	padding: 1.5rem 4rem;
+	padding: 1.5rem 4.5rem;
+}
+.green-tie-ball-hero .btn:hover {
+	background: black;
 }
 /* End Green Tie Ball Hero */
 /* Start Ball Details */
@@ -992,23 +1163,29 @@ h1.gateway-green {
 }
 /* End Green Tie Ball What You Missed */
 /* Start Cgg News Posts */
-.cgg-news-posts .h5 {
-	position: absolute;
-    right: 2rem;
-    top: .2rem;
-	line-height: 1.3rem;
-	font-size: 1.2rem;
+.cgg-news-posts .magazine-article .magazine-article-date {
+	margin-top: 0;
+}
+.cgg-news-posts .magazine-article .magazine-article-date a {
+	background: #0d7a43;
+	padding-bottom: 5px;
+}
+.cgg-news-posts .magazine-article .magazine-article-date time {
+	line-height: 22px;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .cgg-news-posts h5.entry-title {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	line-height: 2rem;
 	font-weight: 900;
 	letter-spacing: 0;
 }
 .cgg-news-posts .entry-image {
-	margin-bottom: 3rem;
+	margin-bottom: 16px;
 }
-.cgg-news-posts figure.magazine-image {
+.cgg-news-posts .col-md-2 figure.magazine-image {
 	max-height: 150px;
 	overflow: hidden;
 }
@@ -1019,7 +1196,7 @@ h1.gateway-green {
 }
 .restaurant-sponsors .well-md {
 	background: white;
-	border: 8px solid #3f3e3e;
+	border: 8px solid #555454;
 	text-align: center;
 	font-size: 1.4rem;
 	font-weight: 1.8rem;
@@ -1050,17 +1227,419 @@ h1.gateway-green {
 	width: auto;
 	padding: 2rem;
 }
+.cgg-news-posts .view-more-btn .btn:hover {
+	background: black;
+}
 .cgg-news-posts .view-more-btn .btn {
 	font-size: 1.4rem;
 	padding-right: 4rem;
 	padding-left: 4rem;
 }
-.cgg-news-posts .view-more-btn .btn:hover {
-	background: black;
-}
 /* End CGG News Posts */
-@media (min-width: 1200px) { 
+/* Begin Green Tie Ball Partner Sponsors */
+.page-id-2000 .content-area.page-builder .site-main section.partner-sponsors .container {
+	padding-bottom: 20%;
+}
+/* End Green Tie Ball Partner Sponsors */
+@media (min-width: 768px) {
+	.cgg-mission .well {
+		padding: 4rem 9rem;
+	}
+}
+
+@media (min-width: 992px) {
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-donate-menu > a.mega-menu-link {
+	color: white !important;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-donate-menu > a.mega-menu-link:after {
+		content: "";
+		position: relative;
+		height: 32px;
+		top: -24px;
+		width: 100%;
+		background: #00783f;
+		display: block;
+		z-index: -1;
+		width: 136%;
+		left: -18%;
+		transition: color, background, .5s;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-donate-menu > a.mega-menu-link:hover {
+		color: white !important;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-donate-menu > a.mega-menu-link:hover:after {
+		background: #555454;
+	}
+	#footer-top #custom_html-3 {
+		margin-top: -4rem;
+		}
+	#colophon br {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.cgg-ctas .row div[class*="col"] p:first-child {
+	width: 100px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+	.logo-header img {
+		height: 140px !important;
+	}
+}
+@media (max-width: 1199px) {
+	.front-page-gardens .entry-title {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+	}
+	.front-page-gardens .entry-content {
+		font-size: 1.3rem;
+	}
+	.cgg-ctas .row {
+		margin-bottom: 0;
+	}
+	.cgg-ctas .row div[class*="col"] {
+		text-align: center !important;
+		margin-bottom: 50px;
+	}
+	.cgg-ctas .row div[class*="col"] p:first-child {
+		position: relative;
+		display: inline-block;
+	}
+	.cgg-ctas .row div[class*="col"] h3,
+	.cgg-ctas .row div[class*="col"] h5,
+	.cgg-ctas .row div[class*="col"] h6 {
+		text-align: center;
+	}
+	.cgg-ctas .row div[class*="col"] img {
+		height: auto;
+		margin-bottom: 10px;
+		margin-right: 0;
+		height: 150px;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		margin: 0 !important;
+	}
+	#footer-bottom {
+		padding-top: 0;
+	}
+	#footer-top .text-wrapper:before {
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.landing-page-impact .row div:first-child {
+		padding-right: 10px;
+	}
+	section.sponsor-benefits img {
+		width: 100%;
+	}
+	.cgg-news-posts figure.magazine-image {
+		max-height: 300px;
+	}
+	.green-tie-ball-what-you-missed .row {
+		display: block;
+	}
+	.green-tie-ball-what-you-missed div[class*="col-xs-12"] {
+		margin-bottom: 0;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+		margin-bottom: 10px;
+	}
+	/* Megamenu and flyout */
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+		margin-left: 16% !important;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu {
+		background-color: #fafffa !important;
+		margin-top: 0 !important;
+	}
+	/* flyout menu */
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout > ul.mega-sub-menu {
+		width: 100% !important;
+		border-top: none !important;
+		margin-bottom: 15px;
+		padding-top: 5px !important;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout > ul.mega-sub-menu li a {
+		margin-left: 0 !important;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout > ul.mega-sub-menu a {
+		background-color: #fafffa !important;
+		margin-left: 0 !important;
+	}
+	#mega-menu-wrap-primary > ul#mega-menu-primary > li.mega-menu-item a {
+ 		text-align: center !important;
+ 	}
+
+	#footer-top {
+		padding-bottom: 20px;
+	}
+	#footer-top .container {
+		padding-top: 10px;
+	}
+	#colophon {
+		padding: 1rem;
+	}
+	#footer-top {
+		height: auto;
+	}
+	#footer-top br.display-on-large {
+		display: none;
+	}
+	#footer-top #widget_cortex_mailchimp-2 {
+		width: 100%;
+		float: none;
+	}
+	#footer-top #widget_cortex_mailchimp-2 {
+		margin-top: 0;
+	}
+	.c9-footer-full-width .widget-cortex-mailchimp form {
+		width: 100%;
+	}
+	#footer-top #custom_html-3 {
+		width: 100%;
+		float: none;
+		margin-bottom: 0;
+	}
+	.c9-footer-full-width .widget_text {
+		padding: 0;
+	}
+	.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(1) {
+		width: 100%;
+		float: none;
+	}
+	.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex:nth-child(2) {
+		width: 100%;
+		float: none;
+	}
+	.c9-footer-full-width .widget-cortex-mailchimp form .input--cortex {
+		width: 100%;
+		float: none;
+	}
+	#footer-top .c9-footer-full-width .widget-cortex-mailchimp form .button {
+		width: auto;
+		float: left;
+	}
+	#footer-top .text-wrapper {
+		padding-top: 3rem;
+	}
+	#colophon .site-title h3 {
+		margin-top: .5rem;
+		line-height: 2rem;
+		margin-bottom: 0;
+	}
+	#colophon .site-info {
+		text-align: left;
+		float: left;
+		clear: both;
+		margin-top: 0;
+	}
+	#mega-menu-wrap-primary {
+		padding: 0 !important;
+		margin-top: 5px !important;
+		background: white !important;
+		transition: height 1s !important;
+		width: 100% !important;
+	}
+	.logo-header {
+		z-index: 1;
+	}
+}
+
+ @media (max-width: 767px) {
+ 	h1,
+	.h1 {
+		font-size: 5rem;
+		letter-spacing: .5px;
+	}
+	h2,
+	.h2 {
+		font-size: 4rem;
+		letter-spacing: .5px;
+	}
+	h3,
+	.h3 {
+		font-size: 3rem;
+		letter-spacing: .5px;
+	}
+	h4,
+	.h4 {
+		font-size: 2rem;
+	}
+	h5,
+	.h5 {
+		font-size: 1.6rem;
+	}
+	h6,
+	.h6,
+	p {
+		font-size: 1.2rem;
+	}
+	.magazine_latest figure.magazine-image {
+		max-height: 300px;
+	}
+	.community-and-environmental-benefits .entry-content div[class*="col-xs-12"] {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.sponsorship-opportunities .h3 {
+		font-size: 4rem;
+	}
+	.landing-page-impact .row div:first-child blockquote {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	section.community-and-environmental-benefits ul {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	section.community-and-environmental-benefits ul li {
+		margin-top: 0;
+	}
+	section.community-and-environmental-benefits h3 {
+		font-size: 3.6rem;
+		line-height: 4rem;
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	section.sponsor-benefits img {
+		width: 100%;
+	}
+	.sponsorship-opportunities img {
+		width: 100%;
+	}
+	.us-forest-service-study-blurb h3 {
+		font-size: 2.4rem;
+		line-height: 3.8rem;
+		letter-spacing: 1px;
+	}
+	.us-forest-service-study-blurb h4 span {
+		font-size: 3rem;
+		line-height: 3.4rem;
+	}
+ 	.expressway-partnership-header .entry-content h1 {
+ 		font-size: 5rem;
+ 		line-height: 6rem;
+ 	}
+ 	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+		margin-left: 0 !important;
+	}
+ 	.magazine_latest_content .entry-title {
+ 		text-align: center;
+ 		font-size: 2.1rem;
+ 		letter-spacing: 1px;
+ 	}
+ 	.page-builder .row {
+ 		display: block;
+ 	}
+ 	.green-tie-ball-hero .entry-title,
+ 	.green-tie-ball-hero .hero-sub-title {
+		text-align: left;
+ 	}
+ 	.content-area.page-builder .site-main section.ball-details .pad50 {
+ 		padding-top: 0;
+ 	}
+ 	.green-tie-ball-hero .heading .hero-sub-title {
+ 		font-size: 2rem;
+ 		line-height: 2rem;
+ 	}
+ 	.front-page-gardens .magazine-article {
+ 		margin-bottom: 15px;
+ 	}
+ 	.content-area.page-builder .site-main section .container {
+ 		padding-bottom: 20px;
+ 	}
+ 	.flexcarousel {
+ 		width: 100%;
+ 	}
+	#footer-top:before {
+		display: none;
+	}
+	#footer-a aside {
+		width: 80%;
+		margin: 0 auto;
+	}
+	#footer-b {
+		text-align: center;
+	}
+	#footer-b .textwidget {
+		width: 100%;
+	}
+	.footer-container .widget {
+		margin-bottom: 2rem;
+	}
+	.footer-container .widget h3 {
+		margin-top: 0;
+	}
+	#footer-bottom {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#footer-d aside ul {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 568px) {
+	article .entry-content {
+		padding: 0;
+	}
+	.expressway-partnership-header .entry-content h1 {
+		margin-left: 0;
+		font-size: 4rem;
+		line-height: 4.5rem;
+	}
+	.cgg-news-posts .view-more-btn .btn {
+		width: 300px;
+	    white-space: pre-wrap; /* css-3 */    
+	    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	    white-space: -pre-wrap; /* Opera 4-6 */    
+	    white-space: -o-pre-wrap; /* Opera 7 */    
+	    word-wrap: break-word; /* Internet Explorer 5.5+ */
+		padding: 1.5rem;
+		line-height: 2rem;
+	}
+	.community-and-environmental-benefits .entry-content article .entry-content {
+		padding: 0;
+	}
+	.partner-sponsors .h2 {
+		font-size: 4.5rem;
+	}
+	.cgg-mission .well .h3 {
+		font-size: 2.3rem;
+	}
+	.cgg-mission .well p {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+	.community-benefits .h4 {
+		font-size: 2rem;
+	}
+	.sponsor-slider h2 {
+		font-size: 5rem;
+	}
+	.sponsor-slider .h3 {
+		display: block;
+		font-size: 4rem;
+		font-weight: 300;
+	}
+
+	.magazine_latest_content .entry-title {
+		font-size: 1.9rem;
+	}
+	#footer-top aside .first-word {
+		font-size: 4.6rem;
+	}
+	#footer-top aside .second-word {
+ 		font-size: 2.3rem;
+ 	}
+ }
+ @media (max-width: 320px) {
+
  }
 
- @media (min-width: 1400px) { 
- }

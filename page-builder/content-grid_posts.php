@@ -12,6 +12,7 @@ $cortex_sub_title                      = get_sub_field('sub_title');
 $cortex_filter_by_category            = get_sub_field('filter_by_category');
 $cortex_filter_by_post_type            = get_sub_field('filter_by_post_type');
 $cortex_filter_by_tag                = get_sub_field('filter_by_tag');
+$cortex_filter_by_region            = get_sub_field('filter_by_region');
 $cortex_number_of_posts                = get_sub_field('number_of_posts_to_display');
 $cortex_view_more_btn                 = get_sub_field('view_more_btn');
 $cortex_view_more_button_link    = esc_url(get_sub_field('view_more_button_link'));
@@ -24,6 +25,7 @@ $cortex_display_read_more_text        = get_sub_field('read_more_text');
 $cortex_columns  = get_sub_field('number_of_columns');
 $cortex_display_title  = get_sub_field('display_title');
 $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
+$cortex_link_to_single = get_sub_field('link_to_single_post_page');
 
 ?>
 <section id="section-<?php echo $cortex_counter; ?>" class="magazine_latest<?php if (! empty($cortex_customClass)) {
@@ -85,6 +87,14 @@ $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
                 if (! empty($cortex_filter_by_tag)) {
                     $args['tag__in'] = $cortex_filter_by_tag;
                 }
+                
+                if (! empty($cortex_filter_by_region)) {
+                    $args['tax_query'][] = array(
+                            'taxonomy' => 'gardens_region',
+                            'field' => 'id',
+                            'terms' => $cortex_filter_by_region
+                    );
+                }
 
                 // The Query
                 $cortex_wp_query = new WP_Query($args);
@@ -109,7 +119,7 @@ $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
                             $cortex_column_classes = "col-xs-6 col-sm-3 col-md-2";
                             break;
                             case 4:
-                            $cortex_column_classes = "col-xs-12 col-sm-6 col-md-3";
+                            $cortex_column_classes = "col-xs-12 col-sm-12 col-md-3";
                             break;
                             case 3:
                             $cortex_column_classes = "col-xs-12 col-sm-4 col-md-4";
@@ -220,10 +230,13 @@ $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
                                         break;
                                         //Default case is adding an image
                                         default:
+                                    if ($cortex_link_to_single) {
                                 ?>
                                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="width:100px; height:100px;"> <?php the_post_thumbnail('cortex-featured', array( 'class' => 'img-responsive' )); ?>                     
                                         </a>
-                                        <?php
+                                        <?php } else {
+                                            the_post_thumbnail('cortex-featured', array( 'class' => 'img-responsive'));
+                                        }
                                         break;
                                     } //end format switch?>
                                 </figure>
@@ -232,15 +245,16 @@ $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
                                     if ($cortex_format != 'quote') {
                                         ?>
                                         <div class="magazine-article-header">
-                                            <?php if ($cortex_display_date == true) {
-                                            ?><div class="magazine-article-date"><span class="h5 alternate"><?php cortex_posted_on(); ?></span></div><?php
-                                        } ?>
                                             <?php 
                                             // Use the Friendly Heading if there is one -- Sam
                                                 if ($cortex_display_title) { 
                                                 ?>
                                                 <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><h5 class="entry-title"><?php echo get_the_title(); ?></h5></a>
-                                               <?php } ?>
+                                               <?php } 
+                                                if ($cortex_display_date == true) {
+                                            ?><div class="magazine-article-date"><span class="h5 alternate">
+                                            <?php cortex_posted_on(); ?></span></div><?php
+                                        } ?>
                                             <?php if ($cortex_display_post_meta == true) {
                                                 ?>
                                             <div class="entry-meta">
@@ -358,4 +372,4 @@ $cortex_display_subtitle = get_sub_field('display_garden_subtitle');
     </div><!--section-bg-->
 </section>
 <?php $cortex_counter++;
-unset($cortex_title, $cortex_display_title, $cortex_view_more_button_text, $cortex_sub_title, $cortex_filter_by_category, $cortex_filter_by_post_type, $cortex_columns, $cortex_column_classes, $cortex_number_of_posts, $cortex_view_more_btn, $cortex_view_more_button_link, $cortex_customClass, $cortex_display_date, $cortex_display_read_more, $cortex_display_read_more_text, $cortex_display_post_meta, $cortex_display_post_excerpt, $cortex_number_of_posts_to_display); ?>
+unset($cortex_filter_by_region, $cortex_link_to_single, $cortex_title, $cortex_display_title, $cortex_view_more_button_text, $cortex_sub_title, $cortex_filter_by_category, $cortex_filter_by_post_type, $cortex_columns, $cortex_column_classes, $cortex_number_of_posts, $cortex_view_more_btn, $cortex_view_more_button_link, $cortex_customClass, $cortex_display_date, $cortex_display_read_more, $cortex_display_read_more_text, $cortex_display_post_meta, $cortex_display_post_excerpt, $cortex_number_of_posts_to_display); ?>

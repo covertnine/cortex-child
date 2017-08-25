@@ -72,7 +72,9 @@ if ( ! function_exists( 'cortex_scripts' ) ) {
         wp_enqueue_script( 'classie-js', get_template_directory_uri() . '/js/classie.js', array(), '', true );
         wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.min.js', array(), '', true );
         wp_enqueue_script( 'cortex-js', get_stylesheet_directory_uri() . '/js/main.js', array(), '', true );
+        wp_enqueue_script( 'cgg-js', get_stylesheet_directory_uri() . '/js/cgg.js', array(), '', true );
         wp_enqueue_script( 'skrollr-init-js', get_template_directory_uri() . '/js/skrollr-init.js', array(), '', true );
+        // wp_dequeue_style('megamenu');
 
         // add required comment reply js
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -107,6 +109,21 @@ add_action( 'wp_enqueue_scripts', 'cortex_enqueue_child_styles', 35 );
 function cortex_child_editor_style() {
    add_editor_style( get_stylesheet_directory_uri() . '/style.css' );
 }
+if ( ! function_exists( 'cortex_acf_field_sanitization' ) ) {
+    function cortex_acf_field_sanitization( $value, $post_id, $field ) {
+
+        if ( ( $field['_name'] != 'custom_code' ) && ( $field['_name'] != 'custom_js' ) && ( $field['_name'] != 'content') ) {
+
+            // santize data from custom fields
+            $value = wp_kses_post( balanceTags($value) );
+            return $value;
+
+        }
+        return $value;
+
+    }
+}
+add_filter('acf/format_value', 'cortex_acf_field_sanitization', 10, 3 );
 
 define( 'ACF_LITE' , false );
 
@@ -115,3 +132,6 @@ add_action( 'init', 'cortex_child_editor_style' );
 add_action( 'init', 'cortex_child_editor_style' );
 
 include('inc/post-types.php');
+
+//add additional custom fields like the welcome window
+include('inc/additional-options.php');

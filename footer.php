@@ -11,6 +11,7 @@ $cortex_theme_options 		= $cortex_options;
 $cortex_custom_js     		= $cortex_theme_options['c9-custom-js'];
 $cortex_footer_layout		= $cortex_theme_options['c9-footer-layout'];
 $cortex_footer_headings		= $cortex_theme_options['c9-footer-headings'];
+$cortex_welcome_window		= $cortex_theme_options['c9-welcome-window'];
 $cortex_copyright_field     = wp_kses_post( $cortex_theme_options['c9-footer-copyright'] );
 $cortex_google_analytics    = str_replace( array('<p>','</p>','<br />'), '', $cortex_theme_options['c9-analytics-js'] );
 ?>
@@ -69,6 +70,11 @@ $cortex_google_analytics    = str_replace( array('<p>','</p>','<br />'), '', $co
 if ( ! empty( $cortex_google_analytics ) ) {
 	echo $cortex_google_analytics;
 }
+?>
+<?php
+	if ($cortex_welcome_window == 'enable') {
+		echo '<a href="/welcome-window/" class="welcome-window"></a>';
+	}
 ?>
 </body>
 </html>

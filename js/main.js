@@ -2,15 +2,27 @@
 
 	"use strict";
 
-	////////////////////////////////*   Codez from the child theme  */////////////////////////////////////////////////
+	////////////////////////////////*   Codes from the child theme  */////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	$(window).load(function() {
 	  $('.flexcarousel').flexslider({
 	    animation: "slide",
 	    animationLoop: true,
-	    itemWidth: 250,
-	    itemMargin: 20,
+	    itemWidth: 210,
 	    directionNav: true
+	  });
+	});
+
+	// Adds id to url for bootstrap tabs, so you can specify an open tab into the url itself, specifically for the contact page.
+	$(function(){
+	  var hash = window.location.hash;
+	  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+	  $('.nav-tabs a').click(function (e) {
+	    $(this).tab('show');
+	    var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+	    window.location.hash = this.hash;
+	    $('html,body').scrollTop(scrollmem);
 	  });
 	});
 	////////////////////////////////*   Codez from the parent theme  *////////////////////////////////////////////////
@@ -21,9 +33,6 @@
 	////////////////////////////////*   prevent scrolling up for links set to #  *////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	$('a[href*="#page"],a[href*="#page-top"]').click(function(e) {
-		if ($(window).width() <= 767) {
-			$('.navbar-collapse').collapse('toggle');
-		}
 		$('html,body').animate({ scrollTop: 0 }, 'slow');
 		return false;
 	});
