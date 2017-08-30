@@ -5257,13 +5257,6 @@
                 "operator": "==",
                 "value": "page_builder.php"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
         ]
     ],
     "menu_order": 2,
@@ -5279,5 +5272,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1503696148
+    "modified": 1503703918
 }

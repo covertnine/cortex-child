@@ -1,13 +1,13 @@
 {
     "key": "group_5518721b1ef82-2",
-    "title": "Navigation Options",
+    "title": "Cortex Page Builder Navigation",
     "fields": [
         {
             "key": "field_56dcddf3e6bca",
             "label": "Change Header Navigation Type",
             "name": "navigation_type_override",
             "type": "radio",
-            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "instructions": "Some header featured background imagery will obscure the navigation if your Cortex Options setting has set the background to be transparent by default. If that's the case, you can override the default setting for your navigation type by changing this setting to opaque, and the content will slide below the opaque navigation",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -20,11 +20,11 @@
                 "nav1": "Transparent Background",
                 "nav2": "Opaque Background"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "default",
-            "layout": "vertical",
-            "allow_null": 0,
+            "layout": "horizontal",
             "return_format": "value"
         }
     ],
@@ -44,13 +44,16 @@
             }
         ]
     ],
-    "menu_order": 4,
-    "position": "side",
+    "menu_order": 1,
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1503587732
+    "modified": 1504052552
 }

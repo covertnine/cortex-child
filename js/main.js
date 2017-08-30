@@ -3,7 +3,9 @@
 	"use strict";
 
 	////////////////////////////////*   Codes from the child theme  */////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// Definition for the slider used for sponsor logos	
 	$(window).load(function() {
 	  $('.flexcarousel').flexslider({
 	    animation: "slide",
@@ -13,7 +15,7 @@
 	  });
 	});
 
-	// Adds id to url for bootstrap tabs, so you can specify an open tab into the url itself, specifically for the contact page.
+	// Adds id to url for bootstrap tabs, so you can add the id of the tab to the url itself, specifically for the contact page.
 	$(function(){
 	  var hash = window.location.hash;
 	  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
@@ -482,6 +484,38 @@
 	// });
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////       input label movement when clicked or filled in        /////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if (!String.prototype.trim) {
+    (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+            return this.replace(rtrim, '');
+        };
+    })();
+}
+
+[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+    // in case the input is already filled..
+    if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+    }
+
+    // events:
+    inputEl.addEventListener( 'focus', onInputFocus );
+    inputEl.addEventListener( 'blur', onInputBlur );
+} );
+
+function onInputFocus( ev ) {
+    classie.add( ev.target.parentNode, 'input--filled' );
+}
+
+function onInputBlur( ev ) {
+    if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+    }
+}
 
 
 	//////////////////////////////////////       full screen search        ///////////////////////////////////////////

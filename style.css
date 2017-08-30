@@ -5,11 +5,14 @@ Author: COVERT NINE
 Author URI: http://www.covertnine.com
 Description: A multi-purpose Wordpress Theme for Photographers, Agencies, Musicians, Labels, Magazines, and Music Festivals
 Template: cortex
-Version: 1.2.12
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cortex
 Tags: responsive, css3, html5, bootstrap, responsive-layout, featured-images, rtl-language-support, two-columns, three-columns, dark, light
+GitHub Theme URI: https://github.com/covertnine/cortex-child
+GitHub Branch:    cgg-child
+
 */
 /*--------------------------------------------------------------
 0.0 Special Styles
@@ -97,10 +100,10 @@ blockquote p:last-child:after {
 	font-weight: 900;
 	text-shadow: none !important;
 	letter-spacing: .45;
-	white-space: pre-wrap; /* css-3 */    
+	white-space: pre-wrap; /* css-3 */
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */    
-    white-space: -o-pre-wrap; /* Opera 7 */    
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 .btn-primary {
@@ -119,12 +122,27 @@ article .entry-content  {
 	padding: 0 15px;
 }
 a.btn:hover {
-	background-color: #555454; 
+	background-color: #555454;
 	color: white;
 }
 /*--------------------------------------------------------------
 1.0 Global Component Definitions
 ----------------------------------------------------------------*/
+.content-area .site-main .container .masonry .grid-tiles .tile {
+	margin: 10px;
+	width: calc(25% - 20px);
+	text-align: center;
+}
+.widget_search input[type="submit"]:hover {
+	background: #00783f;
+	color: white;
+}
+.widget_search .search-submit {
+	line-height: 12px;
+}
+.single-social-share li a:hover {
+	background: #555454;
+}
 .full_page_slider h1,
 .full_page_slider h2,
 .full_page_slider h3,
@@ -323,11 +341,17 @@ h4.mega-block-title {
 button.mfp-close:hover {
 	background: none;
 }
-/*.navbar-small .navbar-bg-solid {
-	-webkit-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
-	-moz-box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
-	box-shadow: 0px 2px 3px 0px rgba(63,62,62,0.62);
-}*/
+
+/* color styling from theme options */
+ /**************************************** light cortex theme color styling ****************************************/
+ /**************************************** accent color styling ****************************************/ .btn.btn-default, .alternate, hr, .btn-default, input[type="submit"], #submit, .accent-color, button, input[type="button"], input[type="reset"], .widget_search .search-submit, .nav-links .page-numbers, .single-social-share li a, .comment-list .comment article .reply a:after, .tp-button.red, .accent-color-bg, .tp-button, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, .btn.light-color-text.cortex_the_excerpt, .entry-content .btn.light-color-text.cortex_the_excerpt:visited, .entry-content .btn.light-color-text.cortex_the_excerpt, .woocommerce .button.add_to_cart_button, .woocommerce .buttons .button, .woocommerce-message .button.wc-forward, mark, ins, .dropdown-menu .divider, button, .button.button.alt, .woocommerce div.product form.cart .button, .woocommerce #content .button, .search-submit, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers, .woocommerce input.button, .woocommerce a.button.alt, .woocommerce .form-row.place-order .button, .cortex .tp-bullet.active,.cortex .tp-bullet.selected,.cortex .tp-bullet:hover,.cortex .tp-bullet:focus, .woocommerce .button, .woocommerce a.button, input[type="checkbox"]:checked, input[type="radio"]:checked, button { background-color: #0d7a43; } .tp-caption .tp-button:hover { background-color: #0d7a43 !important; } .entry-content ul li:before,.widget_archive ul li:before,.widget_categories ul li:before,.widget_pages ul li:before,.widget_meta ul li:before,.widget_recent_comments ul li:before,.widget_recent_entries ul li:before,.widget_rss ul li:before,.widget_text ul li:before,.widget_nav_menu ul li:before, .widget_calendar #wp-calendar caption, a:hover, a:focus, a:active, #secondary-top .widget-cortex-mailchimp h3:before, .entry-meta .cat-links:before, .entry-meta .tags-links:before, .entry-meta a:hover, .nav-links .nav-previous:hover, .nav-links .nav-next:hover, .nav-links .prev:before, .nav-links .nav-previous:before, .nav-links .next:before, .nav-links .nav-next:before, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .h5 .posted-on a, blockquote:before, .author-social li a:hover, .author-social li a:before, .site-info a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active, .navbar-default .navbar-collapse .nav li a:hover, .navbar-default .navbar-collapse .nav li a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .full_page_slider .tp-caption h2, .content-area .site-main .masonry_portfolio .container .isotope-item .masonry_portfolio_sub_heading, .blog_latest a:hover, .small-link:hover, .comment-reply-link:hover, .comment-author .fn .url:hover, .comment-metadata a:hover, .blog_latest .blog_latest_title .subtitle, .twitter-tweet ul li:before, .action-link:after, .project_masonry_description, .subtitle, .widget-cortex-contact .email:before, .widget-cortex-contact .tel:before, .widget-cortex-contact .street-address:before, .widget_cortex_twitter_widget ul li:before, .masonry_project_sub_heading, .isotope-item h3 .masonry_project_heading:hover, .events_description .accent-color-text, .accent-color-text, .tp-caption.-cortex-h2, .-cortex-h2, .content-area .site-main .masonry_project .isotope-item .masonry_project_sub_heading, .content-area .site-main .masonry_project .isotope-item .masonry_project_heading:hover, .content-area .site-main .masonry_portfolio .container .isotope-item .masonry_portfolio_heading:hover, a:hover span, .entry-content ul li:after, .widget_archive ul li:after, .widget_categories ul li:after, .widget_pages ul li:after, .widget_meta ul li:after, .widget_recent_comments ul li:after, .widget_recent_entries ul li:after, .widget_rss ul li:after, .widget_text ul li:after, .widget_nav_menu ul li:after, .widget_product_categories ul li:after, .nav-links .next:after, .nav-links .nav-next:after, .widget_cortex_twitter_widget .date a:hover, .widget_cortex_twitter_widget ul li a:hover, .events-header-text.next-event h5:first-child, .event-single header .events-header-text .light.secondary-font, .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu .active a, .widget_product_categories ul li:before, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers:hover, .woocommerce nav.woocommerce-pagination .page-numbers a.page-numbers.next:hover, .accent-color-text.h1, .accent-color-text.h2, .accent-color-text.h3, .accent-color-text.h4, .accent-color-text.h5, .accent-color-text.h6, .entry-tags .entry-meta .tags-links a:before, .nav2.navbar-default .navbar-collapse .nav li a:hover, .entry-content ol li:before, .sticky .entry-meta:before, .panel-group .panel-heading .panel-title .accordion-toggle.collapsed:hover, a:hover i:before, .c9-footer-full-width .widget_cortex_twitter_widget .big.dark ul li:before, .c9-footer-full-width .widget_cortex_twitter_widget .big.light ul li:before, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-collapse .nav .active a, .bright .nav1.navbar-small.navbar-default .navbar-collapse > .nav > .active > a, .nav2.navbar-default .navbar-collapse .nav .active a, .nav2.navbar-default .navbar-collapse .nav .active.current_page_item a { color: #0d7a43; } .-cortex-h2, .tp-caption.-cortex-h2 { color: #0d7a43 !important; } @media (max-width: 767px) { .bright .nav1.navbar-default .navbar-collapse .nav li a:hover { color: #0d7a43; } } .input__label--cortex:before, .input__label--cortex:after { border-bottom: 1px solid #0d7a43; } .input__label--cortex:after, .widget .widget-title:after, .entry-meta:after, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1:after, .author-about-title h5:after, #comments h3:after, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1:after, .blog-latest-header .entry-header-standard .blog_latest_title:after, .cortex-woocommerce .page-title:after, .widget .widget-title:after, .widget .widgettitle:after{ border-bottom: 2px solid #0d7a43; } .input__label--cortex-color-1:after { border-color: #0d7a43; } .widget_search .search-field, .search-form .search-field, .widget_search .search-field, .widget_product_search .search-field { border: 3px solid #0d7a43; } .comment.bypostauthor { border-left: 3px solid #0d7a43; } .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover { border-bottom: 1px solid #0d7a43; } /**************************************** secondary color styling ****************************************/ code, .input__field, label, .input__label, .input__field--cortex, .nav-links .page-numbers.current, .nav-links .page-numbers.current:hover, .quote blockquote, blockquote .quote-source strong, .full_page_slider .tp-caption h3, .tp-caption h4, .full_page_slider .tp-caption h5, .secondary-color-text, .project-page-header h2, .shop_table.woocommerce-checkout-review-order-table tr th, .secondary-color-text, .secondary-color-text:visited, .secondary-color-text.h1, .secondary-color-text.h2, .secondary-color-text.h3, .secondary-color-text.h4, .secondary-color-text.h5, .secondary-color-text.h6, .nav2.navbar-default .navbar-collapse .nav li a, .entry-meta a { color: #0d7a43; } .tp-button:hover.red, .purchase:hover.red { background-color: #0d7a43 !important; } .input__label--cortex-color-2::after { border-color: #0d7a43; } /**************************************** third color styling ****************************************/ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus, .entry-meta, .comment-metadata a, .comment-notes, .form-allowed-tags, site-info, .site-info a, .twitter-tweet ul li, .third-color-text, .dropdown-header { color: #15c232; } .input__label--cortex-color-3::after { border-color: #15c232; } table thead { background-color: #15c232; } table { border-left: 1px solid #15c232; border-right: 1px solid #15c232; border-bottom: 1px solid #15c232; } /**************************************** cortex nav links (top level) ****************************************/ .navbar-default .navbar-collapse .nav li a, .bright .nav1.navbar-small.navbar-default .navbar-collapse > .nav > li > a, .nav2.navbar-default .navbar-collapse .nav li a { color: #555454; } .navbar-default .navbar-collapse .nav li a:hover, .bright .nav1.navbar-small.navbar-default .navbar-collapse > .nav > li > a:hover, .nav2.navbar-default .navbar-collapse .nav li a:hover { color: #0d7a43; } /**************************************** cortex secondary nav links (second and third level) ****************************************/ .navbar-default .navbar-collapse .nav li .dropdown-menu li a { color: #0d7a43; } /**************************************** body color styling ****************************************/ body, .entry-content, .entry-content p, .comment p, p, code, .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner .author-info .entry-title, textarea, .entry-content .btn.body-color-text,.hero-builder-header .hero-description .well, .entry-header.hero-builder-header .hero-description .well p, .tag .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1 { color: #555454; } .entry-content a:hover, .entry-content p a:hover { color: #0d7a43; } /**************************************** body link color styling ****************************************/ .entry-content a, .entry-content p a, .entry-content a:visited, .entry-content p a:visited { color: #555454; } /**************************************** dark color styling ****************************************/ .navbar-default .navbar-toggle:hover, .dark-color, .btn.light-color-text.cortex_the_excerpt:hover, .btn.light-color-text.cortex_the_excerpt:visited:hover, .entry-content .btn.light-color-text.cortex_the_excerpt:hover, .entry-content .btn.light-color-text.cortex_the_excerpt:visited:hover, .widget-cortex-mailchimp input[type="submit"]:hover, input[type="submit"]:hover, input[type="button"]:hover, .woocommerce input.button:hover,button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.button.button.alt:hover,.woocommerce div.product form.cart .button:hover { background: #555454; } .sidebar .widget_cortex_twitter_widget .twitter-tweet .bg.dark-color-bg, #footer-top .widget_cortex_twitter_widget .dark .bg { background-color: #555454; } .dark-color-text, .twitter-tweet, .twitter-tweet ul li a, .twitter-tweet a, .entry-content .btn.body-color-text.btn-info, .widget-cortex-mailchimp input[type="submit"]:hover, input[type="submit"]:hover, input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], .widget_cortex_subscribe_widget ul li a:before, .widget_calendar #wp-calendar tr td, .panel-group .panel-heading .panel-title .accordion-toggle.collapsed, .dark-color-text:visited, .dark-color-text.h1, .dark-color-text.h2, .dark-color-text.h3, .dark-color-text.h4, .dark-color-text.h5, .dark-color-text.h6 { color: #555454; } @media (max-width: 767px) { .bright .nav1.navbar-default .navbar-collapse .nav li a { color: #555454; } }
+@media (max-width: 767px) {
+    #footer-bottom .with-heading {padding-top: 30px;}
+    .hero_builder .entry-header .heading .h2 {font-size: 5rem;line-height: 5rem;width: 100%;}
+}
+/*********************************************************************************************/
+/*********************************************************************************************/
+
 /*--------------------------------------------------------------
 1.06 Footer Code
 ----------------------------------------------------------------*/
@@ -710,7 +734,7 @@ button.mfp-close:hover {
 	margin-top: 2rem;
 	margin-bottom: 0;
 	color: #4e4d4d;
-} 
+}
 .front-page-gardens .entry-title {
 	margin-bottom: 0;
 	font-size: 2rem;
@@ -1215,10 +1239,19 @@ section.sponsor-benefits li:before {
 .restaurant-sponsors p {
 	font-size: 1.4rem;
 	line-height: 1.8rem;
+	position: relative;
+}
+.restaurant-sponsors p:first-child {
+	min-height: 136px;
 }
 .restaurant-sponsors p img {
-	min-height: 136px;
 	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 /* End Restaurant Sponsors */
 /* Begin CGG News Posts */
@@ -1241,6 +1274,23 @@ section.sponsor-benefits li:before {
 	padding-bottom: 20%;
 }
 /* End Green Tie Ball Partner Sponsors */
+
+/*********************************************************************************************/
+/* single garden pages */
+/*********************************************************************************************/
+h2.sponsor-title,
+.sponsor-title {font-weight: 200;}
+
+.subheading.ultra-light,
+.ultra-light {font-weight: 100;}
+
+.single-garden .content-single .entry-header .entry-header-standard-wrapper .entry-header-standard .entry-header-standard-inner h1 {font-size: 6rem;}
+
+.entry-tags .entry-meta .tags-links a {background-color: transparent;text-transform: uppercase;color: #121212;}
+/*********************************************************************************************/
+/*end single garden*/
+/*********************************************************************************************/
+
 @media (min-width: 768px) {
 	.cgg-mission .well {
 		padding: 4rem 9rem;
@@ -1479,8 +1529,17 @@ section.sponsor-benefits li:before {
 	p {
 		font-size: 1.2rem;
 	}
+	.content-area .site-main .container .masonry .grid-tiles .tile {
+		width: 100%;
+		max-width: 100%;
+	}
 	.magazine_latest figure.magazine-image {
 		max-height: 300px;
+	}
+	.hero_builder .entry-header .heading .h2 {
+		font-size: 4.5rem;
+		line-height: 5rem;
+		text-align: left;
 	}
 	.community-and-environmental-benefits .entry-content div[class*="col-xs-12"] {
 		margin-bottom: 0;
@@ -1596,10 +1655,10 @@ section.sponsor-benefits li:before {
 	}
 	.cgg-news-posts .view-more-btn .btn {
 		width: 300px;
-	    white-space: pre-wrap; /* css-3 */    
+	    white-space: pre-wrap; /* css-3 */
 	    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-	    white-space: -pre-wrap; /* Opera 4-6 */    
-	    white-space: -o-pre-wrap; /* Opera 7 */    
+	    white-space: -pre-wrap; /* Opera 4-6 */
+	    white-space: -o-pre-wrap; /* Opera 7 */
 	    word-wrap: break-word; /* Internet Explorer 5.5+ */
 		padding: 1.5rem;
 		line-height: 2rem;
@@ -1643,8 +1702,3 @@ section.sponsor-benefits li:before {
 
  }
 
-=======
-GitHub Theme URI: https://github.com/covertnine/cortex-child
-GitHub Branch:    master
-*/
->>>>>>> c8176c501e60d0f06dfc53a7adb7695610a0b23d

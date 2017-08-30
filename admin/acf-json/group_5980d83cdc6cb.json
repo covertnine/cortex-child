@@ -1,6 +1,6 @@
 {
     "key": "group_5980d83cdc6cb",
-    "title": "Gardens Details",
+    "title": "Garden Options",
     "fields": [
         {
             "key": "field_5980e1e31fa7c",
@@ -141,5 +141,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1502406214
+    "modified": 1503941873
 }
