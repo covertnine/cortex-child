@@ -93,181 +93,6 @@
             "layout": "horizontal",
             "allow_null": 0,
             "return_format": "value"
-        },
-        {
-            "key": "field_557e0c0a409b1",
-            "label": "Custom Background",
-            "name": "heading_custom_background",
-            "type": "radio",
-            "instructions": "Select a background image, color, or pattern",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "none": "None",
-                "image": "Image",
-                "color": "Color",
-                "pattern": "Background Pattern",
-                "color_pattern": "Color & Pattern"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "none",
-            "layout": "horizontal",
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_557e0c0a409c0",
-            "label": "Background Color",
-            "name": "heading_background_color",
-            "type": "color_picker",
-            "instructions": "Optional background color",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "color"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "color_pattern"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_557e0c0a409cf",
-            "label": "Background Image",
-            "name": "heading_background_image",
-            "type": "image",
-            "instructions": "Optional background image. Recommended 2000 pixels wide minimum",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "full",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_557e0c0a409ee",
-            "label": "Background Pattern",
-            "name": "heading_background_pattern",
-            "type": "image",
-            "instructions": "Use a pattern as your background that repeats vertically, horizontally, or both",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "pattern"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "color_pattern"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_557e0c0a409fd",
-            "label": "Background Pattern Repeat",
-            "name": "heading_background_pattern_repeat",
-            "type": "radio",
-            "instructions": "Select whether your background image should repeat vertically, horizontally, or both",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "pattern"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_557e0c0a409b1",
-                        "operator": "==",
-                        "value": "color_pattern"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "repeat-y": "Repeat Vertically",
-                "repeat-x": "Repeat Horizontally",
-                "repeat": "Repeat Both"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "repeat",
-            "layout": "horizontal",
-            "allow_null": 0,
-            "return_format": "value"
         }
     ],
     "location": [
@@ -279,13 +104,16 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 3,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1496510210
+    "modified": 1503794891
 }

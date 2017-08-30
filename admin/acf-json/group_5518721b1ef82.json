@@ -1,6 +1,6 @@
 {
     "key": "group_5518721b1ef82",
-    "title": "Post & Page Side Options",
+    "title": "Cortex Post\/Page Options",
     "fields": [
         {
             "key": "field_5684201d8ce5b",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -28,35 +28,6 @@
             "return_format": "value"
         },
         {
-            "key": "field_5518723aefc7b",
-            "label": "Sidebar Display",
-            "name": "sidebar",
-            "type": "select",
-            "instructions": "Would you like the sidebar to appear?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "sidebar-default": "Show Sidebar",
-                "sidebar-none": "No Sidebar"
-            },
-            "default_value": {
-                "sidebar-default": "sidebar-default"
-            },
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
-        },
-        {
             "key": "field_57cc8e7acf6b6",
             "label": "Enable Big Featured Header",
             "name": "c9_enable_big_header",
@@ -65,7 +36,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -105,7 +76,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -145,7 +116,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -160,6 +131,33 @@
             "default_value": "default",
             "layout": "vertical",
             "return_format": "value"
+        },
+        {
+            "key": "field_5518723aefc7b",
+            "label": "Sidebar Display",
+            "name": "sidebar",
+            "type": "select",
+            "instructions": "Would you like the sidebar to appear?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sidebar-default": "Show Sidebar",
+                "sidebar-none": "No Sidebar"
+            },
+            "default_value": [
+                "sidebar-default"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_55b3aeea1cbd0",
@@ -389,5 +387,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1503589084
+    "modified": 1503794208
 }

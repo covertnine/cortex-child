@@ -6226,9 +6226,10 @@
         "the_content",
         "discussion",
         "comments",
+        "featured_image",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1502249791
+    "modified": 1503795012
 }
