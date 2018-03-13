@@ -1,6 +1,6 @@
 {
     "key": "group_5589ed651e207",
-    "title": "Events Page Options",
+    "title": "Events Page Choices",
     "fields": [
         {
             "key": "field_558adcf424092",
@@ -400,5 +400,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1497227720
+    "modified": 1505436280
 }

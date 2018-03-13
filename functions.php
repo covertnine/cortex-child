@@ -27,4 +27,4 @@ function cortex_child_editor_style() {
 }
 add_action( 'admin_init', 'cortex_child_editor_style', 45 );
 
-//define( 'ACF_LITE' , true );
+//define( 'ACF_LITE' , false );

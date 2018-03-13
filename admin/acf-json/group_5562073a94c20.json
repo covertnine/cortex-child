@@ -1,6 +1,6 @@
 {
     "key": "group_5562073a94c20",
-    "title": "Project Header Options",
+    "title": "Project Header Information",
     "fields": [
         {
             "key": "field_5932dd721eadf",
@@ -138,7 +138,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -150,5 +150,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1496510210
+    "modified": 1505436280
 }

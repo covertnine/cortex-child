@@ -1,5 +1,5 @@
 {
-    "key": "group_54f6364c99aeb",
+    "key": "group_5aa34baa65488",
     "title": "Cortex Page Builder",
     "fields": [
         {
@@ -1286,6 +1286,31 @@
                             "return_format": "value"
                         },
                         {
+                            "key": "field_5aa34b59d05b3",
+                            "label": "Section Width",
+                            "name": "section_width",
+                            "type": "radio",
+                            "instructions": "Select the width of the content on the page. Defaults to full width on mobile and tablets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "container-fluid": "Extra Wide",
+                                "container": "Wide",
+                                "container-970": "Normal"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "container",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
                             "key": "field_598140ce5f74e",
                             "label": "Section Padding",
                             "name": "custom_section_spacing",
@@ -1497,6 +1522,25 @@
                                 "multiple": 0,
                                 "hide_disabled": 0
                             }
+                        },
+                        {
+                            "key": "field_5aa34b9cd05b4",
+                            "label": "Custom Class",
+                            "name": "custom_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -5513,36 +5557,6 @@
                             "multiple": 0
                         },
                         {
-                            "key": "field_55a84486682a0",
-                            "label": "Product Tag",
-                            "name": "product_tag",
-                            "type": "taxonomy",
-                            "instructions": "Limit the product grid to a product tag?",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_55a844866829e",
-                                        "operator": "==",
-                                        "value": "tag"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "product_tag",
-                            "field_type": "select",
-                            "allow_null": 0,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
-                            "return_format": "object",
-                            "multiple": 0
-                        },
-                        {
                             "key": "field_55a84486682a1",
                             "label": "Order By",
                             "name": "order_by",
@@ -5958,43 +5972,35 @@
             "button_label": "Add Section Layout",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "8893",
+            "label": "",
+            "name": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
-    "location": [
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page_builder.php"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "project"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ]
-    ],
-    "menu_order": 5,
-    "position": "acf_after_title",
+    "location": [],
+    "menu_order": 0,
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "discussion",
-        "comments",
-        "send-trackbacks"
-    ],
+    "hide_on_screen": [],
     "active": 1,
     "description": "",
-    "modified": 1518802174
+    "modified": 1520651178
 }

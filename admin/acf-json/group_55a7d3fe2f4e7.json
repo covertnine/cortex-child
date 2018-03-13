@@ -1,13 +1,13 @@
 {
     "key": "group_55a7d3fe2f4e7",
-    "title": "Cortex Page Builder Full Sidebar",
+    "title": "Cortex Page Builder Sidebar",
     "fields": [
         {
             "key": "field_55a7d3fe4f2a4",
-            "label": "Cortex Page Builder",
+            "label": "Cortex Page Builder With Sidebar",
             "name": "cortex_page_builder_sidebar",
             "type": "flexible_content",
-            "instructions": "Drag as many page components as you need that can include blog posts, events, slide shows, WordPress TinyMCE Editors, WooCommerce Products, & more. After adding your body components, select a sidebar, and that will display to the left or right of the body components you add here.",
+            "instructions": "Drag as many page components as you need that can include blog posts, events, projects, portfolios, single video\/audio embeds, buttons, calls to action, slide shows, WordPress Editors, WooCommerce Products, & more. Components will have a widget-ready sidebar to the left or right depending on theme options. <a href=\"https:\/\/cortex.covertnine.com\/documentation\" target=\"_blank\">Page Builder Documentation<\/a> is also available.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -46,7 +46,7 @@
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -58,9 +58,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -100,7 +98,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
@@ -124,7 +122,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "67",
                                         "class": "",
                                         "id": ""
                                     },
@@ -181,11 +179,32 @@
                             ]
                         },
                         {
+                            "key": "field_5a1f5ab10405e",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
                             "key": "field_55a7d3fe5763a",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter in a custom class for this section",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -197,9 +216,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -274,11 +291,32 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_5a1f5cfa88529",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
                             "key": "field_55a7d3fe5768b",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter in a custom class for this section",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -290,9 +328,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -301,47 +337,9 @@
                 "54f742a2f08d8": {
                     "key": "54f742a2f08d8",
                     "name": "blog_latest",
-                    "label": "Blog Posts",
+                    "label": "Posts Listing",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_55a7d3fe56a61",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_55a7d3fe56a76",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Optional field for a subtitle which will show up below the main title",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_57bb24e1af1dd",
                             "label": "Posts Layout",
@@ -371,11 +369,11 @@
                             "label": "Filter By Category",
                             "name": "filter_by_category",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "instructions": "Leave blank to show all post categories",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -393,11 +391,11 @@
                             "label": "Filter By Format",
                             "name": "filter_by_format",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "instructions": "Leave blank to show all post formats",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -415,11 +413,11 @@
                             "label": "Number of posts to display?",
                             "name": "number_of_posts_to_display",
                             "type": "number",
-                            "instructions": "",
+                            "instructions": "In addition to sticky posts",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -429,9 +427,7 @@
                             "append": "",
                             "min": 1,
                             "max": 100,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "step": 1
                         },
                         {
                             "key": "field_55a7d3fe56b39",
@@ -442,7 +438,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -469,7 +465,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -477,16 +473,35 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a21ea9e7a29e",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_55a7d3fe56b59",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -498,9 +513,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -509,57 +522,19 @@
                 "55a97431b57ef": {
                     "key": "55a97431b57ef",
                     "name": "blog_latest_slider",
-                    "label": "Blog Posts Slider",
+                    "label": "Posts Slider",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_55a97431b57f0",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_55a97431b57f1",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Optional field for a subtitle which will show up below the main title",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_55a97431b57f2",
                             "label": "Filter By Category",
                             "name": "filter_by_category",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "instructions": "Leave blank to show all post categories",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -577,11 +552,11 @@
                             "label": "Filter By Format",
                             "name": "filter_by_format",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "instructions": "Leave blank to show all post categories",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -599,11 +574,11 @@
                             "label": "Number of posts to display?",
                             "name": "number_of_posts_to_display",
                             "type": "number",
-                            "instructions": "",
+                            "instructions": "Displayed one at a time",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -613,16 +588,35 @@
                             "append": "",
                             "min": 1,
                             "max": 100,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "step": 1
+                        },
+                        {
+                            "key": "field_5a21e9d87a29d",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_55a97431b57f7",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -634,9 +628,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -645,53 +637,15 @@
                 "559c1f74e3cf7": {
                     "key": "559c1f74e3cf7",
                     "name": "magazine_latest",
-                    "label": "Blog Posts Grid",
+                    "label": "Posts Grid",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_55a7d3fe56b6b",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_55a7d3fe56b7b",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Optional field for a subtitle which will show up below the main title",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_55a7d3fe56bdb",
                             "label": "Display Date",
                             "name": "display_date",
                             "type": "true_false",
-                            "instructions": "Display the post dates?",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -710,26 +664,7 @@
                             "label": "Display Post Meta",
                             "name": "display_post_meta",
                             "type": "true_false",
-                            "instructions": "Display the author, category, and 3 most popular post tags associated with each post? (Individual post meta items can be hidden independently with CSS)",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "33",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 1,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_55a7d3fe56c04",
-                            "label": "Display Post Excerpt & Read More Button",
-                            "name": "display_post_excerpt",
-                            "type": "true_false",
-                            "instructions": "Display a short excerpt underneath the post with a 'read more' button linking to the full post?",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -744,15 +679,34 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_55a7d3fe56c04",
+                            "label": "Display Post Excerpt & Read More Button",
+                            "name": "display_post_excerpt",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_55a7d3fe56c34",
                             "label": "Filter By Category",
                             "name": "filter_by_category",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "instructions": "Leave blank to show all post categories",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -770,11 +724,11 @@
                             "label": "Filter By Format",
                             "name": "filter_by_format",
                             "type": "taxonomy",
-                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "instructions": "Leave blank to show all post formats",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -792,11 +746,11 @@
                             "label": "Number of posts to display?",
                             "name": "number_of_posts_to_display",
                             "type": "number",
-                            "instructions": "",
+                            "instructions": "In addition to any sticky posts you may have",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -806,9 +760,7 @@
                             "append": "",
                             "min": 1,
                             "max": 100,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "step": 1
                         },
                         {
                             "key": "field_55a7d3fe56c6f",
@@ -819,7 +771,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -846,7 +798,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -854,16 +806,35 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a21eacb7a29f",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_55a7d3fe56c94",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -875,9 +846,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -886,47 +855,9 @@
                 "559d83f9ed5d9": {
                     "key": "559d83f9ed5d9",
                     "name": "magazine_latest_featured",
-                    "label": "Blog Posts Recent Featured",
+                    "label": "Posts Latest Featured",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_55a7d3fe56ca4",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Optional field for a title which will show up as a main heading above your posts",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_55a7d3fe56cbd",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Optional field for a subtitle which will show up below the main title",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_55a7d3fe56d1b",
                             "label": "Number of Featured Posts",
@@ -936,7 +867,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -952,32 +883,55 @@
                             "return_format": "value"
                         },
                         {
-                            "key": "field_55a7d3fe56d59",
-                            "label": "Number of recent posts to display?",
-                            "name": "number_of_posts_to_display",
-                            "type": "number",
-                            "instructions": "",
+                            "key": "field_55a7d3fe56d97",
+                            "label": "Filter By Category",
+                            "name": "filter_by_category",
+                            "type": "taxonomy",
+                            "instructions": "Leave blank to show all post categories",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": 4,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "min": 3,
-                            "max": 20,
-                            "step": 1
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "add_term": 1,
+                            "save_terms": 1,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_55a7d3fe56da7",
+                            "label": "Filter By Format",
+                            "name": "filter_by_format",
+                            "type": "taxonomy",
+                            "instructions": "Leave blank to show all post formats",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "post_format",
+                            "field_type": "multi_select",
+                            "allow_null": 1,
+                            "add_term": 1,
+                            "save_terms": 1,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
                         },
                         {
                             "key": "field_55a7d3fe56d2a",
                             "label": "Display Featured Post Date",
                             "name": "display_date",
                             "type": "true_false",
-                            "instructions": "Hide or show the publish date for the large featured posts.",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -996,26 +950,7 @@
                             "label": "Display Featured Post Meta",
                             "name": "display_post_meta",
                             "type": "true_false",
-                            "instructions": "Display the author, category, and 3 most popular post tags associated with the featured post? (Individual post meta items can be hidden independently with CSS)",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "33",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 1,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_55a7d3fe56d49",
-                            "label": "Display Featured Post Excerpt & Read More Button",
-                            "name": "display_post_excerpt",
-                            "type": "true_false",
-                            "instructions": "Display a short excerpt underneath the featured post with a 'read more' button linking to the full post?",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1030,59 +965,55 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_55a7d3fe56d97",
-                            "label": "Filter By Category",
-                            "name": "filter_by_category",
-                            "type": "taxonomy",
-                            "instructions": "Filter posts by category or leave blank to show all post categories",
+                            "key": "field_55a7d3fe56d49",
+                            "label": "Display Featured Post Excerpt & Read More Button",
+                            "name": "display_post_excerpt",
+                            "type": "true_false",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
-                            "taxonomy": "category",
-                            "field_type": "multi_select",
-                            "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
-                            "return_format": "id",
-                            "multiple": 0
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
-                            "key": "field_55a7d3fe56da7",
-                            "label": "Filter By Format",
-                            "name": "filter_by_format",
-                            "type": "taxonomy",
-                            "instructions": "Filter posts by format type or leave blank to show all post formats",
+                            "key": "field_55a7d3fe56d59",
+                            "label": "Number of recent posts to display?",
+                            "name": "number_of_posts_to_display",
+                            "type": "number",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
-                            "taxonomy": "post_format",
-                            "field_type": "multi_select",
-                            "allow_null": 1,
-                            "add_term": 1,
-                            "save_terms": 1,
-                            "load_terms": 0,
-                            "return_format": "id",
-                            "multiple": 0
+                            "default_value": 4,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 3,
+                            "max": 20,
+                            "step": 1
                         },
                         {
                             "key": "field_55a7d3fe56dc0",
                             "label": "Display view more button?",
                             "name": "view_more_btn",
                             "type": "true_false",
-                            "instructions": "Display a \"view more\" button",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "34",
                                 "class": "",
                                 "id": ""
                             },
@@ -1097,7 +1028,7 @@
                             "label": "View More Button Link",
                             "name": "view_more_button_link",
                             "type": "text",
-                            "instructions": "Enter the link to your posts page",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": [
                                 [
@@ -1109,7 +1040,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -1120,11 +1051,32 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_5a21eec37a2a0",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
                             "key": "field_55a7d3fe56de0",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter a custom class name for further customization with CSS",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1136,9 +1088,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1150,44 +1100,6 @@
                     "label": "Events Listing",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_55a7d3fe57241",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "Input title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the title to be displayed above the events listing",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 75
-                        },
-                        {
-                            "key": "field_55a7d3fe57251",
-                            "label": "Sub Heading",
-                            "name": "sub_title",
-                            "type": "text",
-                            "instructions": "Input a sub title for this section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "Enter the sub title to be displayed below the main title",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 200
-                        },
                         {
                             "key": "field_55a7d3fe57261",
                             "label": "Event Display Type",
@@ -1214,10 +1126,10 @@
                         },
                         {
                             "key": "field_55a7d3fe57271",
-                            "label": "Limit by category?",
+                            "label": "Filter By Category",
                             "name": "limit_by_category",
                             "type": "taxonomy",
-                            "instructions": "If you'd like to limit the event to one specific category please select it here. The default is to show all events.",
+                            "instructions": "Leave blank to show all events",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1264,7 +1176,7 @@
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1291,7 +1203,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1299,16 +1211,35 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a21ef1d7a2a1",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_55a7d3fe57323",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1320,9 +1251,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1360,7 +1289,7 @@
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter in a custom class (if necessary) for the custom code field",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1372,9 +1301,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1384,7 +1311,7 @@
                     "key": "5596e564ca836",
                     "name": "woocommerce_products_grid",
                     "label": "WooCommerce Products Grid",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_55a7d3fe5770e",
@@ -1423,11 +1350,11 @@
                                 "tag": "Product Tag",
                                 "category": "Product Category"
                             },
+                            "allow_null": 0,
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "none",
-                            "layout": "vertical",
-                            "allow_null": 0,
+                            "layout": "horizontal",
                             "return_format": "value"
                         },
                         {
@@ -1499,7 +1426,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1510,17 +1437,15 @@
                                 "rand": "Random",
                                 "menu_order": "Manual (Menu Order)"
                             },
-                            "default_value": {
-                                "date": "date"
-                            },
+                            "default_value": [
+                                "date"
+                            ],
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
                             "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0,
-                            "return_format": "value"
+                            "return_format": "value",
+                            "placeholder": ""
                         },
                         {
                             "key": "field_55a7d3fe5777c",
@@ -1531,7 +1456,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1541,9 +1466,7 @@
                             "append": "",
                             "min": "",
                             "max": "",
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "step": 1
                         },
                         {
                             "key": "field_55a7d3fe5778c",
@@ -1554,7 +1477,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1581,7 +1504,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1589,16 +1512,35 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a21ef447a2a2",
+                            "label": "Section Padding",
+                            "name": "custom_section_spacing",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_598140ce5f74e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_55a7d3fe5780e",
                             "label": "Custom Class",
                             "name": "custom_class",
                             "type": "text",
-                            "instructions": "Enter in a custom class for this section",
+                            "instructions": "Label used to display in the backend and on the frontend for additional CSS customization for this section",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1610,9 +1552,7 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1646,5 +1586,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1501472855
+    "modified": 1512175617
 }

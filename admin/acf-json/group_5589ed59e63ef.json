@@ -1,6 +1,6 @@
 {
     "key": "group_5589ed59e63ef",
-    "title": "Events Page Header Options",
+    "title": "Events Page Header Information",
     "fields": [
         {
             "key": "field_593dd98243ed4",
@@ -388,5 +388,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1497226614
+    "modified": 1505436279
 }

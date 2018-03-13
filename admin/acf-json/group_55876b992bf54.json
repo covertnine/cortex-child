@@ -1,13 +1,13 @@
 {
     "key": "group_55876b992bf54",
-    "title": "Event Post Options",
+    "title": "Event Information",
     "fields": [
         {
-            "key": "field_568429bf41fa1",
-            "label": "Change Header Navigation Type",
-            "name": "navigation_type_override",
-            "type": "radio",
-            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "key": "field_59bb02efb6df6",
+            "label": "Event Name • Headliners",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,53 +15,19 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "default": "Default",
-                "nav1": "Transparent Background",
-                "nav2": "Opaque Background"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "default",
-            "layout": "vertical",
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_56f446370f1b9",
-            "label": "Event Header Overlay",
-            "name": "enable_overlay",
-            "type": "radio",
-            "instructions": "Cortex displays an overlay over featured images in headers to make the heading text easier to read. You can enable or disable this if your heading\/title text is readable over your featured image without the need for a semi-transparent overlay. Default is to display the overlay if a featured image is set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "default": "Default",
-                "dark-overlay": "Enable",
-                "no-overlay": "Disable"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "default",
-            "layout": "horizontal",
-            "allow_null": 0,
-            "return_format": "value"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5587720a80d35",
-            "label": "Event Headline",
+            "label": "Headliner",
             "name": "event_headline",
             "type": "text",
-            "instructions": "Enter in the event headliner (event name, or band\/musician name for instance)",
+            "instructions": "Enter in the event headliner such as the top billed act, or the name of the event itself. Displays above the event location and sidebar on individual event pages, and below the WordPress post title on event listings.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -69,16 +35,70 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ca9ef5a1fe8",
+            "label": "Additional Headliners",
+            "name": "additional_headliners",
+            "type": "repeater",
+            "instructions": "Does this event have other artists\/speakers opening up for the headliner? Or, does the event need some additional subheadings about the event itself? (Free Bobblehead night, $10 Admission, Free before 11pm, etc.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_59ca9f24a1fe9",
+            "min": 0,
+            "max": 5,
+            "layout": "block",
+            "button_label": "Add Headliner",
+            "sub_fields": [
+                {
+                    "key": "field_59ca9f24a1fe9",
+                    "label": "Headliner",
+                    "name": "headliner",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Enter in headliner or subheading",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59baf6f601351",
+            "label": "Date • Time • Location",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_558770e380d2e",
             "label": "Date\/Time",
             "name": "date_and_time",
             "type": "date_time_picker",
-            "instructions": "Select a date\/time for the event",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -95,70 +115,64 @@
             "label": "Location Name",
             "name": "location_name",
             "type": "text",
-            "instructions": "Enter the name of the location",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Enter the name of the location - Lincoln Hall",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5587716a80d31",
-            "label": "Location City, State or Country",
-            "name": "location_city_country",
-            "type": "text",
-            "instructions": "Enter the City, State and\/or Country for the event",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_5588298ac931c",
             "label": "Location Address",
             "name": "location_address",
             "type": "text",
-            "instructions": "Enter the address for the event",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Enter the address for the event - 100 N. Lincoln Ave.",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
+        },
+        {
+            "key": "field_5587716a80d31",
+            "label": "Location City, State or Country",
+            "name": "location_city_country",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Enter the City, State and\/or Country for the event - Chicago, IL",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5587718980d32",
             "label": "Location Map Link",
             "name": "location_map_link",
             "type": "text",
-            "instructions": "Copy & paste the URL from the share link for the venue location to show a Google Map on the event detail page",
+            "instructions": "Copy & paste the full URL from the share link for the venue location to show a link to a Google Map on the event detail page",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -170,16 +184,30 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bafe6965f5e",
+            "label": "Event Ticket Link or RSVP",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_558771b980d33",
             "label": "Event Ticket Link",
             "name": "event_ticket_link",
             "type": "text",
-            "instructions": "If the event has a ticketing page, enter the full URL",
+            "instructions": "If the event has a ticketing page on a third party site such as EventBrite, Ticketfly, or LIveNation, add the full link here and corresponding link buttons will show up on event pages and single event pages.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -191,9 +219,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_558771e580d34",
@@ -217,6 +243,72 @@
             "disabled": 0
         },
         {
+            "key": "field_59baf88c01352",
+            "label": "Page Layout",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_568429bf41fa1",
+            "label": "Change Header Navigation Type",
+            "name": "navigation_type_override",
+            "type": "radio",
+            "instructions": "Some posts or pages will have large  background imagery that hides the header navigation links and logo. If that's the case, you can override the default setting for your navigation type by changing this setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "nav1": "Transparent Background",
+                "nav2": "Opaque Background"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_56f446370f1b9",
+            "label": "Event Header Overlay",
+            "name": "enable_overlay",
+            "type": "radio",
+            "instructions": "Cortex displays an overlay by default over the big header on single event pages, which is a blurred version of the featured image to make the event headline text easier to read. You can disable this if your text is readable over your featured image without the need for the overlay.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "dark-overlay": "Enable",
+                "no-overlay": "Disable"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "default",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_558d916af6aef",
             "label": "Show the event featured image on the event single page?",
             "name": "show_next_event_featured",
@@ -225,7 +317,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -252,7 +344,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -260,40 +352,11 @@
                 "alignleft": "Left",
                 "alignright": "Right"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "alignleft",
             "layout": "horizontal",
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_558d922cdca01",
-            "label": "Display event sidebar?",
-            "name": "event_sidebar_display",
-            "type": "select",
-            "instructions": "Would you like to display the events specific sidebar on the single event page?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "sidebar-default": "Show Sidebar",
-                "sidebar-none": "No Sidebar"
-            },
-            "default_value": {
-                "sidebar-default": "sidebar-default"
-            },
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
             "return_format": "value"
         },
         {
@@ -301,11 +364,11 @@
             "label": "Share Buttons",
             "name": "share_buttons",
             "type": "true_false",
-            "instructions": "Show the share icons?",
+            "instructions": "Show the share icons on the event listings with big images, and on the individual event pages?",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -316,244 +379,31 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_558774bc80d37",
-            "label": "Opening Acts",
-            "name": "opening_acts",
+            "key": "field_558d922cdca01",
+            "label": "Display event sidebar?",
+            "name": "event_sidebar_display",
             "type": "select",
-            "instructions": "Does this event have other acts? If so, select the number in the drop down to enter in the additional acts",
+            "instructions": "Would you like to display the events specific sidebar on the single event page?",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "choices": [
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
+            "choices": {
+                "sidebar-default": "Show Sidebar",
+                "sidebar-none": "No Sidebar"
+            },
             "default_value": [
-                0
+                "sidebar-default"
             ],
-            "allow_null": 1,
+            "allow_null": 0,
             "multiple": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_558774f380d38",
-            "label": "First Opener",
-            "name": "opener_1",
-            "type": "text",
-            "instructions": "This would be the sixth headliner on the bill",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "!=",
-                        "value": "0"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_55882ad52f285",
-            "label": "Second Opener",
-            "name": "opener_2",
-            "type": "text",
-            "instructions": "Enter in the second opening act. This would be the fifth headliner on the bill",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "!=",
-                        "value": "0"
-                    },
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "2"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "3"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "4"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "5"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_55882adc2f286",
-            "label": "Third Opener",
-            "name": "opener_3",
-            "type": "text",
-            "instructions": "This would be the fourth headliner on the bill",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "!=",
-                        "value": "0"
-                    },
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "3"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "4"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "5"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_55882ae22f287",
-            "label": "Fourth Opener",
-            "name": "opener_4",
-            "type": "text",
-            "instructions": "Enter in the second to last opening act. This would be the third headliner on the bill",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "!=",
-                        "value": "0"
-                    },
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "4"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "5"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_55882ae92f288",
-            "label": "Fifth Opener",
-            "name": "opener_5",
-            "type": "text",
-            "instructions": "Enter in the last opening act. This would be the band going on just before the headliner",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "!=",
-                        "value": "0"
-                    },
-                    {
-                        "field": "field_558774bc80d37",
-                        "operator": "==",
-                        "value": "5"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -573,5 +423,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496510209
+    "modified": 1506451484
 }

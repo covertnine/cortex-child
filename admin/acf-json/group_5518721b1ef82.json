@@ -1,6 +1,6 @@
 {
     "key": "group_5518721b1ef82",
-    "title": "Cortex Post\/Page Options",
+    "title": "Cortex Post\/Page Choices",
     "fields": [
         {
             "key": "field_5684201d8ce5b",
@@ -179,11 +179,11 @@
                 "pattern": "Background Pattern",
                 "color_pattern": "Color & Pattern"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "none",
-            "layout": "vertical",
-            "allow_null": 0,
+            "layout": "horizontal",
             "return_format": "value"
         },
         {
@@ -387,5 +387,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1503794208
+    "modified": 1505436278
 }
