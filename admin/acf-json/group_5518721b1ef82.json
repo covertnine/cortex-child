@@ -29,10 +29,10 @@
         },
         {
             "key": "field_57cc8e7acf6b6",
-            "label": "Enable Big Featured Header",
+            "label": "Enable Big Header",
             "name": "c9_enable_big_header",
             "type": "radio",
-            "instructions": "Enable the big header with featured image background and text over the background depending on your choices? Or disable it and just have the featured image and post heading in the body of the post?",
+            "instructions": "Enable the full browser width post header with featured image in the background and the post title and post meta centered above it, or disable the big header in favor of having the featured image within the post content column.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -360,7 +360,7 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "page_projects.php"
+                "value": "default"
             },
             {
                 "param": "page_template",
@@ -387,5 +387,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1505436278
+    "modified": 1522215239
 }
